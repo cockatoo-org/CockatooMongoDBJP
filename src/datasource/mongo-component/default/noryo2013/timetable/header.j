@@ -1,5 +1,5 @@
 {
-"@R":"1369289884",
+"@R":"1369300526",
 "type":"HorizontalWidget",
 "subject":"noryo2013_timetable_header",
 "description":"",
@@ -170,6 +170,7 @@ div.noryo2013_timetable div.tab table.timetable th {\r
   background-color: #402817;\r
   color: #FFFFFF;\r
   font-size: 1.2em;\r
+  text-align: center;\r
 }\r
 div.noryo2013_timetable div.tab table.timetable th.first {\r
   width: 100px;\r
@@ -178,7 +179,6 @@ div.noryo2013_timetable div.tab table.timetable th.cols {\r
   width: 299px;\r
   border-left: 2px solid  #402817;\r
   border-bottom: 1px dashed  #402817;\r
-  text-align: center;\r
 }\r
 \r
 div.noryo2013_timetable div.tab table.timetable td {\r
@@ -197,7 +197,16 @@ div.noryo2013_timetable div.tab table.timetable td.cols {\r
   border-bottom: 1px dashed  #402817;\r
 }\r
 \r
-",
+div.noryo2013_timetable div.tab table.timetable th.place {\r
+  cursor: pointer;\r
+}\r
+img.place {\r
+  position: absolute;\r
+  left: 200px;\r
+  width:500px;\r
+  z-index:9999;\r
+  display: none;\r
+}",
 "js":"$( function (){\r
   timetableNavs = $('#noryo2013_timetable_header div.nav > ul > li');\r
   timetableNavs .each( function () {\r
@@ -207,6 +216,36 @@ div.noryo2013_timetable div.tab table.timetable td.cols {\r
       $(this).addClass('selected');\r
     }\r
   });\r
+\r
+  $('th.place').click(function(){\r
+    var place=$(this).attr('place');\r
+    $('<div id=\"mordal\"></div>')\r
+    .css('position','absolute')\r
+    .css('top',0)\r
+    .css('left',0)\r
+    .css('height','10000')\r
+    .css('width','10000')\r
+    .css('z-index',1000)\r
+    .css('background-color','#000000')\r
+    .css('opacity',0.3)\r
+    .appendTo('body');\r
+    $('img.place').slideDown('normal',function(){\r
+\t$('<div id=\"place\" style=\"'+place+'\" />')\r
+\t.css('position','absolute')\r
+\t.css('border-radius','12px')\r
+\t.css('border','6px dashed #C00000')\r
+\t.css('z-index',9999)\r
+\t.appendTo('div.tab');\r
+    });\r
+    \r
+    $('#mordal').click(function(){\r
+\t$('#place').remove();\r
+\t$('img.place').slideUp('normal',function(){\r
+\t    $('#mordal').remove();\r
+\t});\r
+    });\r
+  });\r
+\r
 })\r
 \r
 function time2date(str){\r
@@ -287,7 +326,8 @@ console.log(session);\r
 "body":"<nav><div class=\"nav\" role=\"navigation\">\r
   <ul>\r
     <li><a href=\"<?cs var:C._base ?>/noryo2013/top\">TOP</a></li>\r
-    <li><a href=\"<?cs var:C._base ?>/noryo2013/exhibition\">\u5c55\u793a</a></li>\r
+    <li><a href=\"<?cs var:C._base ?>/noryo2013/place\">\u4f1a\u5834\u6848\u5185</a></li>\r
+    <li><a href=\"<?cs var:C._base ?>/noryo2013/exhibition\">\u5c55\u793a\u6848\u5185</a></li>\r
     <li><a href=\"<?cs var:C._base ?>/noryo2013/timetable\">\u30bf\u30a4\u30e0\u30c6\u30fc\u30d6\u30eb</a></li>\r
 <?cs if:S.login.writable ?>\r
     <li><a href=\"<?cs var:C._base ?>/noryo2013/edit\">EDIT</a></li>\r

@@ -1,5 +1,5 @@
 {
-"@R":"1369189943",
+"@R":"1369299892",
 "type":"HorizontalWidget",
 "subject":"noryo2013_timetable",
 "description":"",
@@ -12,20 +12,24 @@ div.noryo2013_timetable div.tab table.timetable td div.t.t30 {\r
 }\r
 div.noryo2013_timetable div.tab table.timetable td div.t {\r
   height:30px;\r
-}",
+}\r
+\r
+",
 "js":"$(function(){\r
   draw_timetable(null,function(session){return 'div.noryo2013_timetable div.tab table td.' + session.place + '> div.t'+session.start.replace(/:/,'')});\r
+  \r
 });",
 "id":"",
 "class":"noryo2013_timetable",
 "body":"<div class=\"tab\">\r
+<img class=\"place\" src=\"/_s_/mongo/noryo2013/noryo2013place.png\">\r
 <table class=\"timetable\">\r
 <tbody>\r
 <tr>\r
 <th class=\"first\"></th>\r
-<th class=\"cols place1\">\u30e1\u30a4\u30f3\u30db\u30fc\u30eb</th>\r
-<th class=\"cols place2\">\u30bb\u30df\u30ca\u30fc\u30eb\u30fc\u30e0</th>\r
-<th class=\"cols place3\">\u30ed\u30d3\u30fc</th>\r
+<th class=\"cols place place1\" place=\"top:120px;left:200px;height:140px;width:50px\">\u304f\u3089\u307e\u3048</th>\r
+<th class=\"cols place place2\" place=\"top:190px;left:530px;height:130px;width:180px\">\u30ed\u30a4\u30a2\u30eb\u30d6\u30eb\u30fc</th>\r
+<th class=\"cols place place3\" place=\"top:260px;left:200px;height:110px;width:180px\">\u30ae\u30e3\u30e9\u30ea\u30fc</th>\r
 </tr>\r
 <tr class=\"\">\r
 <td class=\"first\">\r

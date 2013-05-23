@@ -1241,7 +1241,7 @@
 ],
 "_owner":"admin",
 "_ownername":"admin",
-"_time":1369285885,
+"_time":1369297886,
 "_timestr":"2013-05-23",
 "_share":true,
 "image":"mongo-squid-mini.png",
@@ -1250,5 +1250,5 @@
 "logo":"exhibition.13:00.519d9bf2895e2/logo"
 },
 "logo":null,
-"booth":"B1"
+"booth":"B0"
 }

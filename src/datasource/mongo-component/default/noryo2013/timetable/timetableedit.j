@@ -1,5 +1,5 @@
 {
-"@R":"1369285381",
+"@R":"1369297707",
 "type":"HorizontalWidget",
 "subject":"timetableedit",
 "description":"",
@@ -110,20 +110,20 @@ div.noryo2013_timetable div.tab table.timetable input[name=\"targets\"] {\r
 <tr class=\"place\"   ><td class=\"key\">\u4f1a\u5834</td>    <td>\r
 <select name=\"place\">\r
   <option <?cs if:item.place == \"exhibition\"?>selected<?cs /if ?> value=\"exhibition\">\u5c55\u793a</option>\r
-  <option <?cs if:item.place == \"place1\"    ?>selected<?cs /if ?> value=\"place1\">\u30e1\u30a4\u30f3\u30db\u30fc\u30eb</option>\r
-  <option <?cs if:item.place == \"place2\"    ?>selected<?cs /if ?> value=\"place2\">\u30bb\u30df\u30ca\u30fc\u30eb\u30fc\u30e0</option>\r
-  <option <?cs if:item.place == \"place3\"    ?>selected<?cs /if ?> value=\"place3\">\u30ed\u30d3\u30fc</option>\r
+  <option <?cs if:item.place == \"place1\"    ?>selected<?cs /if ?> value=\"place1\">\u304f\u3089\u307e\u3048</option>\r
+  <option <?cs if:item.place == \"place2\"    ?>selected<?cs /if ?> value=\"place2\">\u30ed\u30a4\u30a2\u30eb\u30d6\u30eb\u30fc</option>\r
+  <option <?cs if:item.place == \"place3\"    ?>selected<?cs /if ?> value=\"place3\">\u30ae\u30e3\u30e9\u30ea\u30fc</option>\r
 </select>\r
 <select name=\"booth\">\r
-  <?cs loop:x = #1, #10, #1 ?>\r
+  <?cs loop:x = #0, #9, #1 ?>\r
     <?cs set: v = \"A\"+x ?>\r
     <option <?cs if:item.booth == v ?>selected<?cs /if ?> value=\"<?cs var:v ?>\"><?cs var:v ?></option>\r
   <?cs /loop ?>\r
-  <?cs loop:x = #1, #10, #1 ?>\r
+  <?cs loop:x = #0, #9, #1 ?>\r
     <?cs set: v = \"B\"+x ?>\r
     <option <?cs if:item.booth == v ?>selected<?cs /if ?> value=\"<?cs var:v ?>\"><?cs var:v ?></option>\r
   <?cs /loop ?>\r
-  <?cs loop:x = #1, #10, #1 ?>\r
+  <?cs loop:x = #0, #9, #1 ?>\r
     <?cs set: v = \"C\"+x ?>\r
     <option <?cs if:item.booth == v ?>selected<?cs /if ?> value=\"<?cs var:v ?>\"><?cs var:v ?></option>\r
   <?cs /loop ?>\r
