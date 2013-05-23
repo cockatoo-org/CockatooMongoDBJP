@@ -1,5 +1,5 @@
 {
-"@R":"1369288173",
+"@R":"1369289080",
 "type":"HorizontalWidget",
 "subject":"header",
 "description":"header",
@@ -157,11 +157,9 @@
 ""
 ],
 "_u":"header",
-"header":"<!--<meta property=\"og:title\" content=\"MongoDB JP \u65e5\u672cMongoDB\u30e6\u30fc\u30b6\u4f1a\" />-->\r
-<meta property=\"og:site_name\" content=\"MongoDB JP \u65e5\u672cMongoDB\u30e6\u30fc\u30b6\u4f1a\" />\r
+"header":"<meta property=\"og:site_name\" content=\"MongoDB JP \u65e5\u672cMongoDB\u30e6\u30fc\u30b6\u4f1a\" />\r
 <meta property=\"og:type\" content=\"article\" />\r
-<meta property=\"og:url\" content=\"/mongo/main\" />\r
-<meta property=\"og:image\" content=\"/_s_/mongo/default/img/mongojp-logo.png\" />\r
+<meta property=\"og:image\" content=\"http://crumb.jp/_s_/mongo/default/img/mongojp-logo.png\" />\r
 <meta property=\"og:locale\" content=\"ja_JP\" />\r
 ",
 "bottom":""
