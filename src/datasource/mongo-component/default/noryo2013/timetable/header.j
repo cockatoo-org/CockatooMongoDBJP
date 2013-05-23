@@ -1,5 +1,5 @@
 {
-"@R":"1369284521",
+"@R":"1369289884",
 "type":"HorizontalWidget",
 "subject":"noryo2013_timetable_header",
 "description":"",
@@ -229,8 +229,9 @@ function draw_timetable(h,cb_appendTo){\r
       session.during = (end.getTime() - start.getTime()) / 60000;\r
       height = session.during * 2;\r
     }\r
+console.log(session);\r
       $('<div class=\"session\" u=\"'+session._u+'\">'+\r
-\t((session.images.logo)?('<img class=\"logo\" src=\"/_s_/mongo/timetable/'+session.images.logo+'\"></img>'):'') +\r
+\t(('images' in session && 'logo' in session.images)?('<img class=\"logo\" src=\"/_s_/mongo/timetable/'+session.images.logo+'\"></img>'):'') +\r
 \t'<div class=\"title\">'+session.title+'</div>'+\r
 \t'<div class=\"incharge\">'+session.incharge+\"</div>\"+\r
 \t'<div class=\"overview\">'+session.overview+'</div>'+\r

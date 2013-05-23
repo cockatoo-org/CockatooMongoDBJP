@@ -1,11 +1,11 @@
 {
 "op":"save",
-"_u":"place2%2E16%3A00%2E519da544403ac",
+"_u":"place2%2E15%3A00%2E519db2697272f",
 "public":true,
 "place":"place2",
 "booth":"A1",
-"start":"16:00",
-"end":"17:00",
+"start":"15:00",
+"end":"16:00",
 "title":"\u5b9f\u6f14\uff01MongoDB\u904b\u752824\u6642\uff01\u301c\u969c\u5bb3\u306f\u4f1a\u8b70\u5ba4\u3067\u8d77\u3053\u3063\u3066\u3044\u308b\u3093\u3058\u3083\u306a\u3044\uff01\u73fe\u5834\u3067\u8d77\u3053\u3063\u3066\u3044\u308b\u3093\u3060\uff01\uff01\u301c",
 "incharge":"\u7aaa\u7530\u535a\u662d",
 "overview":"\u30b7\u30b9\u30c6\u30e0\u904b\u7528\u306e\u73fe\u5834\u3067\u8d77\u3053\u308a\u304c\u3061\u306a\u30c9\u30e9\u30de\u3092MongoDB\u904b\u7528\u73fe\u5834\u306e\u518d\u73fe\u5287\u3068\u3057\u3066\u9b45\u305b\u307e\u3059\uff01",
@@ -197,10 +197,10 @@ MongoDB\u306e\u72b6\u614b\u3084\u5fa9\u65e7\u4f5c\u696d\u3092\u30ea\u30a2\u30eb\
 "_share":true,
 "_owner":"crumbjp",
 "_ownername":"@crumbjp",
-"_time":1369286153,
+"_time":1369289321,
 "_timestr":"2013-05-23",
 "images":{
-"logo":"place2.16:00.519da544403ac/logo"
+"logo":"place2.15:00.519db2697272f/logo"
 },
 "logo":null
 }
