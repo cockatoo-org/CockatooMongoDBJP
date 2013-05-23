@@ -1,5 +1,5 @@
 {
-"@R":"1369192630",
+"@R":"1369284521",
 "type":"HorizontalWidget",
 "subject":"noryo2013_timetable_header",
 "description":"",
@@ -105,7 +105,7 @@ div.noryo2013_timetable div.detail {\r
   border-radius: 16px;\r
   border: 2px solid  #402817;\r
   display:none;\r
-  color: #ffff22;\r
+  color: #ffffff;\r
 }\r
 div.noryo2013_timetable div.detail div.close:hover {\r
   background-image:url(\"/_s_/mongo/noryo2013/ui-icons_469bdd_256x240.png\");\r
@@ -119,6 +119,9 @@ div.noryo2013_timetable div.detail div.close {\r
   height:16px;\r
   display: block;\r
   margin: 1px;\r
+}\r
+div.noryo2013_timetable div.detail table {\r
+  color: #ffff22;\r
 }\r
 div.noryo2013_timetable div.detail span.c,\r
 div.noryo2013_timetable div.detail span.b,\r
@@ -140,7 +143,6 @@ div.noryo2013_timetable div.detail td.comma {\r
   font-weight:600;\r
   vertical-align: bottom;\r
 }\r
-  color: #ff2222;\r
 div.noryo2013_timetable div.detail td.title {\r
   font-weight:600;\r
   font-size: 1.5em;\r

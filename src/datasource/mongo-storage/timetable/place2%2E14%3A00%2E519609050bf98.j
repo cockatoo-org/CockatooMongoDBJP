@@ -21,7 +21,7 @@
 "notes":[
 
 ],
-"public":true,
+"public":false,
 "op":"save",
 "place":"place2",
 "start":"14:00",
@@ -64,10 +64,11 @@
 ],
 "_owner":"admin",
 "_ownername":"admin",
-"_time":1368877035,
-"_timestr":"2013-05-18",
+"_time":1369282987,
+"_timestr":"2013-05-23",
 "_share":true,
 "images":[
 
-]
+],
+"booth":"A1"
 }

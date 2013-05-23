@@ -21,7 +21,7 @@
 "\u7b46\u8005\u306e\u30b5\u30a4\u30f3\u4f1a\u3082\uff1f",
 "\u4ed6\u306b\u8ca9\u58f2\u3057\u305f\u3044\u3082\u306e\u304c\u3042\u308c\u3070\u3053\u3053\u3067"
 ],
-"public":true,
+"public":false,
 "op":"save",
 "place":"exhibition",
 "start":"12:00",
@@ -64,8 +64,8 @@
 ],
 "_owner":"admin",
 "_ownername":"admin",
-"_time":1369188958,
-"_timestr":"2013-05-22",
+"_time":1369282960,
+"_timestr":"2013-05-23",
 "_share":true,
 "images":[
 

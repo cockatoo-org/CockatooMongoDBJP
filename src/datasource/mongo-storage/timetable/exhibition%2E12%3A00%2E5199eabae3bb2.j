@@ -51,9 +51,9 @@
 ],
 "_owner":"admin",
 "_ownername":"admin",
-"_time":1369188993,
-"_timestr":"2013-05-22",
-"public":true,
+"_time":1369282963,
+"_timestr":"2013-05-23",
+"public":false,
 "_share":true,
 "images":{
 "logo":"exhibition.12:00.5199eabae3bb2/logo"

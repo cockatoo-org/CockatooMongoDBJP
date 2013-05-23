@@ -1,5 +1,5 @@
 {
-"public":true,
+"public":false,
 "_u":"place1%2E16%3A00%2E5196086fd3285",
 "title":"\u81ea\u8ee2\u8eca\u8d70\u884c\u30ed\u30b0withMongoDB\u958b\u767a\u4f53\u9a13",
 "state_of_title":"temporary",
@@ -63,11 +63,12 @@
 ],
 "_owner":"admin",
 "_ownername":"admin",
-"_time":1368877026,
-"_timestr":"2013-05-18",
+"_time":1369282978,
+"_timestr":"2013-05-23",
 "place":"place1",
 "_share":true,
 "images":[
 
-]
+],
+"booth":"A1"
 }

@@ -7,9 +7,9 @@
 ],
 "targets":[
 "\u5171\u50ac\u8005",
-"        \u5354\u8cdb\u8005",
-"        \u51fa\u5c55\u8005",
-"        \u904b\u55b6\u30b9\u30bf\u30c3\u30d5"
+"         \u5354\u8cdb\u8005",
+"         \u51fa\u5c55\u8005",
+"         \u904b\u55b6\u30b9\u30bf\u30c3\u30d5"
 ],
 "state_of_content":"onplanning",
 "person_in_charge":[
@@ -22,7 +22,7 @@
 "notes":[
 "\u6f14\u51fa\u306e\u4e00\u74b0"
 ],
-"public":true,
+"public":false,
 "op":"save",
 "place":"exhibition",
 "start":"12:00",
@@ -65,8 +65,8 @@
 ],
 "_owner":"admin",
 "_ownername":"admin",
-"_time":1369197294,
-"_timestr":"2013-05-22",
+"_time":1369282957,
+"_timestr":"2013-05-23",
 "_share":true,
 "images":[
 
