@@ -1,5 +1,5 @@
 {
-"@R":"1369299892",
+"@R":"1369359042",
 "type":"HorizontalWidget",
 "subject":"noryo2013_timetable",
 "description":"",
@@ -22,14 +22,13 @@ div.noryo2013_timetable div.tab table.timetable td div.t {\r
 "id":"",
 "class":"noryo2013_timetable",
 "body":"<div class=\"tab\">\r
-<img class=\"place\" src=\"/_s_/mongo/noryo2013/noryo2013place.png\">\r
 <table class=\"timetable\">\r
 <tbody>\r
 <tr>\r
 <th class=\"first\"></th>\r
-<th class=\"cols place place1\" place=\"top:120px;left:200px;height:140px;width:50px\">\u304f\u3089\u307e\u3048</th>\r
-<th class=\"cols place place2\" place=\"top:190px;left:530px;height:130px;width:180px\">\u30ed\u30a4\u30a2\u30eb\u30d6\u30eb\u30fc</th>\r
-<th class=\"cols place place3\" place=\"top:260px;left:200px;height:110px;width:180px\">\u30ae\u30e3\u30e9\u30ea\u30fc</th>\r
+<th class=\"cols place place1\" place=\"top:110px;left:-10px;height:140px;width:50px\">\u304f\u3089\u307e\u3048</th>\r
+<th class=\"cols place place2\" place=\"top:190px;left:330px;height:130px;width:180px\">\u30ed\u30a4\u30a2\u30eb\u30d6\u30eb\u30fc</th>\r
+<th class=\"cols place place3\" place=\"top:260px;left:-10px;height:110px;width:180px\">\u30ae\u30e3\u30e9\u30ea\u30fc</th>\r
 </tr>\r
 <tr class=\"\">\r
 <td class=\"first\">\r
