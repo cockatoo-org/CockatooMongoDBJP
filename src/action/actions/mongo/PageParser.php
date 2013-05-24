@@ -209,19 +209,20 @@ class PageParser {
     $body = array();
     $text = $line;
     for(;;){
-      if ( preg_match('@^([^\[]*)\[\[([^\]|]+)((?:\|[^\]]+)?)\]\](.*)@', $text , $matches ) !== 0 ) {
-        // A   => [<text>|<link or url>]
+      if ( preg_match('@^([^\[]*)\[(#?)\[([^\]|]+)((?:\|[^\]]+)?)\]\](.*)@', $text , $matches ) !== 0 ) {
+        // A   => [[<text>|<link or url>]]
+        $target = ($matches[2]==='#')?'_blank':'self';
         $body = array_merge($body,$this->parse_inner($matches[1]));
-        $text = (($matches[3])?ltrim($matches[3],'|'):$matches[2]);
+        $text = (($matches[4])?ltrim($matches[4],'|'):$matches[3]);
         $children = $this->parse_inner($text);
-        if ( preg_match('@^https?://@', $matches[2] , $matchdummy ) !== 0 ) {
-          $body [] = self::tag('a',array('href' => $matches[2]),$children);
-        }elseif(preg_match('@^#@', $matches[2] , $matchdummy ) !== 0 ) {
-          $body [] = self::tag('a',array('href' => $matches[2]),$children);
+        if ( preg_match('@^https?://@', $matches[3] , $matchdummy ) !== 0 ) {
+          $body [] = self::tag('a',array('target' => $target , 'href' => $matches[3]),$children);
+        }elseif(preg_match('@^#@', $matches[3] , $matchdummy ) !== 0 ) {
+          $body [] = self::tag('a',array('target' => $target , 'href' => $matches[3]),$children);
         }else{
-          $body [] = self::tag('a',array('href' => '/mongo/' . $matches[2]),$children);
+          $body [] = self::tag('a',array('target' => $target , 'href' => '/mongo/' . $matches[3]),$children);
         }
-        $text = $matches[4];
+        $text = $matches[5];
         next;
       }elseif ( preg_match('@^([^&]+)(&.*)@', $text , $matches ) !== 0 ) {
         $body = array_merge($body,$this->parse_inner($matches[1]));
@@ -236,7 +237,7 @@ class PageParser {
         if ( $matches[3] ) {
           $attr['width'] = $matches[3];
         }
-        if ( preg_match('@^https?://@', $matches[1] , $matchdummy ) !== 0 ) {
+        if ( preg_match('@^(https?://|/)@', $matches[1] , $matchdummy ) !== 0 ) {
           $attr['src'] = $matches[1];
           $body [] = self::tag('a',array('href' => $matches[1]),array(self::tag('img',$attr)));
         }else {
