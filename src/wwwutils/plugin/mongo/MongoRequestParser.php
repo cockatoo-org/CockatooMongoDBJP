@@ -27,7 +27,7 @@ class MongoRequestParser extends \Cockatoo\DefaultRequestParser {
         $this->args['E'] = $matches[1];
       }else{
         $this->path = $reqpath;
-        $this->args['P'] = $reqpath;
+        $this->args['P'] = 'noryo2013/'.$reqpath;
       }
       return;
     }
