@@ -92,6 +92,17 @@ class PageAction extends \Cockatoo\Action {
           $this->setMovedTemporary('/mongo/'.$page);
         }
         return array();
+      }elseif( $op === 'upload' ) {
+        $img = $session[\Cockatoo\Def::SESSION_KEY_POST]['filename'];
+        $fname = $page .'/'.\Cockatoo\UrlUtil::urlencode($img['n']);
+        $brl =  \Cockatoo\brlgen(\Cockatoo\Def::BP_STATIC, 'mongo', 'page', $fname, null);
+        var_dump($brl);
+            /* $type = $image[\Cockatoo\Def::F_TYPE]; */
+            /* $content = &$image[\Cockatoo\Def::F_CONTENT]; */
+            /* \Cockatoo\StaticContent::save($brl,$type,$this->user,$content); */
+            /* $doc['images'][$name]= $fname; */
+
+          
       }
     }catch ( \Exception $e ) {
       $s[\Cockatoo\Def::SESSION_KEY_ERROR] = $e->getMessage();
