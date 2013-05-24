@@ -1,5 +1,5 @@
 {
-"etag":"\"3eec2694-9211-a0f6-012d39b86159fcb6\"",
+"etag":"\"8094e48e-b53c-d078-c4924f93ce107a07\"",
 "type":"text/css",
 "exp":"",
 "desc":"",
@@ -258,6 +258,7 @@ div.page div.credit {\r
   float: right;\r
   text-align: right;\r
   margin: 5px 0;\r
+  display: none;\r
 }",
 "_u":"css/page.css"
 }
