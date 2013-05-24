@@ -1,8 +1,8 @@
 {
 "op":"save",
-"_u":"place2%2E13%3A00%2E519db00f30ad3",
+"_u":"place1%2E13%3A00%2E519eb01aeaa6b",
 "public":true,
-"place":"place2",
+"place":"place1",
 "booth":"A1",
 "start":"13:00",
 "end":"15:00",
@@ -53,10 +53,10 @@
 ],
 "_share":true,
 "images":{
-"logo":"place2.13:00.519db00f30ad3/logo"
+"logo":"place1.13:00.519eb01aeaa6b/logo"
 },
 "_owner":"syokenz",
 "_ownername":"@syokenz",
-"_time":1369288924,
-"_timestr":"2013-05-23"
+"_time":1369354266,
+"_timestr":"2013-05-24"
 }

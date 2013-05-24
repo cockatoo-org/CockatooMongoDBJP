@@ -1,8 +1,8 @@
 {
 "op":"save",
-"_u":"place2%2E15%3A00%2E519db2697272f",
+"_u":"place1%2E15%3A00%2E519eae230cb6c",
 "public":true,
-"place":"place2",
+"place":"place1",
 "booth":"A1",
 "start":"15:00",
 "end":"16:00",
@@ -197,10 +197,10 @@ MongoDB\u306e\u72b6\u614b\u3084\u5fa9\u65e7\u4f5c\u696d\u3092\u30ea\u30a2\u30eb\
 "_share":true,
 "_owner":"crumbjp",
 "_ownername":"@crumbjp",
-"_time":1369289321,
-"_timestr":"2013-05-23",
+"_time":1369353763,
+"_timestr":"2013-05-24",
 "images":{
-"logo":"place2.15:00.519db2697272f/logo"
+"logo":"place1.15:00.519eae230cb6c/logo"
 },
 "logo":null
 }
