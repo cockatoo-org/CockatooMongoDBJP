@@ -191,5 +191,5 @@
 "_ownername":"admin",
 "_time":1369360978,
 "_timestr":"2013-05-24",
-"_u":"noryo2013%2Fplace"
+"_u":"place"
 }
