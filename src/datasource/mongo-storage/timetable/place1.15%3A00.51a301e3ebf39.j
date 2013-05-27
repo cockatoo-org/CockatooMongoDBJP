@@ -1,6 +1,6 @@
 {
 "op":"save",
-"_u":"place1.15%3A00.51a2fb096d1de",
+"_u":"place1.15%3A00.51a301e3ebf39",
 "public":true,
 "place":"place1",
 "booth":"A0",
@@ -197,9 +197,9 @@ MongoDB\u306e\u72b6\u614b\u3084\u5fa9\u65e7\u4f5c\u696d\u3092\u30ea\u30a2\u30eb\
 "_share":true,
 "_owner":"admin",
 "_ownername":"admin",
-"_time":1369635593,
+"_time":1369637347,
 "_timestr":"2013-05-27",
 "images":{
-"logo":"place1.15%3A00.51a2fb096d1de/logo"
+"logo":"place1.15%3A00.51a301e3ebf39/logo"
 }
 }
