@@ -115,7 +115,6 @@ class PageAction extends \Cockatoo\Action {
         return $ret;
       }elseif( $op === 'fdelete' ) {
         $page  = \Cockatoo\path_urlencode($session[\Cockatoo\Def::SESSION_KEY_POST]['page']);
-        // $fname = $page .'/'.\Cockatoo\path_urlencode($session[\Cockatoo\Def::SESSION_KEY_POST]['filename']);
         $fname = $page .'/'.$session[\Cockatoo\Def::SESSION_KEY_POST]['filename'];
         $brl =  \Cockatoo\brlgen(\Cockatoo\Def::BP_STATIC, 'mongo', 'page', $fname, \Cockatoo\Beak::M_DEL);
         $ret = \Cockatoo\BeakController::beakSimpleQuery($brl);

@@ -56,7 +56,7 @@ abstract class UserPostAction extends \Cockatoo\Action {
 
   function get_doc($docid,$force = false){
     $session = $this->getSession();
-    $docid = \Cockatoo\UrlUtil::urlencode($docid);
+    $docid = \Cockatoo\path_urlencode($docid);
     $brl = \Cockatoo\brlgen(\Cockatoo\Def::BP_STORAGE,$this->SERVICE,$this->COLLECTION,'/'.$docid,\Cockatoo\Beak::M_GET,array(),array());
     $doc = \Cockatoo\BeakController::beakSimpleQuery($brl);
     if ( $doc ) {
@@ -225,7 +225,8 @@ abstract class UserPostAction extends \Cockatoo\Action {
         $doc['_u'] = $this->update_docid($docid,$doc);
         // Check permission
         $prev = $this->get_doc($doc['_u'],true);
-        if ( ! $doc['_share'] && $prev && $prev['_owner'] !== $this->user ) {
+        if ( ! $this->isRoot &&
+             ! $doc['_share'] && $prev && $prev['_owner'] !== $this->user ) {
           throw new \Exception('You do not have permission or the event is already registed.');
         }
         // 

@@ -164,11 +164,11 @@ class EventAction extends UserPostAction {
   const SEPARATOR = '.';
   function update_docid(&$docid,&$doc) {
     if ( ! $docid || strcmp($docid,'new')===0 ) {
-      return $doc['date'] . self::SEPARATOR . $doc['event_id'];
+      return str_replace('/','',$doc['date']) . self::SEPARATOR . $doc['event_id'];
     }
     $parsed_docid = explode(self::SEPARATOR,$docid);
-    if ( ! ($doc['date'] === $parsed_docid[0]) ) {
-      return $doc['date'] . self::SEPARATOR . $doc['event_id'];
+    if ( ! (str_replace('/','',$doc['date']) === $parsed_docid[0]) ) {
+      return str_replace('/','',$doc['date']) . self::SEPARATOR . $doc['event_id'];
     }
     return $docid;
   }
