@@ -99,6 +99,8 @@ abstract class UserPostAction extends \Cockatoo\Action {
     if ( $doc && 
          ( $force || $this->isRoot || $doc['_share'] || $doc['_owner'] === $this->user )) {
       unset($doc['writable']);
+
+      $docid = \Cockatoo\path_urlencode($docid);
       if ( $doc['images'] ) {
         foreach ( $doc['images']  as $name => $image ) {
           if ( is_array($image) ){
@@ -111,7 +113,6 @@ abstract class UserPostAction extends \Cockatoo\Action {
           }
         }
       }
-      $docid = \Cockatoo\UrlUtil::urlencode($docid);
       $doc['public'] =  ($doc['public'])?true:false;
       $brl = \Cockatoo\brlgen(\Cockatoo\Def::BP_STORAGE,$this->SERVICE,$this->COLLECTION,'/'.$docid,\Cockatoo\Beak::M_SET,array(),array());
       $ret = \Cockatoo\BeakController::beakSimpleQuery($brl,$doc);

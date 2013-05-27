@@ -241,8 +241,8 @@ class PageParser {
           $attr['src'] = $matches[1];
           $body [] = self::tag('a',array('href' => $matches[1]),array(self::tag('img',$attr)));
         }else {
-          $attr['src'] = '/mongo/img/'.$this->page.'?n='.$matches[1];
-          $body [] = self::tag('a',array('href' => '/mongo/img/'.$this->page.'?n='.$matches[1]),array(self::tag('img',$attr)));
+          $attr['src'] = '/_s_/mongo/page/'.$this->page.'/'.$matches[1];
+          $body [] = self::tag('a',array('href' => '/_s_/mongo/page/'.$this->page.'/'.$matches[1]),array(self::tag('img',$attr)));
         }
         $text = $matches[4];
         next;

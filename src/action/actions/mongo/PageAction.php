@@ -92,17 +92,34 @@ class PageAction extends \Cockatoo\Action {
           $this->setMovedTemporary('/mongo/'.$page);
         }
         return array();
-      }elseif( $op === 'upload' ) {
-        $img = $session[\Cockatoo\Def::SESSION_KEY_POST]['filename'];
-        $fname = $page .'/'.\Cockatoo\UrlUtil::urlencode($img['n']);
+      }elseif( $op === 'fupload' ) {
+        $page  = \Cockatoo\path_urlencode($session[\Cockatoo\Def::SESSION_KEY_POST]['page']);
+        $image = $session[\Cockatoo\Def::SESSION_KEY_POST]['filename'];
+        if ( ! $image ) {
+          return array('r' => False);
+        }
+        $fname = $page .'/'.\Cockatoo\path_urlencode($image['n']);
         $brl =  \Cockatoo\brlgen(\Cockatoo\Def::BP_STATIC, 'mongo', 'page', $fname, null);
-        var_dump($brl);
-            /* $type = $image[\Cockatoo\Def::F_TYPE]; */
-            /* $content = &$image[\Cockatoo\Def::F_CONTENT]; */
-            /* \Cockatoo\StaticContent::save($brl,$type,$this->user,$content); */
-            /* $doc['images'][$name]= $fname; */
-
-          
+        $type = $image[\Cockatoo\Def::F_TYPE];
+        $content = &$image[\Cockatoo\Def::F_CONTENT];
+        $ret = \Cockatoo\StaticContent::save($brl,$type,$this->user,$content);
+        return array('r' => $ret);
+      }elseif( $op === 'flist' ) {
+        $page  = \Cockatoo\path_urlencode($session[\Cockatoo\Def::SESSION_KEY_POST]['page']);
+        $brl =  \Cockatoo\brlgen(\Cockatoo\Def::BP_STATIC, 'mongo', 'page', $page, \Cockatoo\Beak::M_KEY_LIST);
+        $images = \Cockatoo\BeakController::beakSimpleQuery($brl);
+        $ret = [];
+        foreach ( $images as &$fname ) {
+          $ret[substr($fname,strlen($page)+1)] = '/_s_/mongo/page/' . $fname;
+        }
+        return $ret;
+      }elseif( $op === 'fdelete' ) {
+        $page  = \Cockatoo\path_urlencode($session[\Cockatoo\Def::SESSION_KEY_POST]['page']);
+        // $fname = $page .'/'.\Cockatoo\path_urlencode($session[\Cockatoo\Def::SESSION_KEY_POST]['filename']);
+        $fname = $page .'/'.$session[\Cockatoo\Def::SESSION_KEY_POST]['filename'];
+        $brl =  \Cockatoo\brlgen(\Cockatoo\Def::BP_STATIC, 'mongo', 'page', $fname, \Cockatoo\Beak::M_DEL);
+        $ret = \Cockatoo\BeakController::beakSimpleQuery($brl);
+        return array('r' => $ret);
       }
     }catch ( \Exception $e ) {
       $s[\Cockatoo\Def::SESSION_KEY_ERROR] = $e->getMessage();
