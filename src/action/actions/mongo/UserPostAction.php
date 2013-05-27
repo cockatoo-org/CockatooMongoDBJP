@@ -123,7 +123,7 @@ abstract class UserPostAction extends \Cockatoo\Action {
     throw new \Exception('Cannot save it ! Probably storage error...');
   }
   function remove_doc($docid){
-
+    $docid = \Cockatoo\path_urlencode($docid);
     $brl =  \Cockatoo\brlgen(\Cockatoo\Def::BP_STATIC, 'mongo', $this->IMAGE_PATH, $docid, \Cockatoo\Beak::M_KEY_LIST);
     $images = \Cockatoo\BeakController::beakSimpleQuery($brl);
     foreach ( $images as $name ) {
@@ -131,7 +131,6 @@ abstract class UserPostAction extends \Cockatoo\Action {
       \Cockatoo\BeakController::beakSimpleQuery($brl);
     }
 
-    $docid = \Cockatoo\UrlUtil::urlencode($docid);
     $brl = \Cockatoo\brlgen(\Cockatoo\Def::BP_STORAGE,$this->SERVICE,$this->COLLECTION,'/'.$docid,\Cockatoo\Beak::M_DEL,array(),array());
     $ret = \Cockatoo\BeakController::beakSimpleQuery($brl);
     if ( $ret ) {
@@ -142,7 +141,7 @@ abstract class UserPostAction extends \Cockatoo\Action {
   function move_doc($docid,&$doc,$old_docid){
     if ( $doc && 
          ( $this->isRoot || $doc['_share'] || $doc['_owner'] === $this->user )) {
-      $brl =  \Cockatoo\brlgen(\Cockatoo\Def::BP_STATIC, 'mongo', $this->IMAGE_PATH, $old_docid, \Cockatoo\Beak::M_KEY_LIST);
+      $brl =  \Cockatoo\brlgen(\Cockatoo\Def::BP_STATIC, 'mongo', $this->IMAGE_PATH, \Cockatoo\path_urlencode($old_docid), \Cockatoo\Beak::M_KEY_LIST);
       $images = \Cockatoo\BeakController::beakSimpleQuery($brl);
 
       if ( $doc['images'] ) {
@@ -152,10 +151,11 @@ abstract class UserPostAction extends \Cockatoo\Action {
           }
         }
       }
+      $path_docid = \Cockatoo\path_urlencode($docid);
       foreach ( $images as $old_fname ) {
         if ( preg_match('@/([^/]+)$@',$old_fname,$matches) !== 0 ) {
           $name  = $matches[1];
-          $fname = $docid . '/' . $name;
+          $fname = $path_docid . '/' . $name;
           $brl =  \Cockatoo\brlgen(\Cockatoo\Def::BP_STATIC, 'mongo', $this->IMAGE_PATH, $old_fname, \Cockatoo\Beak::M_GET);
           $img = \Cockatoo\BeakController::beakSimpleQuery($brl);
           $brl =  \Cockatoo\brlgen(\Cockatoo\Def::BP_STATIC, 'mongo', $this->IMAGE_PATH, $fname, \Cockatoo\Beak::M_SET);

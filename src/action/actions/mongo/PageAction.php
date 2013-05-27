@@ -129,6 +129,7 @@ class PageAction extends \Cockatoo\Action {
       return null;
     }
   }
+  // @@@
   private function move_image($new,$page){
     $olds = array();
     $news = array();
