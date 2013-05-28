@@ -1,9 +1,9 @@
 {
 "title":"noryo2013/place",
-"origin":"*\u4f1a\u5834\u30a2\u30af\u30bb\u30b9\r
-...\r
-\r
-*\u4f1a\u5834\u898b\u53d6\u308a\u56f3\r
+"origin":"*\u4f1a\u5834\u30a2\u30af\u30bb\u30b9
+...//
+
+*\u4f1a\u5834\u898b\u53d6\u308a\u56f3
 &ref(/_s_/mongo/noryo2013/noryo2013place.png,,500);",
 "contents":[
 {
@@ -65,7 +65,7 @@
 "children":[
 {
 "tag":"text",
-"text":"..."
+"text":"...//"
 }
 ]
 },
@@ -189,7 +189,7 @@
 ],
 "_owner":"admin",
 "_ownername":"admin",
-"_time":1369360978,
-"_timestr":"2013-05-24",
-"_u":"place"
+"_time":1369715676,
+"_timestr":"2013-05-28",
+"_u":"noryo2013/place"
 }

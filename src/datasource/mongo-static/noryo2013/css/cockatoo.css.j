@@ -1,5 +1,5 @@
 {
-"etag":"\"da860b01-5769-5986-25b89eae107e9d69\"",
+"etag":"\"c4d0368e-b53c-ed9a-c57dc8cae0721d82\"",
 "type":"text/css",
 "exp":"0",
 "desc":"",
@@ -9,7 +9,7 @@
   font-size:13px;\r
   font-family: arial,helvetica,clean,sans-serif;\r
   color: #4c3a2c;\r
-  width:1000px;\r
+  width:940px;\r
 }\r
 a{\r
   color: #4c3a2c;\r

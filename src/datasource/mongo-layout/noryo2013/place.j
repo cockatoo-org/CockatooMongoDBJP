@@ -74,19 +74,6 @@
 "min_height":"",
 "min_width":"",
 "extra":"",
-"component":"component://mongo-component/default/pages/getpage",
-"children":[
-
-]
-},
-{
-"type":"HorizontalWidget",
-"class":"",
-"height":"",
-"width":"",
-"min_height":"",
-"min_width":"",
-"extra":"",
 "component":"component://mongo-component/default/pages/page",
 "children":[
 

@@ -1,5 +1,5 @@
 {
-"@R":"1369362419",
+"@R":"1369715538",
 "type":"HorizontalWidget",
 "subject":"noryo2013_timetable_header",
 "description":"",
@@ -49,7 +49,7 @@ div.noryo2013_timetable div.tab {\r
   overflow:hidden;\r
 }\r
 div.noryo2013_timetable div.tab div.session{\r
-  width:296px;\r
+  width:276px;\r
   border-radius: 8px;\r
   background-color: #fFf8e0;\r
   border: 1px solid  #402817;\r
@@ -95,7 +95,7 @@ div.noryo2013_timetable div.detail {\r
   left: 15px;\r
   position: absolute;\r
   z-index: 9999;\r
-  width: 960px;\r
+  width: 920px;\r
   padding: 5px;\r
   font-size: 1.5em;\r
   line-height: 1.5em;\r
@@ -180,7 +180,7 @@ div.noryo2013_timetable div.tab table.timetable th.first {\r
   width: 100px;\r
 }\r
 div.noryo2013_timetable div.tab table.timetable th.cols {\r
-  width: 299px;\r
+  width: 279px;\r
   border-left: 2px solid  #402817;\r
   border-bottom: 1px dashed  #402817;\r
 }\r
@@ -196,7 +196,7 @@ div.noryo2013_timetable div.tab table.timetable td.first {\r
 }\r
 \r
 div.noryo2013_timetable div.tab table.timetable td.cols {\r
-  width: 299px;\r
+  width: 279px;\r
   border-left: 2px solid  #402817;\r
   border-bottom: 1px dashed #402817;\r
   vertical-align: top;\r
@@ -219,125 +219,141 @@ div.noryo2013_timetable div.tab table.timetable th.place {\r
   width:500px;\r
 }\r
 ",
-"js":"$( function (){\r
-  timetableNavs = $('#noryo2013_timetable_header div.nav > ul > li');\r
-  timetableNavs .each( function () {\r
-    $(this).removeClass('selected');\r
-    link = $(this).find('> a').attr('href');\r
-    if ( link == window.location.pathname) {\r
-      $(this).addClass('selected');\r
+"js":"$( function () {\r
+  // INDEX\r
+  $('div.ih > a.toggle').text('Hide indexes').addClass('visible');\r
+  $('div.ih > a.toggle').click(function(ev){\r
+    if ( $(this).hasClass('visible') ) {\r
+      $('div.ih li').slideUp();\r
+      $(this).removeClass('visible').text('View indexes');\r
+    }else{\r
+      $('div.ih li').slideDown();\r
+      $(this).addClass('visible').text('Hide indexes');\r
     }\r
   });\r
-\r
-  $('th.place').click(function(){\r
-    var place=$(this).attr('place');\r
-    $('<div id=\"mordal\"></div>')\r
-    .css('position','absolute')\r
-    .css('top',0)\r
-    .css('left',0)\r
-    .css('height','10000')\r
-    .css('width','10000')\r
-    .css('z-index',1000)\r
-    .css('background-color','#000000')\r
-    .css('opacity',0.3)\r
-    .appendTo('body');\r
-\r
-    $('<div id=\"place\"><img class=\"place\" src=\"/_s_/mongo/noryo2013/noryo2013place.png\"></div>')\r
-\t.prependTo('div.noryo2013_timetable');\r
-\r
-\t$('<div style=\"'+place+'\" />')\r
-\t.css('position','absolute')\r
-\t.css('border-radius','12px')\r
-\t.css('border','6px solid #C00000')\r
-\t.css('z-index',9999)\r
-\t.appendTo('#place');\r
-\r
-    $('#place').slideDown();\r
-    \r
-    $('#mordal').click(function(){\r
-        $('#place div').remove();\r
-\t$('img.place').slideUp('normal',function(){\r
-\t    $('#mordal').remove();\r
-\t$('#place').remove();\r
-\r
-\t});\r
-    });\r
+  // EDIT\r
+  $('#page div.edit').click(function(){\r
+    $('#editPage').slideDown();\r
+    image_list();\r
   });\r
 \r
-})\r
-\r
-function time2date(str){\r
-  var t = str.split(':');\r
-  var d = new Date(0,0,0,0,0,0);\r
-  d.setHours(t[0]);\r
-  d.setMinutes(t[1]);\r
-  return d;\r
-}\r
-function draw_timetable(h,cb_appendTo){\r
-  for ( var i in timetable ) {\r
-    var height = h;\r
-    var session = timetable[i];\r
-    if ( ! session.start || ! session.end ) {\r
-      continue;\r
+  // SAVE\r
+  var editAction = $('#editAction');\r
+  $('#editAction input[value=\"save\"]').click(function(){\r
+    var url = editAction.attr('action');\r
+      $.ajax({\r
+\turl: url,\r
+\ttype: 'POST',\r
+\tdataType: 'JSON',\r
+\tdata: {\r
+\t  op: 'save',\r
+\t  page: editAction.attr('pagename'),\r
+\t  origin: editAction.find('textarea[name=\"origin\"]').val()\r
+\t},\r
+\tsuccess: function(ret,st,xhr){\r
+\t  console.log('/mongo/'+editAction.attr('pagename'));\r
+\t  window.location = '/mongo/'+editAction.attr('pagename');\r
+\t}\r
+      });\r
+  });\r
+  function page(obj){\r
+    var ret = '';\r
+    for ( var i in obj ) {\r
+      var elem = obj[i];\r
+      var attr = '';\r
+      for ( var a in elem.attr ) {\r
+\tattr += a+'=\"'+elem.attr[a]+'\" '\r
+      }\r
+      if( elem.tag === 'text' ) {\r
+\tret += (elem.text)?elem.text:'';\r
+\tret += page(elem.children);\r
+      }else{\r
+\tret += '<'+elem.tag+' '+attr+'>' + page(elem.children) + '</'+elem.tag+'>';\r
+      }\r
     }\r
-    if ( ! height ) {\r
-      var start = time2date(session.start);\r
-      var end   = time2date(session.end);\r
-      session.during = (end.getTime() - start.getTime()) / 60000;\r
-      height = session.during * 2;\r
-    }\r
-      $('<div class=\"session\" u=\"'+session._u+'\">'+\r
-\t(('images' in session && 'logo' in session.images)?('<img class=\"logo\" src=\"/_s_/mongo/timetable/'+session.images.logo+'\"></img>'):'') +\r
-\t'<div class=\"title\">'+session.title+'</div>'+\r
-\t'<div class=\"incharge\">'+session.incharge+\"</div>\"+\r
-\t'<div class=\"overview\">'+session.overview+'</div>'+\r
-\t'</div>')\r
-//      .css('background','url(\"/_s_/mongo/timetable/'+session.images.logo+'\") no-repeat')\r
-//      .css('background-size','30px')\r
-      .css('height',height + 'px')\r
-      .appendTo(cb_appendTo(session));\r
+    return ret;\r
   }\r
-    $('div.noryo2013_timetable div.tab div.session').click(function(){\r
-      var u = $(this).attr('u');\r
-\t$('<div id=\"mordal\"></div>')\r
-\t.css('position','absolute')\r
-\t.css('top',0)\r
-\t.css('left',0)\r
-\t.css('height','10000')\r
-\t.css('width','10000')\r
-\t.css('z-index',1000)\r
-\t.css('background-color','#000000')\r
-\t.css('opacity',0.3)\r
-\t.appendTo('body');\r
-      \r
-      var origin_height = $('div.noryo2013_timetable').height();\r
-      \r
-\t$('div.detail[u=\"'+u+'\"]').clone()\r
-\t.attr('id','detail')\r
-//\t.css('position','absolute')\r
-//\t.css('z-index',9999)\r
-//\t.css('top','0px')\r
-//\t.css('left',0)\r
-\t.appendTo('div.noryo2013_timetable')\r
-\t.slideDown('normal', function(){ \r
-\t  var new_height = $(this).height()+150;\r
-\t  if ( new_height > origin_height ) {\r
-\t      $('div.noryo2013_timetable').height(new_height);\r
-\t  }\r
-        });\r
-      \r
-\t$('#mordal').click(function(){\r
-\t  $('#detail > div.close').click();\r
+  // PREVIEW\r
+  $('#editAction input[value=\"preview\"]').click(function(){\r
+    var url = editAction.attr('action');\r
+      $.ajax({\r
+\turl: url,\r
+\ttype: 'POST',\r
+\tdataType: 'JSON',\r
+\tdata: {\r
+\t  op: 'preview',\r
+\t  page: editAction.attr('pagename'),\r
+\t  origin: editAction.find('textarea[name=\"origin\"]').val()\r
+\t},\r
+\tsuccess: function(ret,st,xhr){\r
+\t  console.log(ret);\r
+\t    $('#page div.page').html(page(ret.page.contents));\r
+\t}\r
+      });\r
+  });  \r
+  // IMAGE\r
+  var imageAction = $('#imageAction');\r
+  function image_list () {\r
+    var url = imageAction.attr('action');\r
+    $.ajax({\r
+      url: url,\r
+      type: 'POST',\r
+      dataType: 'JSON',\r
+      data: {\r
+\top: 'flist',\r
+\tpage: imageAction.attr('pagename')\r
+      },\r
+      success: function(ret,st,xhr){\r
+\t$('#images > table > tbody').empty();\r
+\tvar tbody = $('#images > table > tbody');\r
+\tfor ( var i in ret ) {\r
+\t  var tr = $('<tr />');\r
+\t    $('<td class=\"img\" />')\r
+\t    .append( $('<img />')\r
+\t\t    .attr('src',ret[i]))\r
+\t    .appendTo(tr);\r
+\t    $('<td class=\"name\" />')\r
+\t    .text(i)\r
+\t    .appendTo(tr);\r
+\t    $('<td class=\"format\" />')\r
+\t    .text('&ref('+i+');')\r
+\t    .appendTo(tr);\r
+\t    $('<td class=\"check\" />')\r
+\t    .html('<input class=\"del\" type=\"button\" name=\"'+i+'\" value=\"delete\" />')\r
+\t    .appendTo(tr);\r
+\t  tr.appendTo(tbody);\r
+\t}\r
+        $('#imageAction #images input.del').click(function(){\r
+\t    $.ajax({\r
+\t      url: url,\r
+\t      type: 'POST',\r
+\t      dataType: 'JSON',\r
+\t      data: {\r
+\t\top: 'fdelete',\r
+\t\tpage: imageAction.attr('pagename'),\r
+\t\tfilename: $(this).attr('name')\r
+\t      },\r
+\t      success: function(ret,st,xhr){\r
+\t\timage_list();\r
+\t      }\r
+\t    })\r
 \t});\r
-\t$('#detail > div.close').click(function(){\r
-\t    $(this).parent().slideUp('normal',function(){\r
-\t\t$(this).remove();\r
-\t\t$('#mordal').remove();\r
-\t\t$('div.noryo2013_timetable').height(origin_height);\r
-\t    });\r
-\t});\r
+      }\r
     });\r
-}",
+  }\r
+  $('#imageAction input[name=\"upload\"]').click(function(){\r
+    var url = imageAction.attr('action');\r
+    $('#imageAction input[name=\"filename\"]').upload( \r
+                                 url,\r
+\t\t\t\t {\r
+                                   op: 'fupload',\r
+                                   page: imageAction.attr('pagename')\r
+                                 },\r
+\t\t\t\t function(res) {\r
+\t\t\t\t   image_list();\r
+\t\t\t\t }, '');\r
+    });\r
+});",
 "id":"noryo2013_timetable_header",
 "class":"",
 "body":"<nav><div class=\"nav\" role=\"navigation\">\r
