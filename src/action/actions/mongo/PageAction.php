@@ -22,8 +22,8 @@ class PageAction extends \Cockatoo\Action {
       $session = $this->getSession();
 
       $user  = Lib::user($session);
-      $page   = $this->args['P'];
-      $name   = $this->args['N'];
+      $page  = $this->args['P'];
+      $name  = $this->args['N'];
       // Query strings
       $op = $session[\Cockatoo\Def::SESSION_KEY_POST]['op'];
       if ( ! $op ) {
@@ -42,7 +42,9 @@ class PageAction extends \Cockatoo\Action {
                                 $origin,
                                 $contents,
                                 $user));
-      }elseif( $op === 'preview' ) {
+      }
+      $page  = \Cockatoo\path_urlencode($session[\Cockatoo\Def::SESSION_KEY_POST]['page']);
+      if( $op === 'preview' ) {
         $origin   = $session[\Cockatoo\Def::SESSION_KEY_POST]['origin'];
         $lines = preg_split("@\r?\n@",$origin);
         $parser = new PageParser($page,$lines);
@@ -66,9 +68,9 @@ class PageAction extends \Cockatoo\Action {
         $pdata['_ownername'] = Lib::name($session);
         $pdata['_time'] = time();
         $pdata['_timestr'] = date('Y-m-d',$pdata['_time']);
-        Lib::save_page($page,$pdata);
-        $this->setMovedTemporary('/mongo/'.$page);
-        return array();
+        $ret = Lib::save_page($page,$pdata);
+        // $this->setMovedTemporary('/mongo/'.$page);
+        return array('r' => $ret);
       }elseif( $op === 'move' ) {
         if ( ! Lib::isRoot($session) ) {
           throw new \Exception('You are not admin.');
@@ -93,7 +95,6 @@ class PageAction extends \Cockatoo\Action {
         }
         return array();
       }elseif( $op === 'fupload' ) {
-        $page  = \Cockatoo\path_urlencode($session[\Cockatoo\Def::SESSION_KEY_POST]['page']);
         $image = $session[\Cockatoo\Def::SESSION_KEY_POST]['filename'];
         if ( ! $image ) {
           return array('r' => False);
@@ -105,7 +106,6 @@ class PageAction extends \Cockatoo\Action {
         $ret = \Cockatoo\StaticContent::save($brl,$type,$this->user,$content);
         return array('r' => $ret);
       }elseif( $op === 'flist' ) {
-        $page  = \Cockatoo\path_urlencode($session[\Cockatoo\Def::SESSION_KEY_POST]['page']);
         $brl =  \Cockatoo\brlgen(\Cockatoo\Def::BP_STATIC, 'mongo', 'page', $page, \Cockatoo\Beak::M_KEY_LIST);
         $images = \Cockatoo\BeakController::beakSimpleQuery($brl);
         $ret = [];
@@ -114,7 +114,6 @@ class PageAction extends \Cockatoo\Action {
         }
         return $ret;
       }elseif( $op === 'fdelete' ) {
-        $page  = \Cockatoo\path_urlencode($session[\Cockatoo\Def::SESSION_KEY_POST]['page']);
         $fname = $page .'/'.$session[\Cockatoo\Def::SESSION_KEY_POST]['filename'];
         $brl =  \Cockatoo\brlgen(\Cockatoo\Def::BP_STATIC, 'mongo', 'page', $fname, \Cockatoo\Beak::M_DEL);
         $ret = \Cockatoo\BeakController::beakSimpleQuery($brl);

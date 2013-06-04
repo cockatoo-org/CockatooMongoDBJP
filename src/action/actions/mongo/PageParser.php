@@ -228,7 +228,7 @@ class PageParser {
         $body = array_merge($body,$this->parse_inner($matches[1]));
         $text = $matches[2];
         next;
-      }elseif ( preg_match('@^&ref\(([^\),]*)(?:,(\d*)(?:,(\d*))?)?\);(.*)@', $text , $matches ) !== 0 ) {
+      }elseif ( preg_match('@^&ref\(([^\),]*)(?:,(\d*)(?:,(\d*)(?:,(\S*))?)?)?\);(.*)@', $text , $matches ) !== 0 ) {
         // IMG => &ref(<image>,<height>,<width>);
         $attr = array();
         if ( $matches[2] ) {
@@ -237,14 +237,24 @@ class PageParser {
         if ( $matches[3] ) {
           $attr['width'] = $matches[3];
         }
+        $href='';
+        if ( $matches[4] ) {
+          $href = $matches[4];
+        }
         if ( preg_match('@^(https?://|/)@', $matches[1] , $matchdummy ) !== 0 ) {
           $attr['src'] = $matches[1];
-          $body [] = self::tag('a',array('href' => $matches[1]),array(self::tag('img',$attr)));
+          if ( ! $href ) {
+            $href = $attr['src'];
+          }
+          $body [] = self::tag('a',array('href' => $href),array(self::tag('img',$attr)));
         }else {
           $attr['src'] = '/_s_/mongo/page/'.$this->page.'/'.$matches[1];
-          $body [] = self::tag('a',array('href' => '/_s_/mongo/page/'.$this->page.'/'.$matches[1]),array(self::tag('img',$attr)));
+          if ( ! $href ) {
+            $href = $attr['src'];
+          }
+          $body [] = self::tag('a',array('href' => $href),array(self::tag('img',$attr)));
         }
-        $text = $matches[4];
+        $text = $matches[5];
         next;
       }elseif ( preg_match('@^&frame\(([^\),]*)(?:,(\d*)(?:,(\d*))?)?\);(.*)@', $text , $matches ) !== 0 ) {
         // IFRAME => &frame(<url>,<height>,<width>);
