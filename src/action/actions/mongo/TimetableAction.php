@@ -42,10 +42,10 @@ class TimetableAction extends UserPostAction {
     array_unshift($ret,array('title' => '*new*'));
     return array('raw' => $ret , '@json' => json_encode($view));
   }
-  function post_save_hook(&$doc){
+  function redirect_after_save(&$doc){
     return $this->REDIRECT . '/edit';
   }
-  function post_remove_hook(){
+  function redirect_after_remove(){
     return $this->REDIRECT . '/edit';
   }
   function post_to_doc (&$post,&$doc) {

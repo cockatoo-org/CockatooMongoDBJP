@@ -34,20 +34,15 @@ abstract class UserPostAction extends \Cockatoo\Action {
   }
   function get_hook(&$doc){
   }
-  function set_hook(&$doc){
-  }
   function preview_hook(&$doc){
   }
   function save_hook(&$doc){
   }
-  function post_save_hook(&$doc){
+  function redirect_after_save(&$doc){
     return false;
   }
-  function post_remove_hook(){
+  function redirect_after_remove(){
     return false;
-  }
-  function begin_hook(&$op,&$docid,&$doc,&$post){
-    return null; // continue
   }
 
   protected $user = '';
@@ -168,6 +163,84 @@ abstract class UserPostAction extends \Cockatoo\Action {
     }
   }
 
+  public function getQuery(){
+    $docid          = $this->docid();
+    if ( $docid ) {
+      $doc = $this->get_doc($docid);
+      if ( $doc ) {
+        $this->get_hook($doc);
+        return array( $this->DOCNAME => $doc);
+      }
+    }
+    $this->setMovedTemporary($this->REDIRECT);
+    return null;
+  }
+  public function getaQuery(){
+    return array($this->DOCNAME.'s' => 
+                 $this->get_docs()
+                 );
+  }
+  public function setQuery(){
+    $session     = $this->getSession();
+    $docid       = $this->docid();
+    $post = $session[\Cockatoo\Def::SESSION_KEY_POST];
+    $op = $post['op'];
+    if ( ! $this->isWritable ) {
+      throw new \Exception('You do not have write permission.');
+    }
+    // New doc
+    if ( ! $op ) { 
+      $doc = $this->new_doc();
+      $doc['writable'] = true;
+      return array( $this->DOCNAME => $doc);
+    }
+    // Get doc from POST form
+    $doc;
+    $this->post_to_doc($post,$doc);
+    // Set owner to new document
+    if ( !$doc['_owner'] ) {
+      $doc['_owner'] = $this->user;
+      $doc['_ownername'] = $this->username;
+    }
+    $old_docid = $docid;
+    $doc['_u'] = $this->update_docid($docid,$doc);
+    // Check permission
+    $prev = $this->get_doc($doc['_u'],true);
+    if ( ! $this->isRoot &&
+         ! $doc['_share'] && $prev && $prev['_owner'] !== $this->user ) {
+      throw new \Exception('You do not have permission or the event is already registed.');
+    }
+    // 
+    if( $op === 'preview' ) {
+      $this->preview_hook($doc);
+      $doc['writable'] = true;
+      return array( $this->DOCNAME => $doc );
+    }elseif( $op === 'save' ) {
+      $doc['_time'] = time();
+      $doc['_timestr'] = date('Y-m-d',$doc['_time']);
+      $this->save_hook($doc);
+      if ( $old_docid && $doc['_u'] !== $old_docid ) {
+        $this->move_doc($doc['_u'],$doc,$old_docid);
+      }else{
+        $this->save_doc($doc['_u'],$doc);
+      }
+      $redirect = $this->redirect_after_save($doc);
+      if ( ! $redirect ) {
+        $redirect = $this->REDIRECT.'/'.$doc['_u'];
+      }
+      $this->setMovedTemporary($redirect);
+      return array();
+    }elseif( $op === 'remove' ) {
+      $this->remove_doc($doc['_u']);
+      $redirect = $this->redirect_after_remove();
+      if ( ! $redirect ) {
+        $redirect = $this->REDIRECT;
+      }
+      $this->setMovedTemporary($redirect);
+      return array();
+    }
+  }
+  
   public function proc(){
     try{
       $this->setNamespace($this->NAMESPACE);
@@ -176,89 +249,7 @@ abstract class UserPostAction extends \Cockatoo\Action {
       $this->username = Lib::name($session);
       $this->isRoot = Lib::isRoot($session);
       $this->isWritable = Lib::isWritable($session);
-      $docid          = $this->docid();
-      $doc = null;
-      if ( $docid ) {
-        $doc = $this->get_doc($docid);
-      }
-      $post = $session[\Cockatoo\Def::SESSION_KEY_POST];
-      $op = $post['op'];
-
-      $retdoc = $this->begin_hook($op,$docid,$doc,$post);
-      if ( $retdoc ) {
-        return array( $this->DOCNAME => $retdoc);
-      }
-      $method  = $this->get_method();
-      if ( $method === \Cockatoo\Beak::M_GET ) {
-        if ( $doc ) {
-          $this->get_hook($doc);
-          return array( $this->DOCNAME => $doc);
-        }
-        $this->setMovedTemporary($this->REDIRECT);
-        return null;
-      }elseif( $method === \Cockatoo\Beak::M_GET_ARRAY ) {
-        $docs = $this->get_docs();
-        return array($this->DOCNAME.'s' => $docs);
-      }elseif( $method === \Cockatoo\Beak::M_SET ) {
-        if ( ! $this->isWritable ) {
-          throw new \Exception('You do not have write permission.');
-        }
-        if ( ! $op ) {
-          if ( $doc ) {
-            $this->set_hook($doc);
-            return array( $this->DOCNAME => $doc);
-          }
-          $doc = $this->new_doc();
-          $doc['writable'] = true;
-          return array( $this->DOCNAME => $doc);
-        }
-        if ($doc){
-          $doc['public'] = false;
-        }
-        $this->post_to_doc($post,$doc);
-        // Set owner to new document
-        if ( !$doc['_owner'] ) {
-          $doc['_owner'] = $this->user;
-          $doc['_ownername'] = $this->username;
-        }
-        $old_docid = $docid;
-        $doc['_u'] = $this->update_docid($docid,$doc);
-        // Check permission
-        $prev = $this->get_doc($doc['_u'],true);
-        if ( ! $this->isRoot &&
-             ! $doc['_share'] && $prev && $prev['_owner'] !== $this->user ) {
-          throw new \Exception('You do not have permission or the event is already registed.');
-        }
-        // 
-        if( $op === 'preview' ) {
-          $this->preview_hook($doc);
-          $doc['writable'] = true;
-          return array( $this->DOCNAME => $doc );
-        }elseif( $op === 'save' ) {
-          $doc['_time'] = time();
-          $doc['_timestr'] = date('Y-m-d',$doc['_time']);
-          $this->save_hook($doc);
-          if ( $old_docid && $doc['_u'] !== $old_docid ) {
-            $this->move_doc($doc['_u'],$doc,$old_docid);
-          }else{
-            $this->save_doc($doc['_u'],$doc);
-          }
-          $redirect = $this->post_save_hook($doc);
-          if ( ! $redirect ) {
-            $redirect = $this->REDIRECT.'/'.$doc['_u'];
-          }
-          $this->setMovedTemporary($redirect);
-          return array();
-        }elseif( $op === 'remove' ) {
-          $this->remove_doc($doc['_u']);
-          $redirect = $this->post_remove_hook();
-          if ( ! $redirect ) {
-            $redirect = $this->REDIRECT;
-          }
-          $this->setMovedTemporary($redirect);
-          return array();
-        }
-      }
+      return parent::proc();
     }catch ( \Exception $e ) {
       $s[\Cockatoo\Def::SESSION_KEY_ERROR] = $e->getMessage();
       $this->updateSession($s);

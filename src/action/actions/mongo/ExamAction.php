@@ -84,39 +84,41 @@ class ExamAction extends UserPostAction {
       $doc = array_merge($doc,$exam);
     }
   }
-  function begin_hook(&$op,&$docid,&$doc,&$post){
-    $method  = $this->get_method();
-    if ( $method === \Cockatoo\Beak::M_GET ) {
-      if ( $op === 'eval' ) {
-        // Eval score
-        $session     = $this->getSession();
-        $ret = $session['exam'];
-        $qs =& $ret['qs'];
-        $all = sizeof($qs);
-        $correct = 0;
-        array_walk($qs,function(&$e,$i) use ($session,$post,$all,&$correct){
-            if ( $post['q'.$i.'a'] !== null && (int)$post['q'.$i.'a'] === (int)$e['correct'] ) {
-              $correct++;
-            }
-            $e['checked'] = $post['q'.$i.'a'];
-            $e['show'] = 'show';
-          });
-        $ret['score'] = floor(100*$correct/$all);
-        $ret['done'] = '1';
-        // Save user data
-        $user_data = $session[\Cockatoo\AccountUtil::SESSION_LOGIN];
-        $user_data['exam'] = array($docid => array('score' => $ret['score']));
-        \Cockatoo\AccountUtil::save_account(MongoConfig::USER_COLLECTION,$user_data);
-        // Update session
-        $s[\Cockatoo\AccountUtil::SESSION_LOGIN] = $user_data;
-        $s['exam'] = null;
-        $this->updateSession($s);
-        return $ret;
-      }
+  
+  public function getQuery(){
+    $session     = $this->getSession();
+    $docid       = $this->docid();
+    $post = $session[\Cockatoo\Def::SESSION_KEY_POST];
+    $op = $post['op'];
+
+    if ( $op === 'eval' ) {
+      // Eval score
+      $doc = $session['exam'];
+      $qs =& $doc['qs'];
+      $all = sizeof($qs);
+      $correct = 0;
+      array_walk($qs,function(&$e,$i) use ($session,$post,$all,&$correct){
+          if ( $post['q'.$i.'a'] !== null && (int)$post['q'.$i.'a'] === (int)$e['correct'] ) {
+            $correct++;
+          }
+          $e['checked'] = $post['q'.$i.'a'];
+          $e['show'] = 'show';
+        });
+      $doc['score'] = floor(100*$correct/$all);
+      $doc['done'] = '1';
+      // Save user data
+      $user_data = $session[\Cockatoo\AccountUtil::SESSION_LOGIN];
+      $user_data['exam'] = array($docid => array('score' => $doc['score']));
+      \Cockatoo\AccountUtil::save_account(MongoConfig::USER_COLLECTION,$user_data);
+      // Update session
+      $s[\Cockatoo\AccountUtil::SESSION_LOGIN] = $user_data;
+      $s['exam'] = null;
+      $this->updateSession($s);
+      return array( $this->DOCNAME => $doc);
     }
-    return null;
+    parent::getQuery();
   }
-  function get_hook(&$doc){
+  public function get_hook(&$doc) {
     $qs = array_filter($doc['qs'],function ($e) {
         return (boolean)$e['show'];
       });
@@ -136,11 +138,8 @@ class ExamAction extends UserPostAction {
     $doc['qs'] = $qs;
     $s['exam'] = $doc;
     $this->updateSession($s);
-    return $doc;
   }
-  function set_hook(&$doc){
-    $doc['done'] = '1';
-  }
+
   function preview_hook(&$doc){
     $doc['done'] = '1';
   }

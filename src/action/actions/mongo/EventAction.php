@@ -24,121 +24,8 @@ class EventAction extends UserPostAction {
       'contents' => $contents
       );
   }
-  function attend(&$docid,&$doc,&$data){
-    // 
-    if ( $doc['capacity'] < count($doc['attenders']) ) {
-      // Add to attenders
-      if ( $this->searchMy($doc['attenders']) ) {
-        return;
-      }
-      $doc['attenders'] []= $data;
-    }else{
-      // Add to waiters
-      if ( $this->searchMy($doc['waiters']) ) {
-        return;
-      }
-      $doc['waiters'] []= $data;
-    }
-    // Remove from cancelers
-    $this->removeMy($doc['cancelers']);
-    $this->save_doc($docid,$doc,true);
-  }
-  function pullback_waiter(&$doc){
-    $c = array_pop($doc['waiters']);
-    if ( $c ) {
-      $doc['attenders'] []= $c;
-    }
-  }
-  function cancel(&$docid,&$doc,&$data){
-    // Remove from attenders
-    if ( $my = $this->removeMy($doc['attenders']) ) {
-      // Cancel to Attenders
-      $this->pullback_waiter($doc);
-      // Add to cancelers
-      $doc['cancelers'] []= $data;
-      $this->save_doc($docid,$doc,true);
-      return;
-    }
-    if ( $my = $this->removeMy($doc['waiters']) ) {
-      // Add to cancelers
-      $doc['cancelers'] []= $data;
-      $this->save_doc($docid,$doc,true);
-      return;
-    }
-  }
-
-  function save_hook(&$doc){
-    if ( ! isset($doc['attenders']) ) {
-      $doc['attenders'] = array();
-    }
-    if ( ! isset($doc['cancelers']) ) {
-      $doc['cancelers'] = array();
-    }
-    if ( ! isset($doc['waiters']) ) {
-      $doc['waiters'] = array();
-    }
-  }
-  function post_save_hook(&$doc){
+  function redirect_after_save(&$doc){
     return $this->REDIRECT;
-  }
-  function begin_hook(&$op,&$docid,&$doc,&$post){
-    $method  = $this->get_method();
-    if ( $method === \Cockatoo\Beak::M_GET ) {
-      if ( ! $this->user ) { // Is login
-        return null;
-      }
-      if ( ! $doc ) {
-        return null;
-      }
-      if ( $op === 'attend' ) {
-        $data = array('user' => $this->user, 'name' => $this->username ,'msg' => $post['msg']);
-        $this->attend($docid,$doc,$data);
-      } else if ( $op === 'cancel' ) {
-        $data = array('user' => $this->user, 'name' => $this->username ,'msg' => $post['msg']);
-        $this->cancel($docid,$doc,$data);
-      }
-    }
-    return null;
-  }
-
-  function removeMy (&$list ) {
-    foreach ($list as $i => &$e ) {
-      if ( strcmp($e['user'],$this->user)===0 ) {
-        unset($list[$i]);
-        return true;
-      }
-    }
-    return false;
-  }
-
-  function & searchMy (&$list ) {
-    foreach ($list as $i => &$e ) {
-      if ( strcmp($e['user'],$this->user)===0 ) {
-        return $e;
-      }
-    }
-    return null;
-  }
-
-  function get_hook(&$doc){
-    if ( ! $this->user ) { // Is login
-      return null;
-    }
-    $doc['attendstatus'] = 1;
-    $my = &$this->searchMy($doc['attenders'] );
-    if ( $my ) {
-      $my['my'] = 'my';
-      $doc['attendstatus'] = 2;
-    }
-    if ( ! $my && 
-         $my = &$this->searchMy($doc['waiters'] ) ) {
-      $my['my'] = 'my';
-      $doc['attendstatus'] = 2;
-    }
-    if ( ! $my &&
-         $my = &$this->searchMy($doc['cancelers'] ) ) {
-      $my['my'] = 'my';
-    }
   }
 
   function post_to_doc (&$post,&$doc) {
@@ -161,6 +48,7 @@ class EventAction extends UserPostAction {
     $doc['contents'] =  $parser->parse();
     return $doc;
   }
+
   const SEPARATOR = '.';
   function update_docid(&$docid,&$doc) {
     if ( ! $docid || strcmp($docid,'new')===0 ) {
