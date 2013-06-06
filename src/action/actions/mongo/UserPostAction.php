@@ -103,11 +103,14 @@ abstract class UserPostAction extends \Cockatoo\Action {
             $brl =  \Cockatoo\brlgen(\Cockatoo\Def::BP_STATIC, 'mongo', $this->IMAGE_PATH, $fname, null);
             $type = $image[\Cockatoo\Def::F_TYPE];
             $content = &$image[\Cockatoo\Def::F_CONTENT];
-            \Cockatoo\StaticContent::save($brl,$type,$this->user,$content);
+            $exp = $image[\Cockatoo\Def::K_STATIC_EXPIRE];
+            \Cockatoo\StaticContent::save($brl,$type,$this->user,$content,null,$exp);
             $doc['images'][$name]= $fname;
           }
         }
       }
+
+      return;
       $doc['public'] =  ($doc['public'])?true:false;
       $brl = \Cockatoo\brlgen(\Cockatoo\Def::BP_STORAGE,$this->SERVICE,$this->COLLECTION,'/'.$docid,\Cockatoo\Beak::M_SET,array(),array());
       $ret = \Cockatoo\BeakController::beakSimpleQuery($brl,$doc);
@@ -218,7 +221,7 @@ abstract class UserPostAction extends \Cockatoo\Action {
     }elseif( $op === 'save' ) {
       $doc['_time'] = time();
       $doc['_timestr'] = date('Y-m-d',$doc['_time']);
-      $this->save_hook($doc);
+      $this->save_hook($doc,$prev);
       if ( $old_docid && $doc['_u'] !== $old_docid ) {
         $this->move_doc($doc['_u'],$doc,$old_docid);
       }else{

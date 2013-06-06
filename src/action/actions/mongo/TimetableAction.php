@@ -48,6 +48,15 @@ class TimetableAction extends UserPostAction {
   function redirect_after_remove(){
     return $this->REDIRECT . '/edit';
   }
+  function save_hook(&$doc,&$prev){
+    if ( $doc['images'] ) {
+      foreach ( $doc['images']  as $name => &$image ) {
+        $image[\Cockatoo\Def::K_STATIC_EXPIRE] = 60;
+      }
+    }elseif($prev){
+      $doc['images'] = $prev['images'];
+    }
+  }
   function post_to_doc (&$post,&$doc) {
     if ( ! $doc ) {
       $doc = $post;
@@ -78,4 +87,6 @@ class TimetableAction extends UserPostAction {
     }
     return $docid;
   }
+
+
 }
