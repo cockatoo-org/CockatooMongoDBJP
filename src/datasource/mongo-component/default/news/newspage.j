@@ -12,7 +12,7 @@
 "id":"newspage",
 "class":"page",
 "body":"<div class=\"mongo\">\r
-  <div class=\"window\" style=\"width:100%;clear:both;\">\r
+  <div class=\"window\">\r
   <div class=\"credit\">by <?cs var:A.mongo.news._ownername ?> <time><?cs var:A.mongo.news._timestr ?></time></div>\r
     <div class=\"h1\"><h1><?cs var:A.mongo.news.title?></h1></div>\r
     <div class=\"hd1\">\r

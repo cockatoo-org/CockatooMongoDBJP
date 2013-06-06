@@ -216,7 +216,7 @@
 \r
 <!--\r
 <div class=\"mongo\">\r
-<div class=\"window\" style=\"width:100%;clear:both;\">\r
+<div class=\"window\">\r
 </div>\r
 </div>\r
 -->\r

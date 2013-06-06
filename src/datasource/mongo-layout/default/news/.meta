@@ -6,7 +6,8 @@
 "post_action":"",
 "session_exp":"2147483647",
 "expires":"",
-"header":"<meta name=\"description\" content=\"\">\r\n",
+"header":"<meta name=\"description\" content=\"\">\r
+",
 "pheader":"",
 "bottom":"",
 "layout":{
@@ -17,7 +18,7 @@
 "min_height":"",
 "min_width":"",
 "extra":"",
-"component":"component:\/\/core-component\/default\/horizontal#critical",
+"component":"component://core-component/default/horizontal#critical",
 "children":[
 {
 "type":"HorizontalWidget",
@@ -27,28 +28,25 @@
 "min_height":"",
 "min_width":"",
 "extra":"",
-"component":"component:\/\/mongo-component\/default\/utils\/page",
+"component":"component://mongo-component/default/news/getnewspage",
 "children":[
 
 ]
 },
 {
 "type":"HorizontalWidget",
+"class":"",
+"height":"",
+"width":"",
+"min_height":"",
+"min_width":"",
 "extra":"",
-"component":"component:\/\/mongo-component\/default\/news\/getnewspage",
-"children":[
-
-]
-},
-{
-"type":"HorizontalWidget",
-"extra":"",
-"component":"component:\/\/mongo-component\/default\/news\/newspage",
+"component":"component://mongo-component/default/news/newspage",
 "children":[
 
 ]
 }
 ]
 },
-"_u":"news\/"
+"_u":"news/"
 }

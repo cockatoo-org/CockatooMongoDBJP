@@ -37,7 +37,7 @@
 "class":"page",
 "body":"<?cs if: A.mongo.news.writable ?>\r
 <div class=\"mongo\">\r
-<div class=\"window\" style=\"width:100%;clear:both;\">\r
+<div class=\"window\">\r
 <div class=\"hd1\">\r
 <div class=\"h2\">\r
   <h2>NEWS\u5185\u5bb9</h2>\r

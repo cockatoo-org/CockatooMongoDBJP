@@ -6,7 +6,8 @@
 "post_action":"",
 "session_exp":"2147483647",
 "expires":"",
-"header":"<meta name=\"description\" content=\"\">\r\n",
+"header":"<meta name=\"description\" content=\"\">\r
+",
 "pheader":"",
 "bottom":"",
 "layout":{
@@ -17,7 +18,7 @@
 "min_height":"",
 "min_width":"",
 "extra":"",
-"component":"component:\/\/core-component\/default\/horizontal#critical",
+"component":"component://core-component/default/horizontal#critical",
 "children":[
 {
 "type":"HorizontalWidget",
@@ -27,15 +28,7 @@
 "min_height":"",
 "min_width":"",
 "extra":"",
-"component":"component:\/\/mongo-component\/default\/utils\/page",
-"children":[
-
-]
-},
-{
-"type":"HorizontalWidget",
-"extra":"",
-"component":"component:\/\/mongo-component\/default\/tips\/gettippage",
+"component":"component://mongo-component/default/tips/gettippage",
 "children":[
 
 ]
@@ -48,12 +41,12 @@
 "min_height":"",
 "min_width":"",
 "extra":"",
-"component":"component:\/\/mongo-component\/default\/tips\/tippage",
+"component":"component://mongo-component/default/tips/tippage",
 "children":[
 
 ]
 }
 ]
 },
-"_u":"tips\/"
+"_u":"tips/"
 }

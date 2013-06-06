@@ -49,7 +49,7 @@
 "class":"page",
 "body":"<?cs if: A.mongo.exam.writable ?>\r
 <div class=\"mongo\">\r
-<div class=\"window\" style=\"width:100%;clear:both;\">\r
+<div class=\"window\">\r
 <div class=\"hd1\">\r
 <div class=\"h2\">\r
   <h2>\u7de8\u96c6</h2>\r

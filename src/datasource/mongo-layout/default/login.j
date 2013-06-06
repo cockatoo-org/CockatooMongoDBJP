@@ -6,7 +6,8 @@
 "post_action":"",
 "session_exp":"2147483647",
 "expires":"0",
-"header":"<meta name=\"description\" content=\"\">\r\n",
+"header":"<meta name=\"description\" content=\"\">\r
+",
 "pheader":"",
 "layout":{
 "type":"HorizontalWidget",
@@ -16,16 +17,9 @@
 "min_height":"",
 "min_width":"",
 "extra":"",
-"component":"component:\/\/core-component\/default\/horizontal#critical",
-"children":[
-{
-"type":"HorizontalWidget",
-"extra":"",
-"component":"component:\/\/mongo-component\/default\/login\/login",
+"component":"component://mongo-component/default/login/login",
 "children":[
 
-]
-}
 ]
 },
 "_u":"login",

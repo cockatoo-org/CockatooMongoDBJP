@@ -1,12 +1,13 @@
 {
 "@R":"1361857427",
-"eredirect":"\/mongo\/tips",
+"eredirect":"/mongo/tips",
 "redirect":"",
 "pre_action":"",
-"post_action":"action:\/\/mongo-action\/mongo\/TipAction?set",
+"post_action":"action://mongo-action/mongo/TipAction?set",
 "session_exp":"2147483647",
 "expires":"",
-"header":"<meta name=\"description\" content=\"\">\r\n",
+"header":"<meta name=\"description\" content=\"\">\r
+",
 "pheader":"",
 "bottom":"",
 "layout":{
@@ -17,33 +18,35 @@
 "min_height":"",
 "min_width":"",
 "extra":"",
-"component":"component:\/\/core-component\/default\/horizontal#critical",
+"component":"component://core-component/default/horizontal#critical",
 "children":[
 {
 "type":"HorizontalWidget",
+"class":"",
+"height":"",
+"width":"",
+"min_height":"",
+"min_width":"",
 "extra":"",
-"component":"component:\/\/mongo-component\/default\/utils\/page",
-"children":[
-
-]
-},
-{
-"type":"HorizontalWidget",
-"extra":"",
-"component":"component:\/\/mongo-component\/default\/tips\/tippage",
+"component":"component://mongo-component/default/tips/tippage",
 "children":[
 
 ]
 },
 {
 "type":"HorizontalWidget",
+"class":"",
+"height":"",
+"width":"",
+"min_height":"",
+"min_width":"",
 "extra":"",
-"component":"component:\/\/mongo-component\/default\/tips\/tipedit",
+"component":"component://mongo-component/default/tips/tipedit",
 "children":[
 
 ]
 }
 ]
 },
-"_u":"tips\/edit"
+"_u":"tips/edit"
 }

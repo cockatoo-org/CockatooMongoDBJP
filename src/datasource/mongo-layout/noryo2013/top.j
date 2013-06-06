@@ -18,21 +18,9 @@
 "min_height":"",
 "min_width":"",
 "extra":"",
-"component":"component://core-component/default/horizontal#critical",
-"children":[
-{
-"type":"HorizontalWidget",
-"class":"",
-"height":"",
-"width":"",
-"min_height":"",
-"min_width":"",
-"extra":"",
 "component":"component://mongo-component/default/noryo2013/top",
 "children":[
 
-]
-}
 ]
 },
 "_u":"top"

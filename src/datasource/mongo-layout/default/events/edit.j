@@ -1,12 +1,13 @@
 {
 "@R":"1361857427",
-"eredirect":"\/mongo\/events",
+"eredirect":"/mongo/events",
 "redirect":"",
 "pre_action":"",
-"post_action":"action:\/\/mongo-action\/mongo\/EventAction?set",
+"post_action":"action://mongo-action/mongo/EventAction?set",
 "session_exp":"2147483647",
 "expires":"",
-"header":"<meta name=\"description\" content=\"\">\r\n",
+"header":"<meta name=\"description\" content=\"\">\r
+",
 "pheader":"",
 "bottom":"",
 "layout":{
@@ -17,33 +18,35 @@
 "min_height":"",
 "min_width":"",
 "extra":"",
-"component":"component:\/\/core-component\/default\/horizontal#critical",
+"component":"component://core-component/default/horizontal#critical",
 "children":[
 {
 "type":"HorizontalWidget",
+"class":"",
+"height":"",
+"width":"",
+"min_height":"",
+"min_width":"",
 "extra":"",
-"component":"component:\/\/mongo-component\/default\/utils\/page",
-"children":[
-
-]
-},
-{
-"type":"HorizontalWidget",
-"extra":"",
-"component":"component:\/\/mongo-component\/default\/events\/eventpage",
+"component":"component://mongo-component/default/events/eventpage",
 "children":[
 
 ]
 },
 {
 "type":"HorizontalWidget",
+"class":"",
+"height":"",
+"width":"",
+"min_height":"",
+"min_width":"",
 "extra":"",
-"component":"component:\/\/mongo-component\/default\/events\/eventedit",
+"component":"component://mongo-component/default/events/eventedit",
 "children":[
 
 ]
 }
 ]
 },
-"_u":"events\/edit"
+"_u":"events/edit"
 }
