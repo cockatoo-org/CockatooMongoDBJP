@@ -116,7 +116,7 @@ class ExamAction extends UserPostAction {
       $this->updateSession($s);
       return array( $this->DOCNAME => $doc);
     }
-    parent::getQuery();
+    return parent::getQuery();
   }
   public function get_hook(&$doc) {
     $qs = array_filter($doc['qs'],function ($e) {
