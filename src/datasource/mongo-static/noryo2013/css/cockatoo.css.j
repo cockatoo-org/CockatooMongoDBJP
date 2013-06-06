@@ -1,15 +1,20 @@
 {
-"etag":"\"c4d0368e-b53c-ed9a-c57dc8cae0721d82\"",
+"etag":"\"8c9734df-8e52-84f5-5389c738a128e2f1\"",
 "type":"text/css",
 "exp":"0",
 "desc":"",
 "data":"body {\r
+  width:100%;\r
   margin:0;\r
-  background-color:#F0F0F0;\r
   font-size:13px;\r
   font-family: arial,helvetica,clean,sans-serif;\r
-  color: #4c3a2c;\r
+  background-color:#EEEEEE;\r
+}\r
+#co-main {\r
+  margin: 0 auto;\r
   width:940px;\r
+  color: #4c3a2c;\r
+  background-color:#F0F0F0;\r
 }\r
 a{\r
   color: #4c3a2c;\r
@@ -22,7 +27,6 @@ a:hover {\r
 div.box {\r
   border : 1px solid #BBBBBB;\r
 }\r
-\r
 div.noryo2013 {\r
   margin: 0 auto;\r
   background-image: url(\"/_s_/mongo/noryo2013/top.png\");\r

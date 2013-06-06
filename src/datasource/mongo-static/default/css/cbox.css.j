@@ -1,8 +1,25 @@
 {
-"etag":"\"aefa6195-9641-33ad-8841d26ff60df70c\"",
-"type":"text\/css",
-"exp":"",
+"etag":"\"823696fe-9097-9188-f14b084bb874629a\"",
+"type":"text/css",
+"exp":"60",
 "desc":"",
-"data":"div.cbox {\r\n  font-size: 0.8em;\r\n  margin: 5px;\r\n}\r\ndiv.cbox > div > h6 {\r\n  font-size: 1.3em;\r\n  margin:0;\r\n  padding: 5px 2px 2px 2px;\r\n  border-bottom: 1px solid #bbbbbb;\r\n}\r\ndiv.cbox  > div > dt {\r\n  margin: 5px 2px;\r\n  padding : 0px;\r\n}\r\ndiv.cbox  > div > dd {\r\n  margin: 2px 0 0 10px;\r\n  padding : 0px;\r\n}",
-"_u":"css\/cbox.css"
+"data":"div.cbox {\r
+  font-size: 0.8em;\r
+  margin: 5px;\r
+}\r
+div.cbox > div > h6 {\r
+  font-size: 1.3em;\r
+  margin:0;\r
+  padding: 5px 2px 2px 2px;\r
+  border-bottom: 1px solid #bbbbbb;\r
+}\r
+div.cbox  > div > dt {\r
+  margin: 5px 2px;\r
+  padding : 0px;\r
+}\r
+div.cbox  > div > dd {\r
+  margin: 2px 0 0 10px;\r
+  padding : 0px;\r
+}",
+"_u":"css/cbox.css"
 }
