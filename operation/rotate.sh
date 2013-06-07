@@ -13,6 +13,6 @@ function mongo_hup {
 		PIDFILE=$1
 		kill -SIGUSR1 `cat ${PIDFILE}`
 }
-mongo_hup /usr/local/mongo/logs/mongod.pid
-mongo_hup /usr/local/mongo/logs/mongodc.pid
-mongo_hup /usr/local/mongo/logs/mongos.pid
+for $f in `find /usr/local/mongo/logs -name '*.pid'`;do
+		mongo_hup $f
+done
