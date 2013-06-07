@@ -1,5 +1,5 @@
 {
-"@R":"1370574040",
+"@R":"1370575383",
 "type":"HorizontalWidget",
 "subject":"noryo2013_exhibition",
 "description":"",
@@ -90,7 +90,7 @@ div.noryo2013_timetable div.tab table.timetable td.first div.N {  \r
 </script>\r
 ",
 "action":[
-"action://mongo-action/mongo/TimetableAction?getA&exhibition=1&exp=1"
+"action://mongo-action/mongo/TimetableAction?getA&exhibition=1#cache#cexp=1"
 ],
 "header":"",
 "bottom":"",
