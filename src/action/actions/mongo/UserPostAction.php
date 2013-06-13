@@ -110,7 +110,6 @@ abstract class UserPostAction extends \Cockatoo\Action {
         }
       }
 
-      return;
       $doc['public'] =  ($doc['public'])?true:false;
       $brl = \Cockatoo\brlgen(\Cockatoo\Def::BP_STORAGE,$this->SERVICE,$this->COLLECTION,'/'.$docid,\Cockatoo\Beak::M_SET,array(),array());
       $ret = \Cockatoo\BeakController::beakSimpleQuery($brl,$doc);
