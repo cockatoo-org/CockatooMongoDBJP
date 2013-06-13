@@ -1,7 +1,7 @@
 {
 "title":"noryo2013/place",
 "origin":"*\u958b\u50ac\u65e5\u6642
-:\u958b\u50ac\u65e5: 2013\u5e747\u670814\u65e5\uff08\u65e5\uff09
+:\u958b\u50ac\u65e5: 2013\u5e747\u670828\u65e5\uff08\u65e5\uff09
 
 :\u958b\u50ac\u6642\u9593: 12\u6642\u301c18\u6642
 
@@ -101,7 +101,7 @@
 "children":[
 {
 "tag":"text",
-"text":" 2013\u5e747\u670814\u65e5\uff08\u65e5\uff09"
+"text":" 2013\u5e747\u670828\u65e5\uff08\u65e5\uff09"
 }
 ]
 }
@@ -491,7 +491,7 @@
 ],
 "_owner":"admin",
 "_ownername":"admin",
-"_time":1371089491,
+"_time":1371096749,
 "_timestr":"2013-06-13",
 "_u":"noryo2013/place"
 }

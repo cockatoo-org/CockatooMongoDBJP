@@ -1,5 +1,5 @@
 {
-"@R":"1371089523",
+"@R":"1371096717",
 "type":"HorizontalWidget",
 "subject":"noryo2013_top",
 "description":"",
@@ -91,7 +91,7 @@ mongoDB\u3063\u3066\u77e5\u3063\u3066\u308b\u304b\u3044\uff1f\u8272\u3005\u826f\
   <tr>\r
    <td class=\"title\">\u65e5\u6642</td>\r
    <td class=\"sep\"  >\uff1a</td>\r
-   <td class=\"text\" >2013\u5e747\u670814\u65e5\uff08\u65e5\uff09<br>12\u6642\u301c18\u6642</td>\r
+   <td class=\"text\" >2013\u5e747\u670828\u65e5\uff08\u65e5\uff09<br>12\u6642\u301c18\u6642</td>\r
   </tr>\r
   <tr>\r
    <td class=\"title\">\u5834\u6240</td>\r
