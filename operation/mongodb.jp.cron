@@ -1,3 +1,4 @@
-6 3 * * * root /usr/local/cockatoo/operation/rotate.sh
-8 3 * * * root /usr/local/cockatoo/operation/loggz.sh
+3 3 * * * root /usr/local/cockatoo/operation/session_expired.php > /dev/null 2>&1
+6 3 * * * root /usr/local/cockatoo/operation/rotate.sh           > /dev/null 2>&1
+8 3 * * * root /usr/local/cockatoo/operation/loggz.sh            > /dev/null 2>&1
 
