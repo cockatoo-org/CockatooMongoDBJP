@@ -1,5 +1,5 @@
 {
-"@R":"1369757726",
+"@R":"1371090202",
 "type":"HorizontalWidget",
 "subject":"noryo2013_timetable_header",
 "description":"",
@@ -287,7 +287,7 @@ function draw_timetable(h,cb_appendTo){\r
       height = session.during * 2;\r
     }\r
       $('<div class=\"session\" u=\"'+session._u+'\">'+\r
-\t(('images' in session && 'logo' in session.images)?('<img class=\"logo\" src=\"/_s_/mongo/timetable/'+session.images.logo+'\"></img>'):'') +\r
+\t((session.images && session.images.logo)?('<img class=\"logo\" src=\"/_s_/mongo/timetable/'+session.images.logo+'\"></img>'):'') +\r
 \t'<div class=\"title\">'+session.title+'</div>'+\r
 \t'<div class=\"incharge\">'+session.incharge+\"</div>\"+\r
 \t'<div class=\"overview\">'+session.overview+'</div>'+\r
@@ -337,14 +337,15 @@ function draw_timetable(h,cb_appendTo){\r
 \t    });\r
 \t});\r
     });\r
-}",
+}\r
+",
 "id":"noryo2013_timetable_header",
 "class":"",
 "body":"<nav><div class=\"nav\" role=\"navigation\">\r
   <ul>\r
     <li><a href=\"<?cs var:C._base ?>/noryo2013/top\">TOP</a></li>\r
     <li><a href=\"<?cs var:C._base ?>/noryo2013/about\">\u3082\u3093\u3054\u796d\u308a</a></li>\r
-    <li><a href=\"<?cs var:C._base ?>/noryo2013/place\">\u4f1a\u5834\u6848\u5185</a></li>\r
+    <li><a href=\"<?cs var:C._base ?>/noryo2013/place\">\u6765\u5834\u6848\u5185</a></li>\r
     <li><a href=\"<?cs var:C._base ?>/noryo2013/exhibition\">\u5c55\u793a\u6848\u5185</a></li>\r
     <li><a href=\"<?cs var:C._base ?>/noryo2013/timetable\">\u30bf\u30a4\u30e0\u30c6\u30fc\u30d6\u30eb</a></li>\r
 <?cs if:S.login.writable ?>\r
