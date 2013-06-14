@@ -165,7 +165,7 @@ abstract class UserPostAction extends \Cockatoo\Action {
     }
   }
 
-  public function getQuery(){
+  public function get(){
     $docid          = $this->docid();
     if ( $docid ) {
       $doc = $this->get_doc($docid);
@@ -177,12 +177,12 @@ abstract class UserPostAction extends \Cockatoo\Action {
     $this->setMovedTemporary($this->REDIRECT);
     return null;
   }
-  public function getaQuery(){
+  public function getA(){
     return array($this->DOCNAME.'s' => 
                  $this->get_docs()
                  );
   }
-  public function setQuery(){
+  public function set(){
     $session     = $this->getSession();
     $docid       = $this->docid();
     $post = $session[\Cockatoo\Def::SESSION_KEY_POST];
@@ -192,7 +192,7 @@ abstract class UserPostAction extends \Cockatoo\Action {
     }
     // New doc
     if ( ! $op ) {
-      $target = $this->getQuery();
+      $target = $this->get();
       if ( $target ) {
         return $target;
       }

@@ -68,7 +68,7 @@ class TimetableAction extends UserPostAction {
     $doc['targets']= explode(',',$doc['targets']);
     $origin   = $doc['origin'];
     $lines = preg_split("@\r?\n@",$origin);
-    $parser = new \Cockatoo\PageParser($doc['title'],$lines);
+    $parser = new \Cockatoo\PageParser('/mongo','/_s_/mongo/page',$doc['title'],$lines);
     $doc['contents'] =  $parser->parse();
     $doc['_share'] = true;
     if ( is_array($post['logo']) ) {

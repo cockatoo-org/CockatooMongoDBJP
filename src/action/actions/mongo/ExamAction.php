@@ -48,12 +48,12 @@ class ExamAction extends UserPostAction {
     for( $i = 0 ; $i < self::$NUM_QUESTION ; $i++ ) {
       $origin   = $post['q'.$i];
       $lines    = preg_split("@\r?\n@",$origin);
-      $parser   = new \Cockatoo\PageParser($qname,$lines);
+      $parser   = new \Cockatoo\PageParser('/mongo','/_s_/mongo/page',$qname,$lines);
       $contents =  $parser->parse();
       $answer   = $post['q'.$i.'a'];
       $eorigin   = $post['q'.$i.'e'];
       $lines    = preg_split("@\r?\n@",$eorigin);
-      $parser   = new \Cockatoo\PageParser($qname,$lines);
+      $parser   = new \Cockatoo\PageParser('/mongo','/_s_/mongo/page',$qname,$lines);
       $explanation =  $parser->parse();
       $candidates = null;
       for( $c = 0 ; $c < self::$NUM_CANDIDATE ; $c++ ) {
@@ -85,7 +85,7 @@ class ExamAction extends UserPostAction {
     }
   }
   
-  public function getQuery(){
+  public function get(){
     $session     = $this->getSession();
     $docid       = $this->docid();
     $post = $session[\Cockatoo\Def::SESSION_KEY_POST];
@@ -116,7 +116,7 @@ class ExamAction extends UserPostAction {
       $this->updateSession($s);
       return array( $this->DOCNAME => $doc);
     }
-    return parent::getQuery();
+    return parent::get();
   }
   public function get_hook(&$doc) {
     $method  = $this->get_method();

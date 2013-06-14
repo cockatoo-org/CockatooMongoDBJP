@@ -113,6 +113,7 @@ class Config extends DefaultConfig {
 
     self::$RequestParser = array (
       '/core' => 'Cockatoo\CoreRequestParser',
+      '/wiki2' => 'wiki2\Wiki2RequestParser',
       '/mongo' => 'mongo\MongoRequestParser'
       );
     self::$DefaultRequestParser = 'Cockatoo\DefaultRequestParser';

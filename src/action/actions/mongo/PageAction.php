@@ -13,7 +13,8 @@ namespace mongo;
 
 class PageAction extends \Cockatoo\PageAction {
   protected $NAMESPACE  = 'mongo';
-  protected $STORAGE  = 'mongo';
+  protected $STORAGE    = 'mongo';
+  protected $BASEPATH   = '/mongo';
   protected function user(&$session){
     return Lib::user($session);
   }
