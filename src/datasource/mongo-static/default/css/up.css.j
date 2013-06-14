@@ -1,5 +1,5 @@
 {
-"etag":"\"8bb54190-218c-2f06-13ac09ab7ab847e6\"",
+"etag":"\"5ab6dc15-1d3f-1052-3fabdf49dbf89a73\"",
 "type":"text/css",
 "exp":"60",
 "desc":"",
@@ -15,8 +15,8 @@ div.uplist a {\r
   text-decoration: underline;\r
   line-height: 1.5em;\r
 }\r
-div.uplist div.private,\r
-div.uplist div.private a {\r
+div.uplist .private,\r
+div.uplist .private a {\r
   color: #999999;\r
 }\r
 div.uplist dt {\r

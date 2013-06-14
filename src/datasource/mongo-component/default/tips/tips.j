@@ -1,24 +1,9 @@
 {
-"@R":"1371110203",
+"@R":"1371174190",
 "type":"HorizontalWidget",
 "subject":"tips",
 "description":"",
-"css":"#tips div.edit {\r
-  float: right;\r
-  font-size: 0.7em;\r
-}\r
-#tips h2 {\r
-  padding: 2px 0 0 10px;\r
-  border-bottom: 1px solid #bbbbbb;\r
-}\r
-#tips a {\r
-  text-decoration: underline;\r
-  line-height: 1.5em;\r
-}\r
-#tips li.private,\r
-#tips li.private a {\r
-  color: #999999;\r
-}",
+"css":"",
 "js":"",
 "id":"tips",
 "class":"uplist",
@@ -35,7 +20,8 @@
 "action":[
 "action://mongo-action/mongo/TipAction?getA"
 ],
-"header":"",
+"header":"<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"/_s_/mongo/default/css/up.css\" />\r
+",
 "bottom":"",
 "_u":"tips/tips"
 }
