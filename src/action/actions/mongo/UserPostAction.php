@@ -191,7 +191,12 @@ abstract class UserPostAction extends \Cockatoo\Action {
       throw new \Exception('You do not have write permission.');
     }
     // New doc
-    if ( ! $op ) { 
+    if ( ! $op ) {
+      $target = $this->getQuery();
+      if ( $target ) {
+        return $target;
+      }
+      $this->setMovedTemporary(null);
       $doc = $this->new_doc();
       $doc['writable'] = true;
       return array( $this->DOCNAME => $doc);

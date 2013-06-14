@@ -21,33 +21,4 @@ class Lib {
     }
     return false;
   }
-
-  # Page
-  static function page(&$page,&$origin,&$contents,&$user){
-    return array('title' => $page,'origin' => $origin , 'contents' => $contents);
-  }
-  static function get_page($page){
-    $page = \Cockatoo\path_urlencode($page);
-    $brl = \Cockatoo\brlgen(\Cockatoo\Def::BP_STORAGE,'mongo','page','/'.$page,\Cockatoo\Beak::M_GET,array(),array());
-    $page_data = \Cockatoo\BeakController::beakSimpleQuery($brl);
-    return $page_data;
-  }
-  static function save_page($page,&$pdata){
-    $page = \Cockatoo\path_urlencode($page);
-    $brl = \Cockatoo\brlgen(\Cockatoo\Def::BP_STORAGE,'mongo','page','/'.$page,\Cockatoo\Beak::M_SET,array(),array());
-    $ret = \Cockatoo\BeakController::beakSimpleQuery($brl,$pdata);
-    if ( $ret ) {
-      return $ret;
-    }
-    throw new \Exception('Cannot save it ! Probably storage error...');
-  }
-  static function remove_page($page){
-    $page = \Cockatoo\path_urlencode($page);
-    $brl = \Cockatoo\brlgen(\Cockatoo\Def::BP_STORAGE,'mongo','page','/'.$page,\Cockatoo\Beak::M_DEL,array(),array());
-    $ret = \Cockatoo\BeakController::beakSimpleQuery($brl);
-    if ( $ret ) {
-      return $ret;
-    }
-    throw new \Exception('Cannot save it ! Probably storage error...');
-  }
 }

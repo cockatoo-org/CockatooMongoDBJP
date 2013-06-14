@@ -1,5 +1,5 @@
 {
-"@R":"1366011157",
+"@R":"1371109086",
 "type":"HorizontalWidget",
 "subject":"eventedit",
 "description":"",
@@ -143,15 +143,9 @@ $(function() {\r
   });\r
 });",
 "id":"eventedit",
-"class":"page",
+"class":"",
 "body":"<?cs if: A.mongo.event.writable ?>\r
-<div class=\"mongo\">\r
-<div class=\"window\">\r
-<div class=\"hd1\">\r
-<div class=\"h2\">\r
-  <h2>ATND (ATND beta) information</h2>\r
-</div>\r
-<div class=\"hd2\">\r
+<h2>ATND (ATND beta) information</h2>\r
 <form method=\"POST\" action=\"<?cs var:C._base ?>/events/edit/<?cs var:A.mongo.event._u ?>\">\r
   <table><tbody>\r
     <tr>\r
@@ -183,32 +177,6 @@ $(function() {\r
     <th>\u5b9a\u54e1</th>\r
     <td class=\"limit\"><input type=\"text\" name=\"limit\" readonly=\"readonly\" value=\"<?cs var:A.mongo.event.limit ?>\"></input></td>\r
     </tr><tr>\r
-<!--\r
-    <th>\u958b\u50ac\u65e5</th>\r
-    <td><input type=\"text\" name=\"date\" value=\"<?cs var:A.mongo.event.date ?>\"></input></td>\r
-    </tr><tr>\r
-    <th>\u6642\u9593</th>\r
-    <td><input type=\"text\" name=\"time\" value=\"<?cs var:A.mongo.event.time ?>\"></input></td>\r
-    </tr><tr>\r
-    <th>\u4f1a\u5834\uff08\u4f4f\u6240\u7b49 google map\u9023\u643a\uff09</th>\r
-    <td><input type=\"text\" name=\"address\"  value=\"<?cs var:A.mongo.event.address ?>\"></input></td>\r
-    </tr><tr>\r
-    <th>\u5b9a\u54e1</th>\r
-    <td><input type=\"text\" name=\"capacity\"  value=\"<?cs var:A.mongo.event.capacity ?>\"></input></td>\r
-    </tr><tr>\r
-    <th>\u30bf\u30a4\u30c8\u30eb</th>\r
-    <td><input type=\"text\" name=\"title\"  value=\"<?cs var:A.mongo.event.title ?>\"></input></td>\r
-    </tr><tr>\r
-    <th>\u30b5\u30d6\u30bf\u30a4\u30c8\u30eb</th>\r
-    <td><input type=\"text\" name=\"subtitle\"  value=\"<?cs var:A.mongo.event.subtitle ?>\"></input></td>\r
-    </tr><tr>\r
-    <th>URL</th>\r
-    <td><input type=\"text\" name=\"url\"  value=\"<?cs var:A.mongo.event.url ?>\"></input></td>\r
-    </tr><tr>\r
-    <th>\u6982\u8981</th>\r
-    <td><textarea name=\"origin\"><?cs var:A.mongo.event.origin ?></textarea></td>\r
-    </tr><tr>\r
--->\r
     <th></th>\r
     <td>\r
     <input type=\"hidden\" name=\"_u\" value=\"<?cs var:A.mongo.event._u ?>\"></input>\r
@@ -220,10 +188,6 @@ $(function() {\r
     </tr>\r
   </tbody></table>\r
 </form>\r
-</div>\r
-</div>\r
-</div>\r
-</div>\r
 <script>\r
 <?cs set: a = #0 ?><?cs each:item = A.mongo.event.attenders ?><?cs set: a = a+#1 ?><?cs /each ?>\r
 var N_ATTENDERS=<?cs var:a ?>;\r

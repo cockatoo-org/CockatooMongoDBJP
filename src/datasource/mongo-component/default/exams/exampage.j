@@ -1,17 +1,66 @@
 {
-"@R":"1364794044",
+"@R":"1371110581",
 "type":"HorizontalWidget",
 "subject":"exampage",
 "description":"",
-"css":"#exampage li.correct {\r\n  color: #E00000;\r\n  font-weight: bold;\r\n}\r\n#exampage span.result {\r\n  color: #E00000;\r\n  font-weight: bold;\r\n  font-size: 2em;\r\n  vertical-align: bottom;\r\n}\r\n#exampage div.h3,\r\n#exampage div.hd3 {\r\n  display: none;\r\n}\r\n#exampage div.show{\r\n  display: block;\r\n}\r\n#exampage h3.q {\r\n  cursor: pointer;\r\n}\r\n#exampage div.q {\r\n  display: none;\r\n}\r\n#exampage div.edit {\r\n  float: right;\r\n  font-size: 0.7em;\r\n}\r\n#exampage table.details {\r\n  padding: 15px 0 0 10px;\r\n  min-width: 600px;\r\n  float:left;\r\n}\r\n#exampage table.details th {\r\n  min-width: 100px;\r\n}\r\n#map {\r\n  float:left;\r\n  height: 200px;\r\n  width: 200px;\r\n  border: 1px solid #333;\r\n  margin-top: 0.6em;\r\n}",
-"js":"$(function(){\r\n  var CUR=0;\r\n  $('#goexam').click(function(ev){\r\n    CUR=0;\r\n    showQ(0);\r\n  });\r\n  $('#exampage button.gonext').click(function(ev){\r\n    CUR++;\r\n    showQ(CUR);\r\n  });\r\n  function showQ( i){\r\n      $('#exampage div.h3').hide();\r\n      $('#exampage div.hd3').hide();\r\n      $('#q'+i).show();\r\n      $('#q'+i).next().show();\r\n  }\r\n});",
+"css":"#exampage li.correct {\r
+  color: #E00000;\r
+  font-weight: bold;\r
+}\r
+#exampage span.result {\r
+  color: #E00000;\r
+  font-weight: bold;\r
+  font-size: 2em;\r
+  vertical-align: bottom;\r
+}\r
+#exampage div.h3,\r
+#exampage div.hd3 {\r
+  display: none;\r
+}\r
+#exampage div.show{\r
+  display: block;\r
+}\r
+#exampage h3.q {\r
+  cursor: pointer;\r
+}\r
+#exampage div.q {\r
+  display: none;\r
+}\r
+\r
+#exampage table.details {\r
+  padding: 15px 0 0 10px;\r
+  min-width: 600px;\r
+  float:left;\r
+}\r
+#exampage table.details th {\r
+  min-width: 100px;\r
+}\r
+",
+"js":"$(function(){\r
+  var CUR=0;\r
+  $('#goexam').click(function(ev){\r
+    CUR=0;\r
+    showQ(0);\r
+  });\r
+  $('#exampage button.gonext').click(function(ev){\r
+    CUR++;\r
+    showQ(CUR);\r
+  });\r
+  function showQ( i){\r
+      $('#exampage div.h3').hide();\r
+      $('#exampage div.hd3').hide();\r
+      $('#q'+i).show();\r
+      $('#q'+i).next().show();\r
+  }\r
+});",
 "id":"exampage",
-"class":"page",
-"body":"<div class=\"mongo\">\r\n  <div class=\"window\">\r\n    <div class=\"credit\">by <?cs var:A.mongo.exam._ownername ?> <time><?cs var:A.mongo.exam._timestr ?><\/time><\/div>\r\n    <div class=\"h1\"><h1><?cs var:A.mongo.exam.qname?><\/h1><\/div>\r\n    <div class=\"hd1\">\r\n      <div class=\"hd2\">\r\n\t<form method=\"POST\" action=\"\">\r\n          <?cs var:A.mongo.exam.qsummary ?>\r\n          <br>\r\n          <?cs if: ! A.mongo.exam.done ?>\r\n            <button id=\"goexam\" type=\"button\">\u30c6\u30b9\u30c8\u958b\u59cb<\/button>\r\n          <?cs elif:A.mongo.exam.score != null ?>\r\n            <br>\r\n\t    <span class=\"result\"><?cs var: A.mongo.exam.score ?>\u70b9<\/span>\r\n          <?cs \/if ?>\r\n          <?cs set: i = 0 ?>\r\n  \t<?cs each: question = A.mongo.exam.qs ?>\r\n          <?cs set: i = i+1 ?>\r\n          <div id=\"q<?cs name:question ?>\" class=\"h3 <?cs var:question.show ?>\"><h3 class=\"q\">Q<?cs var:i?>.\r\n              <?cs if: A.mongo.exam.done ?>\r\n                <?cs if: question.correct != null ?>\r\n\t        <span class=\"result\">\r\n\t\t  <?cs if: question.checked == question.correct ?>\r\n\t\t  \u25cb\r\n  \t\t  <?cs else ?>\r\n\t\t  \u00d7\r\n\t\t  <?cs \/if ?>\r\n\t\t<\/span>\r\n\t\t<?cs \/if ?>\r\n              <?cs \/if ?>\r\n\t  <\/h3><\/div>\r\n\t  <div class=\"hd3 <?cs var:question.show ?>\">\r\n  \t    <?cs each:contents = question.contents ?>\r\n  \t    <?cs call:drawTags(contents)?>\r\n\t    <?cs \/each ?>\r\n\t    <div class=\"hd4\">\r\n\t      <ol>\r\n\t\t<?cs each: candidate = question.s ?>\r\n                  <?cs if:candidate ?>\r\n\t\t    <?cs if: A.mongo.exam.done && question.correct == name(candidate) ?>\r\n  \t\t      <li class=\"correct\">\r\n  \t\t    <?cs else ?>\r\n\t\t      <li>\r\n\t\t    <?cs \/if ?>\r\n\t\t    <?cs if: question.checked == name(candidate) ?>\r\n                      <input type=\"radio\" id=\"q<?cs name:question ?>a<?cs name:candidate ?>\" name=\"q<?cs name:question ?>a\" value=\"<?cs name:candidate ?>\" checked><\/input>\r\n\t\t    <?cs else ?>\r\n                      <input type=\"radio\" id=\"q<?cs name:question ?>a<?cs name:candidate ?>\" name=\"q<?cs name:question ?>a\" value=\"<?cs name:candidate ?>\"><\/input>\r\n                    <?cs \/if ?>\r\n\t\t    <label for=\"q<?cs name:question ?>a<?cs name:candidate ?>\"><?cs var:candidate ?><\/label>\r\n  \t\t    <\/li>\r\n                  <?cs \/if ?>\r\n\t\t<?cs \/each ?>\r\n\t      <\/ol>\r\n\t    <\/div>\r\n            <?cs if: A.mongo.exam.done ?>\r\n            <div class=\"h4 exp\"><h4>\u89e3\u8aac<\/h4><\/div>\r\n\t    <div class=\"hd4 exp\">\r\n              <?cs each:contents = question.explanation ?>\r\n\t      <?cs call:drawTags(contents)?>\r\n\t      <?cs \/each ?>\r\n\t    <\/div>\r\n            <?cs \/if ?>\r\n            <?cs if: ! A.mongo.exam.done ?>\r\n            <br>\r\n            <?cs if: question.last ?>\r\n            <button type=\"submit\" name=\"op\" value=\"eval\">\u63a1\u70b9<\/buton>\r\n            <?cs else ?>\r\n            <button class=\"gonext\" type=\"button\">\u6b21\u3078<\/button>\r\n            <?cs \/if ?>\r\n            <?cs \/if ?>\r\n\t  <\/div>\r\n\t  <?cs \/each ?>\r\n\t<\/form>\r\n      <\/div><!-- hd2 -->\r\n      <?cs if:A.mongo.exam.writable ?>\r\n      <div class=\"edit\"><a href=\"<?cs var:C._base ?>\/exams\/edit\/<?cs var:A.mongo.exam._u ?>\">\u7de8\u96c6<\/a><\/div>\r\n      <?cs \/if ?>\r\n    <\/div><!-- hd1 -->\r\n  <\/div>\r\n<\/div>\r\n",
+"class":"uppage",
+"body":"@BIN@3c68313e3c3f6373207661723a412e6d6f6e676f2e6578616d2e716e616d653f3e3c2f68313e0d0a3c666f726d206d6574686f643d22504f53542220616374696f6e3d22223e0d0a203c3f6373207661723a412e6d6f6e676f2e6578616d2e7173756d6d617279203f3e0d0a202020202020202020203c62723e0d0a202020202020202020203c3f63732069663a202120412e6d6f6e676f2e6578616d2e646f6e65203f3e0d0a2020202020202020202020203c627574746f6e2069643d22676f6578616d2220747970653d22627574746f6e223ee38386e382b9e38388e9968be5a78b3c2f627574746f6e3e0d0a202020202020202020203c3f637320656c69663a412e6d6f6e676f2e6578616d2e73636f726520213d206e756c6c203f3e0d0a2020202020202020202020203c62723e0d0a09202020203c7370616e20636c6173733d22726573756c74223e3c3f6373207661723a20412e6d6f6e676f2e6578616d2e73636f7265203f3ee782b93c2f7370616e3e0d0a202020202020202020203c3f6373202f6966203f3e0d0a202020202020202020203c3f6373207365743a2069203d2030203f3e0d0a2020093c3f637320656163683a207175657374696f6e203d20412e6d6f6e676f2e6578616d2e7173203f3e0d0a202020202020202020203c3f6373207365743a2069203d20692b31203f3e0d0a202020202020202020203c6469762069643d22713c3f6373206e616d653a7175657374696f6e203f3e2220636c6173733d226833203c3f6373207661723a7175657374696f6e2e73686f77203f3e223e3c683320636c6173733d2271223e513c3f6373207661723a693f3e2e0d0a20202020202020202020202020203c3f63732069663a20412e6d6f6e676f2e6578616d2e646f6e65203f3e0d0a202020202020202020202020202020203c3f63732069663a207175657374696f6e2e636f727265637420213d206e756c6c203f3e0d0a0920202020202020203c7370616e20636c6173733d22726573756c74223e0d0a090920203c3f63732069663a207175657374696f6e2e636865636b6564203d3d207175657374696f6e2e636f7272656374203f3e0d0a09092020e2978b0d0a2020090920203c3f637320656c7365203f3e0d0a09092020c3970d0a090920203c3f6373202f6966203f3e0d0a09093c2f7370616e3e0d0a09093c3f6373202f6966203f3e0d0a20202020202020202020202020203c3f6373202f6966203f3e0d0a0920203c2f68333e3c2f6469763e0d0a0920203c64697620636c6173733d22686433203c3f6373207661723a7175657374696f6e2e73686f77203f3e223e0d0a202009202020203c3f637320656163683a636f6e74656e7473203d207175657374696f6e2e636f6e74656e7473203f3e0d0a202009202020203c3f63732063616c6c3a647261775461677328636f6e74656e7473293f3e0d0a09202020203c3f6373202f65616368203f3e0d0a09202020203c64697620636c6173733d22686434223e0d0a092020202020203c6f6c3e0d0a09093c3f637320656163683a2063616e646964617465203d207175657374696f6e2e73203f3e0d0a2020202020202020202020202020202020203c3f63732069663a63616e646964617465203f3e0d0a0909202020203c3f63732069663a20412e6d6f6e676f2e6578616d2e646f6e65202626207175657374696f6e2e636f7272656374203d3d206e616d652863616e64696461746529203f3e0d0a202009092020202020203c6c6920636c6173733d22636f7272656374223e0d0a20200909202020203c3f637320656c7365203f3e0d0a09092020202020203c6c693e0d0a0909202020203c3f6373202f6966203f3e0d0a0909202020203c3f63732069663a207175657374696f6e2e636865636b6564203d3d206e616d652863616e64696461746529203f3e0d0a202020202020202020202020202020202020202020203c696e70757420747970653d22726164696f222069643d22713c3f6373206e616d653a7175657374696f6e203f3e613c3f6373206e616d653a63616e646964617465203f3e22206e616d653d22713c3f6373206e616d653a7175657374696f6e203f3e61222076616c75653d223c3f6373206e616d653a63616e646964617465203f3e2220636865636b65643e3c2f696e7075743e0d0a0909202020203c3f637320656c7365203f3e0d0a202020202020202020202020202020202020202020203c696e70757420747970653d22726164696f222069643d22713c3f6373206e616d653a7175657374696f6e203f3e613c3f6373206e616d653a63616e646964617465203f3e22206e616d653d22713c3f6373206e616d653a7175657374696f6e203f3e61222076616c75653d223c3f6373206e616d653a63616e646964617465203f3e223e3c2f696e7075743e0d0a20202020202020202020202020202020202020203c3f6373202f6966203f3e0d0a0909202020203c6c6162656c20666f723d22713c3f6373206e616d653a7175657374696f6e203f3e613c3f6373206e616d653a63616e646964617465203f3e223e3c3f6373207661723a63616e646964617465203f3e3c2f6c6162656c3e0d0a20200909202020203c2f6c693e0d0a2020202020202020202020202020202020203c3f6373202f6966203f3e0d0a09093c3f6373202f65616368203f3e0d0a092020202020203c2f6f6c3e0d0a09202020203c2f6469763e0d0a2020202020202020202020203c3f63732069663a20412e6d6f6e676f2e6578616d2e646f6e65203f3e0d0a2020202020202020202020203c64697620636c6173733d22683420657870223e3c68343ee8a7a3e8aaac3c2f68343e3c2f6469763e0d0a09202020203c64697620636c6173733d2268643420657870223e0d0a20202020202020202020202020203c3f637320656163683a636f6e74656e7473203d207175657374696f6e2e6578706c616e6174696f6e203f3e0d0a092020202020203c3f63732063616c6c3a647261775461677328636f6e74656e7473293f3e0d0a092020202020203c3f6373202f65616368203f3e0d0a09202020203c2f6469763e0d0a2020202020202020202020203c3f6373202f6966203f3e0d0a2020202020202020202020203c3f63732069663a202120412e6d6f6e676f2e6578616d2e646f6e65203f3e0d0a2020202020202020202020203c62723e0d0a2020202020202020202020203c3f63732069663a207175657374696f6e2e6c617374203f3e0d0a2020202020202020202020203c627574746f6e20747970653d227375626d697422206e616d653d226f70222076616c75653d226576616c223ee68ea1e782b93c2f6275746f6e3e0d0a2020202020202020202020203c3f637320656c7365203f3e0d0a2020202020202020202020203c627574746f6e20636c6173733d22676f6e6578742220747970653d22627574746f6e223ee6aca1e381b83c2f627574746f6e3e0d0a2020202020202020202020203c3f6373202f6966203f3e0d0a2020202020202020202020203c3f6373202f6966203f3e0d0a0920203c2f6469763e0d0a0920203c3f6373202f65616368203f3e0d0a093c2f666f726d3e0d0a2020202020203c3f63732069663a412e6d6f6e676f2e6578616d2e7772697461626c65203f3e0d0a2020202020203c64697620636c6173733d2265646974223e3c6120687265663d223c3f6373207661723a432e5f62617365203f3e2f6578616d732f656469742f3c3f6373207661723a412e6d6f6e676f2e6578616d2e5f75203f3e223ee7b7a8e99b863c2f613e3c2f6469763e0d0a2020202020203c3f6373202f6966203f3e0d0a",
 "action":[
 ""
 ],
-"header":"",
+"header":"<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"/_s_/mongo/default/css/up.css\" />\r
+",
 "bottom":"",
-"_u":"exams\/exampage"
+"_u":"exams/exampage"
 }

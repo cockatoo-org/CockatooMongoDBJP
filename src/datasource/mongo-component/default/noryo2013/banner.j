@@ -1,10 +1,9 @@
 {
-"@R":"1368690591",
+"@R":"1371109734",
 "type":"HorizontalWidget",
 "subject":"noryo_2013/banner",
 "description":"banner",
 "css":"#noryo_2013_banner {\r
-    margin-left: 20px;\r
     text-align: left;\r
 }",
 "js":"",

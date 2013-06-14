@@ -48,16 +48,16 @@ class ExamAction extends UserPostAction {
     for( $i = 0 ; $i < self::$NUM_QUESTION ; $i++ ) {
       $origin   = $post['q'.$i];
       $lines    = preg_split("@\r?\n@",$origin);
-      $parser   = new PageParser($qname,$lines);
+      $parser   = new \Cockatoo\PageParser($qname,$lines);
       $contents =  $parser->parse();
       $answer   = $post['q'.$i.'a'];
       $eorigin   = $post['q'.$i.'e'];
       $lines    = preg_split("@\r?\n@",$eorigin);
-      $parser   = new PageParser($qname,$lines);
+      $parser   = new \Cockatoo\PageParser($qname,$lines);
       $explanation =  $parser->parse();
       $candidates = null;
       for( $c = 0 ; $c < self::$NUM_CANDIDATE ; $c++ ) {
-        $candidates []= $post['q'.$i.'c'.$c];
+        $candidates []= ($post['q'.$i.'c'.$c]?$post['q'.$i.'c'.$c]:'');
       }
       $qs [] = array(
         'show' => ($answer?'show':''),
@@ -119,6 +119,11 @@ class ExamAction extends UserPostAction {
     return parent::getQuery();
   }
   public function get_hook(&$doc) {
+    $method  = $this->get_method();
+    if ( $method===\Cockatoo\Beak::M_SET){
+      return; // Edit mode
+    }
+    $qs = $doc['qs'];
     $qs = array_filter($doc['qs'],function ($e) {
         return (boolean)$e['show'];
       });

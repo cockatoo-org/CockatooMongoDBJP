@@ -1,17 +1,41 @@
 {
-"@R":"1364453386",
+"@R":"1371110203",
 "type":"HorizontalWidget",
 "subject":"tips",
 "description":"",
-"css":"#tips div.edit {\r\n  float: right;\r\n  font-size: 0.7em;\r\n}\r\n#tips li.private,\r\n#tips li.private a {\r\n  color: #999999;\r\n}",
+"css":"#tips div.edit {\r
+  float: right;\r
+  font-size: 0.7em;\r
+}\r
+#tips h2 {\r
+  padding: 2px 0 0 10px;\r
+  border-bottom: 1px solid #bbbbbb;\r
+}\r
+#tips a {\r
+  text-decoration: underline;\r
+  line-height: 1.5em;\r
+}\r
+#tips li.private,\r
+#tips li.private a {\r
+  color: #999999;\r
+}",
 "js":"",
 "id":"tips",
-"class":"page",
-"body":"<div class=\"mongo\">\r\n<div class=\"window\">\r\n<div class=\"hd1\">\r\n<div class=\"h2\">\r\n  <h2>TIPS<\/h2>\r\n<\/div>\r\n<div class=\"hd2\">\r\n  <ul>\r\n  <?cs each: item = A.mongo.tips ?>\r\n    <li class=\"<?cs if:!item.public ?>private<?cs \/if?>\" ><a href=\"<?cs var:C._base ?>\/tips\/<?cs var:item._u ?>\"><?cs var:item.title ?><\/a> (by <?cs var:item._ownername ?> <time><?cs var:item._timestr ?><\/time>)<\/li>\r\n  <?cs \/each ?>\r\n  <\/ul>\r\n<\/div>\r\n<\/div>\r\n<\/div>\r\n<\/div>\r\n<?cs if:S.login.writable?>\r\n  <div class=\"edit\"><a href=\"<?cs var:C._base ?>\/tips\/edit\/new\">\u65b0\u898fTIPS<\/a><\/div>\r\n<?cs \/if ?>\r\n",
+"class":"uplist",
+"body":"<h2>TIPS</h2>\r
+<ul>\r
+ <?cs each: item = A.mongo.tips ?>\r
+   <li class=\"<?cs if:!item.public ?>private<?cs /if?>\" ><a href=\"<?cs var:C._base ?>/tips/<?cs var:item._u ?>\"><?cs var:item.title ?></a> (by <?cs var:item._ownername ?> <time><?cs var:item._timestr ?></time>)</li>\r
+  <?cs /each ?>\r
+</ul>\r
+<?cs if:S.login.writable?>\r
+  <div class=\"edit\"><a href=\"<?cs var:C._base ?>/tips/edit/new\">\u65b0\u898fTIPS</a></div>\r
+<?cs /if ?>\r
+",
 "action":[
-"action:\/\/mongo-action\/mongo\/TipAction?getA"
+"action://mongo-action/mongo/TipAction?getA"
 ],
 "header":"",
 "bottom":"",
-"_u":"tips\/tips"
+"_u":"tips/tips"
 }

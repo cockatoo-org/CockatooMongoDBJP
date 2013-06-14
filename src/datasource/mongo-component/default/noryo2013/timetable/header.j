@@ -1,5 +1,5 @@
 {
-"@R":"1371090202",
+"@R":"1371173286",
 "type":"HorizontalWidget",
 "subject":"noryo2013_timetable_header",
 "description":"",
@@ -61,7 +61,9 @@ div.noryo2013_timetable div.tab div.session a{\r
 }\r
 div.noryo2013_timetable div.tab div.session img.logo{\r
  float:left;\r
- height:60px;\r
+ height:auto;\r
+ width:60px;\r
+ max-height:60px;\r
 }\r
 \r
 div.noryo2013_timetable div.tab div.session:hover {\r
@@ -107,7 +109,7 @@ div.noryo2013_timetable div.detail {\r
   display:none;\r
   color: #ffffff;\r
 }\r
-div.page a {\r
+div.wikipage a {\r
   color:#ffffff;\r
 }\r
 \r
@@ -385,7 +387,7 @@ function draw_timetable(h,cb_appendTo){\r
  </table>\r
 }\r
 <hr class=\"sep\" />\r
-<div class=\"page\">\r
+<div class=\"wikipage\">\r
 <?cs each: content = item.contents ?>\r
  <?cs call:drawTags(content)?>\r
 <?cs /each ?>\r

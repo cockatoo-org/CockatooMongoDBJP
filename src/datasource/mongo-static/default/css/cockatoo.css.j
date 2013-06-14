@@ -1,7 +1,7 @@
 {
-"etag":"\"73a62632-1266-cc6f-7ed3711fda7179bb\"",
+"etag":"\"72b968fb-9e98-61f6-f539820f53f80893\"",
 "type":"text/css",
-"exp":"60",
+"exp":"0",
 "desc":"",
 "data":"body {\r
   width:100%;\r
@@ -28,7 +28,8 @@ a:hover {\r
 div.box {\r
   border : 1px solid #BBBBBB;\r
 }\r
-\r
-",
+div.mainContents {\r
+  padding-left:10px;\r
+}",
 "_u":"css/cockatoo.css"
 }

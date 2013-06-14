@@ -1,5 +1,5 @@
 {
-"@R":"1365745326",
+"@R":"1371172075",
 "type":"HorizontalWidget",
 "subject":"examedit",
 "description":"",
@@ -48,13 +48,7 @@
 "id":"examedit",
 "class":"page",
 "body":"<?cs if: A.mongo.exam.writable ?>\r
-<div class=\"mongo\">\r
-<div class=\"window\">\r
-<div class=\"hd1\">\r
-<div class=\"h2\">\r
-  <h2>\u7de8\u96c6</h2>\r
-</div>\r
-<div class=\"hd2\">\r
+<h2>\u7de8\u96c6</h2>\r
 <form id=\"questions\" method=\"POST\" action=\"<?cs var:C._base ?>/exams/edit/<?cs var:A.mongo.exam._u ?>\">\r
 <h5>\u516c\u958b<input type=\"checkbox\" name=\"public\" <?cs if:A.mongo.exam.public ?>checked<?cs /if ?>></input></h5>\r
 \r
@@ -93,10 +87,6 @@
 <input type=\"submit\" name=\"op\" value=\"preview\"></input>\r
 <input type=\"submit\" name=\"op\" value=\"remove\"></input>\r
 </form>\r
-</div>\r
-</div>\r
-</div>\r
-</div>\r
 <?cs /if ?>\r
 ",
 "action":[

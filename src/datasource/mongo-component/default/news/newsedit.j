@@ -1,5 +1,5 @@
 {
-"@R":"1365745159",
+"@R":"1371109244",
 "type":"HorizontalWidget",
 "subject":"newsedit",
 "description":"",
@@ -34,15 +34,9 @@
 ",
 "js":"",
 "id":"newsedit",
-"class":"page",
+"class":"",
 "body":"<?cs if: A.mongo.news.writable ?>\r
-<div class=\"mongo\">\r
-<div class=\"window\">\r
-<div class=\"hd1\">\r
-<div class=\"h2\">\r
-  <h2>NEWS\u5185\u5bb9</h2>\r
-</div>\r
-<div class=\"hd2\">\r
+<h2>NEWS\u5185\u5bb9</h2>\r
 <form method=\"POST\" action=\"<?cs var:C._base ?>/news/edit/<?cs var:A.mongo.news._u ?>\">\r
   <h5>\u516c\u958b<input type=\"checkbox\" name=\"public\" <?cs if:A.mongo.news.public ?>checked<?cs /if ?>></input></h5>\r
   <h5>NEWS\u30bf\u30a4\u30c8\u30eb</h5>\r
@@ -56,10 +50,6 @@
   <a target=\"_blank\" href=\"<?cs var:C._base ?>/notation\">notation</a>\r
   <input type=\"submit\" name=\"op\" value=\"remove\"></input>\r
 </form>\r
-</div>\r
-</div>\r
-</div>\r
-</div>\r
 <?cs /if ?>\r
 ",
 "action":[

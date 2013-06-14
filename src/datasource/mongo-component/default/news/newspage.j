@@ -1,38 +1,26 @@
 {
-"@R":"1367313890",
+"@R":"1371110614",
 "type":"HorizontalWidget",
 "subject":"newspage",
 "description":"",
-"css":"#newspage div.edit {\r
-  float: right;\r
-  font-size: 0.7em;\r
-}\r
-",
+"css":"",
 "js":"",
 "id":"newspage",
-"class":"page",
-"body":"<div class=\"mongo\">\r
-  <div class=\"window\">\r
-  <div class=\"credit\">by <?cs var:A.mongo.news._ownername ?> <time><?cs var:A.mongo.news._timestr ?></time></div>\r
-    <div class=\"h1\"><h1><?cs var:A.mongo.news.title?></h1></div>\r
-    <div class=\"hd1\">\r
-      <div class=\"hd2\">\r
-\t<?cs each:item = A.mongo.news.contents ?>\r
-\t  <?cs call:drawTags(item)?>\r
-\t<?cs /each ?>\r
-\t<br clear=\"both\">\r
-      </div>\r
-    </div>\r
-  </div>\r
+"class":"uppage",
+"body":"<h1><?cs var:A.mongo.news.title?></h1>\r
+<div class=\"wikipage\"><?cs call:drawTags(A.mongo.news.contents.0)?></div>\r
+\r
 <?cs if:A.mongo.news.writable ?>\r
   <div class=\"edit\"><a href=\"<?cs var:C._base ?>/news/edit/<?cs var:A.mongo.news._u ?>\">\u7de8\u96c6</a></div>\r
 <?cs /if ?>\r
-</div>\r
+\r
+\r
 ",
 "action":[
 ""
 ],
-"header":"",
+"header":"<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"/_s_/mongo/default/css/up.css\" />\r
+",
 "bottom":"",
 "_u":"news/newspage"
 }

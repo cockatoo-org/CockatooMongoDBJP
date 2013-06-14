@@ -1,5 +1,5 @@
 {
-"@R":"1370500125",
+"@R":"1371106906",
 "eredirect":"/mongo/main",
 "redirect":"/mongo/main",
 "layout":{
@@ -20,7 +20,7 @@
 "min_height":"",
 "min_width":"",
 "extra":"",
-"component":"component://mongo-component/default/utils/page",
+"component":"component://core-component/default/utils/wikipage",
 "children":[
 
 ]
@@ -147,6 +147,16 @@
 "children":[
 {
 "type":"HorizontalWidget",
+"class":"mainContents",
+"height":"",
+"width":"",
+"min_height":"",
+"min_width":"",
+"extra":"",
+"component":"component://core-component/default/horizontal",
+"children":[
+{
+"type":"HorizontalWidget",
 "class":"",
 "height":"",
 "width":"",
@@ -169,6 +179,8 @@
 "component":"component://core-component/default/pagelayout",
 "children":[
 
+]
+}
 ]
 }
 ]
@@ -207,7 +219,6 @@
 "header":"<meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\">\r
 <meta http-equiv=\"content-style-type\" content=\"text/css\">\r
 <meta http-equiv=\"content-script-type\" content=\"text/javascript\">\r
-<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"/_s_/mongo/default/css/page.css\" />\r
 <link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"/_s_/mongo/default/css/cbox.css\" />\r
 <link rel=\"shortcut icon\" href=\"/_s_/mongo/default/favicon.ico\">",
 "pheader":"",

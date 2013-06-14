@@ -32,7 +32,7 @@ class NewsAction extends UserPostAction {
     unset($doc['submit']);
     $origin   = $doc['origin'];
     $lines = preg_split("@\r?\n@",$origin);
-    $parser = new PageParser($doc['title'],$lines);
+    $parser = new \Cockatoo\PageParser($doc['title'],$lines);
     $doc['contents'] =  $parser->parse();
   }
 }
