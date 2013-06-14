@@ -6,16 +6,16 @@
 "booth":"A0",
 "start":"14:30",
 "end":"15:00",
-"title":"MongoDB \u30b7\u30b9\u30c6\u30e0\u30bd\u30ea\u30e5\u30fc\u30b7\u30e7\u30f3\u6226\u7565\uff08\u4eee\uff09",
+"title":"MongoDB\u8d85\u5165\u9580\uff01",
 "incharge":"NRI",
 "overview":"\u5171\u50ac NRI\u306b\u3088\u308b\u8b1b\u6f14",
 "targets":[
-""
+"\u5c0f\u5b66\u6821\u9ad8\u5b66\u5e74\uff5e\u5927\u304d\u3044\u304a\u53cb\u9054\u307e\u3067"
 ],
 "types":[
 ""
 ],
-"origin":"",
+"origin":"gihyo.jp\u306e\u9023\u8f09\u300cMongoDB\u3067\u3086\u308b\u3075\u308fDB\u4f53\u9a13\u300d\u8457\u8005\u306e\u6e21\u90e8\u5fb9\u592a\u90ce\u6c0f\u304c\u3001\u8a18\u4e8b\u306e\u5185\u5bb9\u3092\u30c0\u30a4\u30b8\u30a7\u30b9\u30c8\u3067\u3054\u8aac\u660e\u3057\u307e\u3059\u3002",
 "contents":[
 {
 "tag":"div",
@@ -37,7 +37,7 @@
 "children":[
 {
 "tag":"text",
-"text":""
+"text":"gihyo.jp\u306e\u9023\u8f09\u300cMongoDB\u3067\u3086\u308b\u3075\u308fDB\u4f53\u9a13\u300d\u8457\u8005\u306e\u6e21\u90e8\u5fb9\u592a\u90ce\u6c0f\u304c\u3001\u8a18\u4e8b\u306e\u5185\u5bb9\u3092\u30c0\u30a4\u30b8\u30a7\u30b9\u30c8\u3067\u3054\u8aac\u660e\u3057\u307e\u3059\u3002"
 }
 ]
 },
@@ -51,8 +51,9 @@
 }
 ],
 "_share":true,
-"_owner":"ak2i",
-"_ownername":"@ak2i",
-"_time":1369354787,
-"_timestr":"2013-05-24"
+"_owner":"rinrin0108",
+"_ownername":"@rinrin0108",
+"_time":1371096470,
+"_timestr":"2013-06-13",
+"images":null
 }
