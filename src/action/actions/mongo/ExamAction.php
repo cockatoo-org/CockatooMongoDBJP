@@ -119,7 +119,7 @@ class ExamAction extends UserPostAction {
     return parent::get();
   }
   public function get_hook(&$doc) {
-    $method  = $this->get_method();
+    $method  = $this->getMethod();
     if ( $method===\Cockatoo\Beak::M_SET){
       return; // Edit mode
     }

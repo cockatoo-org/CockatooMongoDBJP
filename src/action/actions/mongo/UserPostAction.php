@@ -71,7 +71,7 @@ abstract class UserPostAction extends \Cockatoo\Action {
   }
   function get_docs(){
     $limit = 1000;
-    $qs = $this->get_queries();
+    $qs = $this->getQueries();
     if ( isset($qs[\Cockatoo\Beak::Q_LIMIT]) ) {
       $limit = $qs[\Cockatoo\Beak::Q_LIMIT];
     }

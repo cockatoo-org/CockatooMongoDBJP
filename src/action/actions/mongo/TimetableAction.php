@@ -31,7 +31,7 @@ class TimetableAction extends UserPostAction {
       );
   }
   function get_docs(){
-    $qs = $this->get_queries();
+    $qs = $this->getQueries();
     $ret = parent::get_docs();
     $view = array_filter($ret,function ($doc) use($qs) {
         if ( isset($qs['exhibition']) ){
