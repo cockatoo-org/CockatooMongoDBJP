@@ -1,5 +1,5 @@
 {
-"@R":"1369289080",
+"@R":"1371431966",
 "type":"HorizontalWidget",
 "subject":"header",
 "description":"header",
@@ -148,6 +148,7 @@
     <li><a href=\"<?cs var:C._base ?>/exams\">\u554f\u984c\u96c6</a></li>\r
     <li><a href=\"<?cs var:C._base ?>/tips\">TIPS</a></li>\r
     <li><a href=\"<?cs var:C._base ?>/docs\">\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8</a></li>\r
+    <li><a href=\"<?cs var:C._base ?>/mongodbjp\">MongoDBJP</a></li>\r
     <li><a href=\"<?cs var:C._base ?>/main\">\u30e1\u30a4\u30f3</a></li>\r
   </ul>\r
 </div></nav>\r
