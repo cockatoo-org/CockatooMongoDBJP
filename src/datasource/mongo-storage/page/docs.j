@@ -1,6 +1,6 @@
 {
 "title":"docs",
-"origin":"*\u3069\u3046\u3057\u3088\u3046\uff1f",
+"origin":"*Comming soon",
 "contents":[
 {
 "tag":"div",
@@ -22,13 +22,13 @@
 "children":[
 {
 "tag":"text",
-"text":"\u3069\u3046\u3057\u3088\u3046\uff1f"
+"text":"Comming soon"
 },
 {
 "tag":"a",
 "attr":{
-"href":"#\u3069\u3046\u3057\u3088\u3046\uff1f",
-"name":"\u3069\u3046\u3057\u3088\u3046\uff1f"
+"href":"#Comming soon",
+"name":"Comming soon"
 },
 "children":[
 {
@@ -55,7 +55,7 @@
 ],
 "_owner":"admin",
 "_ownername":"admin",
-"_time":1364445098,
-"_timestr":"2013-03-28",
+"_time":1371431589,
+"_timestr":"2013-06-17",
 "_u":"docs"
 }

@@ -1,13 +1,12 @@
 {
-"@R":"1369288250",
+"@R":"1371432096",
 "eredirect":"",
 "redirect":"",
 "pre_action":"",
 "post_action":"",
 "session_exp":"2147483647",
 "expires":"",
-"header":"<title>MongoDB JP : <?cs var:A.mongo.page.title?></title>\r
-<meta property=\"og:type\" content=\"website\" />\r
+"header":"<meta property=\"og:type\" content=\"website\" />\r
 ",
 "pheader":"",
 "bottom":"",

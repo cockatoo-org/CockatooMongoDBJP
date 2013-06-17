@@ -1,5 +1,5 @@
 {
-"@R":"1371106906",
+"@R":"1371432025",
 "eredirect":"/mongo/main",
 "redirect":"/mongo/main",
 "layout":{
@@ -220,7 +220,8 @@
 <meta http-equiv=\"content-style-type\" content=\"text/css\">\r
 <meta http-equiv=\"content-script-type\" content=\"text/javascript\">\r
 <link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"/_s_/mongo/default/css/cbox.css\" />\r
-<link rel=\"shortcut icon\" href=\"/_s_/mongo/default/favicon.ico\">",
+<link rel=\"shortcut icon\" href=\"/_s_/mongo/default/favicon.ico\">\r
+<title>MongoDB JP : <?cs var:A.mongo.page.title?></title>",
 "pheader":"",
 "bottom":"<script src=\"/_s_/core/default/js/jquery-1.7.2.min.js\"></script>",
 "session_exp":"3600",
