@@ -1,5 +1,5 @@
 {
-"@R":"1371173286",
+"@R":"1371432498",
 "type":"HorizontalWidget",
 "subject":"noryo2013_timetable_header",
 "description":"",
@@ -97,7 +97,7 @@ div.noryo2013_timetable div.detail {\r
   left: 15px;\r
   position: absolute;\r
   z-index: 9999;\r
-  width: 960px;\r
+  width: 900px;\r
   padding: 5px;\r
   font-size: 1.5em;\r
   line-height: 1.5em;\r
