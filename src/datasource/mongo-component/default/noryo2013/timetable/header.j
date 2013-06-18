@@ -1,5 +1,5 @@
 {
-"@R":"1371432498",
+"@R":"1371542351",
 "type":"HorizontalWidget",
 "subject":"noryo2013_timetable_header",
 "description":"",
@@ -350,6 +350,7 @@ function draw_timetable(h,cb_appendTo){\r
     <li><a href=\"<?cs var:C._base ?>/noryo2013/place\">\u6765\u5834\u6848\u5185</a></li>\r
     <li><a href=\"<?cs var:C._base ?>/noryo2013/exhibition\">\u5c55\u793a\u6848\u5185</a></li>\r
     <li><a href=\"<?cs var:C._base ?>/noryo2013/timetable\">\u30bf\u30a4\u30e0\u30c6\u30fc\u30d6\u30eb</a></li>\r
+    <li><a href=\"<?cs var:C._base ?>/noryo2013/sponsors\">\u5354\u8cdb\u4f01\u696d\u69d8</a></li>\r
 <?cs if:S.login.writable ?>\r
     <li><a href=\"<?cs var:C._base ?>/noryo2013/edit\">EDIT</a></li>\r
 <?cs /if ?>\r
