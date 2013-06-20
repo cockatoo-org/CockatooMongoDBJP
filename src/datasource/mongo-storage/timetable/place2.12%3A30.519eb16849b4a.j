@@ -8,7 +8,7 @@
 "end":"13:30",
 "title":"NoSQL\u3001MongoDB \u6700\u65b0\u4e8b\u60c5",
 "incharge":"\u672a\u5b9a",
-"overview":"\u6700\u521d\u306e\u67a0\u306f\u4e00\u822c\u5ba2\u304c\u5c11\u306a\u3044\u3068\u601d\u308f\u308c\u308b\u305f\u3081\u3001\u51fa\u5c55\u5074\u306e\u4eba\u9593\u3069\u3046\u3057\u3067\u306e\u60c5\u5831\u4ea4\u63db\u3092\u76ee\u7684\u3068\u3057\u305f\u30bb\u30c3\u30b7\u30e7\u30f3\u3068\u3057\u307e\u3059",
+"overview":"\u30d3\u30c3\u30b0\u30c7\u30fc\u30bf\u3001NoSQL\u3001MongoDB\u3092\u30ad\u30fc\u306b\u696d\u754c\u306e\u6700\u65b0\u4e8b\u60c5\u3092\u591a\u6570\u306e\u51fa\u5c55\u8005\u9054\u306b\u3088\u308a\u7d39\u4ecb\u3057\u307e\u3059\u3002",
 "targets":[
 ""
 ],
@@ -31,20 +31,17 @@
 "children":[
 {
 "tag":"text",
-"attr":[
-
-],
-"children":[
-{
-"tag":"text",
 "text":""
 }
 ]
 },
 {
 "tag":"br",
-"text":""
-}
+"attr":[
+
+],
+"children":[
+
 ]
 }
 ]
@@ -53,6 +50,7 @@
 "_share":true,
 "_owner":"ak2i",
 "_ownername":"@ak2i",
-"_time":1369354600,
-"_timestr":"2013-05-24"
+"_time":1371602082,
+"_timestr":"2013-06-19",
+"images":null
 }
