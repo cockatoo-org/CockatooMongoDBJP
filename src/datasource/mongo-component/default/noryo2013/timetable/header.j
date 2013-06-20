@@ -1,5 +1,5 @@
 {
-"@R":"1371691446",
+"@R":"1371711410",
 "type":"HorizontalWidget",
 "subject":"noryo2013_timetable_header",
 "description":"",
@@ -286,7 +286,7 @@ function draw_timetable(h,cb_appendTo){\r
       var start = time2date(session.start);\r
       var end   = time2date(session.end);\r
       session.during = (end.getTime() - start.getTime()) / 60000;\r
-      height = session.during * 2;\r
+      height = session.during * 2 -1;\r
     }\r
       $('<div class=\"session\" u=\"'+session._u+'\">'+\r
 \t((session.images && session.images.logo)?('<img class=\"logo\" src=\"/_s_/mongo/timetable/'+session.images.logo+'\"></img>'):'') +\r
@@ -294,9 +294,7 @@ function draw_timetable(h,cb_appendTo){\r
 \t'<div class=\"incharge\">'+session.incharge+\"</div>\"+\r
 \t'<div class=\"overview\">'+session.overview+'</div>'+\r
 \t'</div>')\r
-//      .css('background','url(\"/_s_/mongo/timetable/'+session.images.logo+'\") no-repeat')\r
-//      .css('background-size','30px')\r
-      .css('height',height + 'px')\r
+      .css('height',height)\r
       .appendTo(cb_appendTo(session));\r
   }\r
     $('div.noryo2013_timetable div.tab div.session').click(function(){\r
