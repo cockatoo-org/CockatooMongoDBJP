@@ -8,13 +8,13 @@
 "end":"14:00",
 "title":"\u7c73\u56fd\u306b\u304a\u3051\u308bMongoDB\u30d3\u30b8\u30cd\u30b9\u30e2\u30c7\u30eb\uff08\u4eee\uff09",
 "incharge":"\u9234\u6728\u9038\u5e73",
-"overview":"\u5317\u7c73\u5e02\u5834\u306e\u7d71\u8a08\u60c5\u5831\u3092\u3092\u5c11\u3057\u3054\u7d39\u4ecb\u3055\u3057\u4e0a\u3052\u307e\u3059\u3002\r
+"overview":"\u5317\u7c73\u5e02\u5834\u306e\u7d71\u8a08\u60c5\u5831\u3092\u3092\u5c11\u3057\u3054\u7d39\u4ecb\u3057\u307e\u3059\u3002\r
 ",
 "targets":[
 "SIer",
-"        \u30e6\u30fc\u30b6\u4f01\u696d\u5019\u88dc",
-"        MongoDB\u30a8\u30f3\u30b8\u30cb\u30a2",
-"        \u4e00\u822c\u30a8\u30f3\u30b8\u30cb\u30a2"
+"         \u30e6\u30fc\u30b6\u4f01\u696d\u5019\u88dc",
+"         MongoDB\u30a8\u30f3\u30b8\u30cb\u30a2",
+"         \u4e00\u822c\u30a8\u30f3\u30b8\u30cb\u30a2"
 ],
 "types":[
 "\u8b1b\u6f14"
@@ -39,28 +39,19 @@
 "children":[
 {
 "tag":"text",
-"attr":[
-
-],
-"children":[
-{
-"tag":"text",
 "text":"MongoDB\u306f\u3001\u767b\u5834\u3057\u3066\u304b\u3089\u6570\u5e74\u3057\u304b\u7d4c\u3063\u3066\u3044\u307e\u305b\u3093\u304c\uff0cNoSQL\u5e02\u5834\u3067\u306f\u7a81\u51fa\u3057\u3066\u30e6\u30fc\u30b6\u6570\u306e\u591a\u3044\u3001\u30c0\u30f3\u30c8\u30c4\u306e\u6280\u8853\u3068\u3057\u3066\u305d\u306e\u5730\u4f4d\u3092\u56fa\u3081\u3064\u3064\u3042\u308a\u307e\u3059\u3002\u6700\u8fd1\u3067\u306f\u3001Web2.0\u696d\u754c\u306e\u307f\u306a\u3089\u305a\u3001\u30a8\u30f3\u30bf\u30d7\u30e9\u30a4\u30ba\u3067\u306e\u5229\u7528\u304c\u305d\u306e\u6210\u9577\u306b\u80cc\u666f\u306b\u3042\u308a\u3001\u5f93\u6765\u306eSNS\u3001\u30b2\u30fc\u30e0\u7cfb\u3001\u7b49\u306e\u30a6\u30a7\u30d6\u30b5\u30a4\u30c8\u3092\u652f\u3048\u308b\u30c7\u30fc\u30bf\u30d9\u30fc\u30b9\u30b7\u30b9\u30c6\u30e0\u306e\u307f\u306a\u3089\u305a\u3001\u4f01\u696d\u5185\u306e\u30d3\u30c3\u30b0\u30c7\u30fc\u30bf\u5206\u6790\u3001BI (Business Intelligence)\u30bd\u30ea\u30e5\u30fc\u30b7\u30e7\u30f3\u3068\u3057\u3066\u63a1\u7528\u3055\u308c\u308b\u30b1\u30fc\u30b9\u304c\u5897\u3048\u3066\u3044\u307e\u3059\u3002"
 }
 ]
 },
 {
 "tag":"br",
-"text":""
-}
-]
-},
-{
-"tag":"text",
 "attr":[
 
 ],
 "children":[
+
+]
+},
 {
 "tag":"text",
 "attr":[
@@ -75,16 +66,13 @@
 },
 {
 "tag":"br",
-"text":""
-}
-]
-},
-{
-"tag":"text",
 "attr":[
 
 ],
 "children":[
+
+]
+},
 {
 "tag":"text",
 "attr":[
@@ -99,16 +87,13 @@
 },
 {
 "tag":"br",
-"text":""
-}
-]
-},
-{
-"tag":"text",
 "attr":[
 
 ],
 "children":[
+
+]
+},
 {
 "tag":"text",
 "attr":[
@@ -123,16 +108,13 @@
 },
 {
 "tag":"br",
-"text":""
-}
-]
-},
-{
-"tag":"text",
 "attr":[
 
 ],
 "children":[
+
+]
+},
 {
 "tag":"text",
 "attr":[
@@ -147,16 +129,20 @@
 },
 {
 "tag":"br",
-"text":""
-}
+"attr":[
+
+],
+"children":[
+
 ]
 }
 ]
 }
 ],
 "_share":true,
-"_owner":"ak2i",
-"_ownername":"@ak2i",
-"_time":1369758126,
-"_timestr":"2013-05-29"
+"_owner":"crumbjp",
+"_ownername":"@crumbjp",
+"_time":1371710580,
+"_timestr":"2013-06-20",
+"images":null
 }
