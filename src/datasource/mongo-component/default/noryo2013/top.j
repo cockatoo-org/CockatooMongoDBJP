@@ -1,5 +1,5 @@
 {
-"@R":"1371542187",
+"@R":"1371691385",
 "type":"HorizontalWidget",
 "subject":"noryo2013_top",
 "description":"",
@@ -77,7 +77,7 @@
   <li><a href=\"<?cs var:C._base ?>/noryo2013/place\">\u6765\u5834\u6848\u5185</a></li>\r
   <li><a href=\"<?cs var:C._base ?>/noryo2013/timetable\">\u30bf\u30a4\u30e0\u30c6\u30fc\u30d6\u30eb</a></li>\r
   <li><a href=\"<?cs var:C._base ?>/noryo2013/exhibition\">\u5e38\u8a2d\u5c55\u793a</a></li>\r
-  <li><a href=\"<?cs var:C._base ?>/noryo2013/sponsors\">\u5354\u8cdb\u4f01\u696d\u69d8</a></li>\r
+  <li><a href=\"<?cs var:C._base ?>/noryo2013/sponsors\">\u30b9\u30dd\u30f3\u30b5\u30fc</a></li>\r
 </ul>\r
 <div id=\"message\">\r
 mongoDB\u3063\u3066\u77e5\u3063\u3066\u308b\u304b\u3044\uff1f\u8272\u3005\u826f\u3044\u3053\u3068\u304c\u51fa\u6765\u308b\u3063\u3066\u5642\u3060\u305c\u266a<br>\r
