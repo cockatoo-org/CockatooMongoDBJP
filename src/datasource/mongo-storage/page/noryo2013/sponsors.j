@@ -1,14 +1,14 @@
 {
 "title":"noryo2013/sponsors",
 "origin":"&table(\u5354\u8cdb\u4f01\u696d\u69d8\u4e00\u89a7,width:200px;font-size:1.5em;){
-&ref(kumiawase_j_4_RGB.jpg,,300);|
-&ref(rakuten-logo.jpg,,300);|
-};
+&ref(kumiawase_j_4_RGB.jpg,,300)|
+&ref(rakuten-logo.jpg,,300)|
+}
 
 * \u30b9\u30dd\u30f3\u30b5\u30fc\u30b7\u30c3\u30d7\u306b\u95a2\u3057\u3066
 \u300e\u7b2c\u4e00\u56de\u7d0d\u6dbc\u3082\u3093\u3054\u796d\u308a\u300f\uff08\u4ee5\u964d\u3001\u5f53\u30a4\u30d9\u30f3\u30c8\uff09\u306b\u8cdb\u540c\u3057\u3001\u5171\u50ac\u30fb\u5354\u8cdb\u3057\u3066\u9802\u3051\u308b\u4f01\u696d\u69d8\u3092\u52df\u96c6\u3057\u3066\u304a\u308a\u307e\u3059\u3002
 
-:\u4f01\u753b\u66f8:[[https://github.com/MongoDB-JP/2013-summer-festival/blob/master/doc/2013_summer_festival_plan.pdf]]
+:\u4f01\u753b\u66f8:&a(https://github.com/MongoDB-JP/2013-summer-festival/blob/master/doc/2013_summer_festival_plan.pdf,_blank)
 
 ** \u5f53\u30a4\u30d9\u30f3\u30c8\u7a93\u53e3
 :mail:event@mongodb.jp
@@ -379,21 +379,9 @@
 ],
 "children":[
 {
-"tag":"text",
-"attr":[
-
-],
-"children":[
-{
-"tag":"text",
-"text":""
-}
-]
-},
-{
 "tag":"a",
 "attr":{
-"target":"_self",
+"target":"_blank",
 "href":"https://github.com/MongoDB-JP/2013-summer-festival/blob/master/doc/2013_summer_festival_plan.pdf"
 },
 "children":[
@@ -700,9 +688,9 @@
 ]
 }
 ],
-"_owner":"admin",
-"_ownername":"admin",
-"_time":1371692426,
-"_timestr":"2013-06-20",
+"_owner":"crumbjp",
+"_ownername":"@crumbjp",
+"_time":1371774424,
+"_timestr":"2013-06-21",
 "_u":"noryo2013/sponsors"
 }
