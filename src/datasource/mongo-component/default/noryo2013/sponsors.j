@@ -1,5 +1,5 @@
 {
-"@R":"1371618714",
+"@R":"1371946200",
 "type":"HorizontalWidget",
 "subject":"noryo2013/sponsors",
 "description":"",
@@ -15,7 +15,7 @@
 "id":"sponsors",
 "class":"",
 "body":"\r
-<img width=\"300\" src=\"/_s_/mongo/page/noryo2013/sponsors/kumiawase_j_4_RGB.jpg\">\r
+<img width=\"300\" src=\"/_s_/mongo/page/noryo2013/sponsors/nomura.jpg\">\r
 <img width=\"300\" src=\"/_s_/mongo/page/noryo2013/sponsors/rakuten-logo.jpg\">\r
 ",
 "action":[

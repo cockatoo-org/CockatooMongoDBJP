@@ -1,8 +1,8 @@
 {
 "title":"noryo2013/sponsors",
 "origin":"&table(\u5354\u8cdb\u4f01\u696d\u69d8\u4e00\u89a7,width:200px;font-size:1.5em;){
-&ref(kumiawase_j_4_RGB.jpg,,300)|
-&ref(rakuten-logo.jpg,,300)|
+&img(nomura.jpg,,300)|
+&img(rakuten-logo.jpg,,300)|
 }
 
 * \u30b9\u30dd\u30f3\u30b5\u30fc\u30b7\u30c3\u30d7\u306b\u95a2\u3057\u3066
@@ -105,14 +105,14 @@
 {
 "tag":"a",
 "attr":{
-"href":"/_s_/mongo/page/noryo2013/sponsors/kumiawase_j_4_RGB.jpg"
+"href":"/_s_/mongo/page/noryo2013/sponsors/nomura.jpg"
 },
 "children":[
 {
 "tag":"img",
 "attr":{
 "width":"300",
-"src":"/_s_/mongo/page/noryo2013/sponsors/kumiawase_j_4_RGB.jpg"
+"src":"/_s_/mongo/page/noryo2013/sponsors/nomura.jpg"
 },
 "children":[
 
@@ -690,7 +690,7 @@
 ],
 "_owner":"crumbjp",
 "_ownername":"@crumbjp",
-"_time":1371774424,
-"_timestr":"2013-06-21",
+"_time":1371946885,
+"_timestr":"2013-06-23",
 "_u":"noryo2013/sponsors"
 }
