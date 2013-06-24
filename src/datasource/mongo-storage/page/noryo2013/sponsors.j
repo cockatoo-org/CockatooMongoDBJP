@@ -1,6 +1,6 @@
 {
 "title":"noryo2013/sponsors",
-"origin":"&table(\u5354\u8cdb\u4f01\u696d\u69d8\u4e00\u89a7,width:200px;font-size:1.5em;){
+"origin":"&table(\u5354\u8cdb\u4f01\u696d\u69d8\u4e00\u89a7,width:300px;font-size:1.5em;){
 &img(nomura.jpg,,300)|
 &img(rakuten-logo.jpg,,300)|
 }
@@ -49,7 +49,7 @@
 "tag":"th",
 "attr":{
 "class":"th0",
-"style":"width:200px;font-size:1.5em;"
+"style":"width:300px;font-size:1.5em;"
 },
 "children":[
 {
@@ -690,7 +690,7 @@
 ],
 "_owner":"crumbjp",
 "_ownername":"@crumbjp",
-"_time":1371946885,
-"_timestr":"2013-06-23",
+"_time":1372041197,
+"_timestr":"2013-06-24",
 "_u":"noryo2013/sponsors"
 }
