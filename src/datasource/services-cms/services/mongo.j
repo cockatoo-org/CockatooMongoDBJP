@@ -1,6 +1,6 @@
 {
-"account":{
-"admin":8
-},
+"account":[
+
+],
 "_u":"mongo"
 }
