@@ -1,5 +1,5 @@
 {
-"@R":"1371099875",
+"@R":"1372660535",
 "eredirect":"/mongo/noryo2013/top",
 "redirect":"/mongo/noryo2013/top",
 "layout":{
@@ -113,5 +113,7 @@
 "bottom":"<script src=\"/_s_/core/default/js/jquery-1.7.2.min.js\"></script>",
 "session_exp":"3600",
 "expires":"0",
-"_u":""
+"_u":"",
+"pre_action":"action://mongo-action/mongo/AccountAction?get",
+"post_action":""
 }

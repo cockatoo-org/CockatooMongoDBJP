@@ -1,5 +1,5 @@
 {
-"@R":"1371432025",
+"@R":"1372660530",
 "eredirect":"/mongo/main",
 "redirect":"/mongo/main",
 "layout":{
@@ -226,5 +226,7 @@
 "bottom":"<script src=\"/_s_/core/default/js/jquery-1.7.2.min.js\"></script>",
 "session_exp":"3600",
 "expires":"0",
-"_u":""
+"_u":"",
+"pre_action":"action://mongo-action/mongo/AccountAction?get",
+"post_action":""
 }
