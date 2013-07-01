@@ -17,12 +17,4 @@ class AccountAction extends \Cockatoo\AccountAction {
   protected $REPLY_TO = MongoConfig::MAIL_FROM;
   protected $REDIRECT = 'main';
   protected $EREDIRECT = 'main';
-
-  protected function first_hook() {
-    parent::first_hook();
-    $session =& $this->getSession();
-    if ( $session[\Cockatoo\Def::SESSION_KEY_POST] && ! $session[\Cockatoo\Def::SESSION_KEY_POST]['r'] ) {
-      $session[\Cockatoo\Def::SESSION_KEY_POST]['r'] = $session[\Cockatoo\Def::SESSION_KEY_REQ]['Referer'];
-    }
-  }
 }
