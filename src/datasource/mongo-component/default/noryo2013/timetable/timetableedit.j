@@ -1,5 +1,5 @@
 {
-"@R":"1369297707",
+"@R":"1373297080",
 "type":"HorizontalWidget",
 "subject":"timetableedit",
 "description":"",
@@ -15,6 +15,10 @@ div.noryo2013_timetable div.tab table.timetable th.end,\r
 div.noryo2013_timetable div.tab table.timetable input[name=\"start\"],\r
 div.noryo2013_timetable div.tab table.timetable input[name=\"end\"] {\r
   width: 40px;\r
+}\r
+div.noryo2013_timetable div.tab table.timetable th.atnd,\r
+div.noryo2013_timetable div.tab table.timetable input[name=\"atnd\"] {\r
+  width: 500px;\r
 }\r
 div.noryo2013_timetable div.tab table.timetable th.title,\r
 div.noryo2013_timetable div.tab table.timetable input[name=\"title\"] {\r
@@ -131,6 +135,7 @@ div.noryo2013_timetable div.tab table.timetable input[name=\"targets\"] {\r
 </td></tr>\r
 <tr class=\"start\"   ><td class=\"key\">\u958b\u59cb\u6642\u523b</td><td><input type=\"text\" name=\"start\" value=\"<?cs var:item.start ?>\"></input></td></tr>\r
 <tr class=\"end\"     ><td class=\"key\">\u7d42\u4e86\u6642\u523b</td><td><input type=\"text\" name=\"end\"   value=\"<?cs var:item.end ?>\"  ></input></td></tr>\r
+<tr class=\"atnd\"     ><td class=\"key\">ATND(url)</td><td><input type=\"text\" name=\"atnd\"   value=\"<?cs var:item.atnd ?>\"  ></input></td></tr>\r
 <tr class=\"logo\"    ><td class=\"key\">\u30a4\u30e1\u30fc\u30b8</td><td><?cs var:item.logo ?><br><img src=\"/_s_/mongo/timetable/<?cs var:item.images.logo ?>\"></img><br><input type=\"file\" name=\"logo\" value=\"\"></input></td></tr>\r
 <tr class=\"title\"   ><td class=\"key\">\u30bf\u30a4\u30c8\u30eb</td><td><input type=\"text\" name=\"title\" value=\"<?cs var:item.title ?>\"></input></td></tr>\r
 <tr class=\"incharge\"><td class=\"key\">\u8b1b\u6f14\u8005</td>  <td><input type=\"text\" name=\"incharge\" value=\"<?cs var:item.incharge ?>\"></input></td></tr>\r

@@ -1,5 +1,5 @@
 {
-"@R":"1371711410",
+"@R":"1373297564",
 "type":"HorizontalWidget",
 "subject":"noryo2013_timetable_header",
 "description":"",
@@ -375,6 +375,10 @@ function draw_timetable(h,cb_appendTo){\r
     <td class=\"key\"><span class=\"q\">\"</span>\u958b\u59cb\u6642\u523b<span class=\"q\">\"</span></td><td class=\"sep\">:</td><td class=\"value start\"><span class=\"q\">\"</span><?cs var:item.start ?><span class=\"q\">\"</span></td><td class=\"comma\">,</td>\r
    </tr><tr>\r
     <td class=\"key\"><span class=\"q\">\"</span>\u7d42\u4e86\u6642\u523b<span class=\"q\">\"</span></td><td class=\"sep\">:</td><td class=\"value end\"><span class=\"q\">\"</span><?cs var:item.end ?><span class=\"q\">\"</span></td><td class=\"comma\">,</td>\r
+    <?cs if:item.atnd ?>\r
+   </tr><tr>\r
+    <td class=\"key\"><span class=\"q\">\"</span>\u53c2\u52a0\u767b\u9332<span class=\"q\">\"</span></td><td class=\"sep\">:</td><td class=\"value end\"><span class=\"q\">\"</span><a target=\"_blank\" href=\"<?cs var:item.atnd ?>\"><?cs var:item.atnd ?></a><span class=\"q\">\"</span></td><td class=\"comma\">,</td>\r
+   <?cs /if ?>\r
    </tr><tr>\r
     <td class=\"key\"><span class=\"q\">\"</span>\u6982\u8981<span class=\"q\">\"</span></td>\u3000\u3000<td class=\"sep\">:</td><td class=\"value\"><span class=\"q\">\"</span><?cs var:item.overview ?><span class=\"q\">\"</span></td><td class=\"comma\">,</td>\r
    </tr><tr>\r
