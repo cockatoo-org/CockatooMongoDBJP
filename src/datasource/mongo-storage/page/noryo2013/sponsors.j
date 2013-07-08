@@ -1,9 +1,9 @@
 {
 "title":"noryo2013/sponsors",
 "origin":"&table(\u5354\u8cdb\u4f01\u696d\u69d8\u4e00\u89a7,width:300px;font-size:1.5em;){
+&img(logo_01.jpeg,,300)|
 &img(nomura.jpg,,300)|
 &img(rakuten-logo.jpg,,300)|
-&img(logo_01.jpeg,,300)|
 &img(sakura_logo.png,,300)|
 &img(ezlogo.png,,300)|
 }
@@ -108,14 +108,14 @@
 {
 "tag":"a",
 "attr":{
-"href":"/_s_/mongo/page/noryo2013/sponsors/nomura.jpg"
+"href":"/_s_/mongo/page/noryo2013/sponsors/logo_01.jpeg"
 },
 "children":[
 {
 "tag":"img",
 "attr":{
 "width":"300",
-"src":"/_s_/mongo/page/noryo2013/sponsors/nomura.jpg"
+"src":"/_s_/mongo/page/noryo2013/sponsors/logo_01.jpeg"
 },
 "children":[
 
@@ -162,14 +162,14 @@
 {
 "tag":"a",
 "attr":{
-"href":"/_s_/mongo/page/noryo2013/sponsors/rakuten-logo.jpg"
+"href":"/_s_/mongo/page/noryo2013/sponsors/nomura.jpg"
 },
 "children":[
 {
 "tag":"img",
 "attr":{
 "width":"300",
-"src":"/_s_/mongo/page/noryo2013/sponsors/rakuten-logo.jpg"
+"src":"/_s_/mongo/page/noryo2013/sponsors/nomura.jpg"
 },
 "children":[
 
@@ -216,14 +216,14 @@
 {
 "tag":"a",
 "attr":{
-"href":"/_s_/mongo/page/noryo2013/sponsors/logo_01.jpeg"
+"href":"/_s_/mongo/page/noryo2013/sponsors/rakuten-logo.jpg"
 },
 "children":[
 {
 "tag":"img",
 "attr":{
 "width":"300",
-"src":"/_s_/mongo/page/noryo2013/sponsors/logo_01.jpeg"
+"src":"/_s_/mongo/page/noryo2013/sponsors/rakuten-logo.jpg"
 },
 "children":[
 
@@ -853,9 +853,9 @@
 ]
 }
 ],
-"_owner":"ak2i",
-"_ownername":"@ak2i",
-"_time":1373290413,
-"_timestr":"2013-07-08",
+"_owner":"crumbjp",
+"_ownername":"@crumbjp",
+"_time":1373298672,
+"_timestr":"2013-07-09",
 "_u":"noryo2013/sponsors"
 }

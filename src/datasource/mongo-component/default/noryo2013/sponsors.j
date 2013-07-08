@@ -1,5 +1,5 @@
 {
-"@R":"1371946200",
+"@R":"1373298635",
 "type":"HorizontalWidget",
 "subject":"noryo2013/sponsors",
 "description":"",
@@ -8,15 +8,17 @@
 }\r
 \r
 #sponsors img {\r
-  padding: 10px;\r
+  margin-left: 8px;\r
 }\r
 ",
 "js":"",
 "id":"sponsors",
 "class":"",
-"body":"\r
+"body":"<img width=\"300\" src=\"/_s_/mongo/page/noryo2013/sponsors/logo_01.jpeg\">\r
 <img width=\"300\" src=\"/_s_/mongo/page/noryo2013/sponsors/nomura.jpg\">\r
 <img width=\"300\" src=\"/_s_/mongo/page/noryo2013/sponsors/rakuten-logo.jpg\">\r
+<img width=\"300\" src=\"/_s_/mongo/page/noryo2013/sponsors/sakura_logo.png\">\r
+<img width=\"300\" src=\"/_s_/mongo/page/noryo2013/sponsors/ezlogo.png\">\r
 ",
 "action":[
 ""
