@@ -1,5 +1,5 @@
 {
-"@R":"1374023442",
+"@R":"1374108722",
 "type":"HorizontalWidget",
 "subject":"noryo2013_top",
 "description":"",
@@ -78,7 +78,7 @@
   <li><a href=\"<?cs var:C._base ?>/noryo2013/timetable\">\u30bf\u30a4\u30e0\u30c6\u30fc\u30d6\u30eb</a></li>\r
   <li><a href=\"<?cs var:C._base ?>/noryo2013/exhibition\">\u5e38\u8a2d\u5c55\u793a</a></li>\r
   <li><a href=\"<?cs var:C._base ?>/noryo2013/sponsors\">\u30b9\u30dd\u30f3\u30b5\u30fc</a></li>\r
-  <li><a href=\"http://atnd.org/events/41572\">\u53c2\u52a0\u767b\u9332</a></li>\r
+  <li><div style=\"background-color:white;border:solid 1px red;border-radius:8px;padding:2px;\"><div style=\"background-color:red;border-radius:6px;padding:2px;\"><a style=\"color:white;font-weight:900;\" href=\"http://atnd.org/events/41572\">\u30a4\u30d9\u30f3\u30c8\u306b\u884c\u304f</a></div></div></li>\r
 </ul>\r
 <div id=\"message\">\r
 mongoDB\u3063\u3066\u77e5\u3063\u3066\u308b\u304b\u3044\uff1f\u8272\u3005\u826f\u3044\u3053\u3068\u304c\u51fa\u6765\u308b\u3063\u3066\u5642\u3060\u305c\u266a<br>\r
