@@ -1,5 +1,5 @@
 {
-"@R":"1373298635",
+"@R":"1374036688",
 "type":"HorizontalWidget",
 "subject":"noryo2013/sponsors",
 "description":"",
@@ -19,6 +19,7 @@
 <img width=\"300\" src=\"/_s_/mongo/page/noryo2013/sponsors/rakuten-logo.jpg\">\r
 <img width=\"300\" src=\"/_s_/mongo/page/noryo2013/sponsors/sakura_logo.png\">\r
 <img width=\"300\" src=\"/_s_/mongo/page/noryo2013/sponsors/ezlogo.png\">\r
+<img width=\"300\" src=\"/_s_/mongo/page/noryo2013/sponsors/10gen_Logo_Full.png\">\r
 ",
 "action":[
 ""
