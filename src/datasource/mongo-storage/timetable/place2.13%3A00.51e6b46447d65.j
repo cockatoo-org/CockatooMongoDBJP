@@ -8,8 +8,8 @@
 "end":"13:30",
 "atnd":"",
 "title":"\u57fa\u8abf\u8b1b\u6f14",
-"incharge":"\u672a\u5b9a",
-"overview":"\u30d3\u30c3\u30b0\u30c7\u30fc\u30bf\u3001NoSQL\u3001MongoDB\u3092\u30ad\u30fc\u306b\u57fa\u8abf\u8b1b\u6f14",
+"incharge":"-",
+"overview":"\u30af\u30e9\u30a6\u30c9\u3001\u30d3\u30c3\u30b0\u30c7\u30fc\u30bf\u3001NoSQL\u3001MongoDB\u3092\u30ad\u30fc\u306b\u57fa\u8abf\u8b1b\u6f14",
 "targets":[
 ""
 ],
@@ -51,6 +51,7 @@
 "_share":true,
 "_owner":"ak2i",
 "_ownername":"@ak2i",
-"_time":1374073956,
-"_timestr":"2013-07-18"
+"_time":1374192841,
+"_timestr":"2013-07-19",
+"images":null
 }

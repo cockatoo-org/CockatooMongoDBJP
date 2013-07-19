@@ -7,7 +7,7 @@
 &img(sakura_logo.png,,300)|
 &img(10gen_Logo_Full.png,,300)|
 &img(ezlogo.png,,300)|
-&img(cloudn_logo.png,,300)|
+&img(cloudn_300.png,,300)|
 &img(WinAzure_c_Blue286_M.png,,300)|
 }
 
@@ -440,14 +440,14 @@
 {
 "tag":"a",
 "attr":{
-"href":"/_s_/mongo/page/noryo2013/sponsors/cloudn_logo.png"
+"href":"/_s_/mongo/page/noryo2013/sponsors/cloudn_300.png"
 },
 "children":[
 {
 "tag":"img",
 "attr":{
 "width":"300",
-"src":"/_s_/mongo/page/noryo2013/sponsors/cloudn_logo.png"
+"src":"/_s_/mongo/page/noryo2013/sponsors/cloudn_300.png"
 },
 "children":[
 
@@ -1263,7 +1263,7 @@
 ],
 "_owner":"ak2i",
 "_ownername":"@ak2i",
-"_time":1374075288,
-"_timestr":"2013-07-18",
+"_time":1374189185,
+"_timestr":"2013-07-19",
 "_u":"noryo2013/sponsors"
 }

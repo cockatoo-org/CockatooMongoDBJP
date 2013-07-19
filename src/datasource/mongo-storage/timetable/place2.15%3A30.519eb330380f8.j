@@ -1,11 +1,11 @@
 {
 "op":"save",
 "_u":"place2.15%3A30.519eb330380f8",
-"public":true,
 "place":"place2",
 "booth":"A0",
 "start":"15:30",
 "end":"16:00",
+"atnd":"",
 "title":"Web\u306e\u4e16\u754c\u306e\u884c\u304f\u672b\uff08\u4eee\uff09",
 "incharge":"\u672a\u5b9a",
 "overview":"\u8b1b\u6f14\u8005\u52df\u96c6\u4e2d",
@@ -50,7 +50,8 @@
 "_share":true,
 "_owner":"ak2i",
 "_ownername":"@ak2i",
-"_time":1371602194,
-"_timestr":"2013-06-19",
-"images":null
+"_time":1374192771,
+"_timestr":"2013-07-19",
+"images":null,
+"public":false
 }

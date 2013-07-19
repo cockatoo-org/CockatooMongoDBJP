@@ -1,11 +1,11 @@
 {
 "op":"save",
 "_u":"place2.15%3A00.519eb28b087b6",
-"public":true,
 "place":"place2",
 "booth":"A1",
 "start":"15:00",
 "end":"15:30",
+"atnd":"",
 "title":"MongoDB\u958b\u767a\u4f53\u9a13\uff08\u4eee\uff09",
 "incharge":"\u672a\u5b9a",
 "overview":"MongoDB\u958b\u767a\u4f53\u9a13\u306e\u767a\u8868\u8005\u3092\u52df\u96c6\u4e2d",
@@ -50,7 +50,8 @@
 "_share":true,
 "_owner":"ak2i",
 "_ownername":"@ak2i",
-"_time":1371611350,
-"_timestr":"2013-06-19",
-"images":null
+"_time":1374192764,
+"_timestr":"2013-07-19",
+"images":null,
+"public":false
 }
