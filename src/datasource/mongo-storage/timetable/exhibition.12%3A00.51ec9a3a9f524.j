@@ -1,7 +1,6 @@
 {
 "op":"save",
 "_u":"exhibition.12%3A00.51ec9a3a9f524",
-"public":true,
 "place":"exhibition",
 "booth":"A6",
 "start":"12:00",
@@ -49,8 +48,10 @@
 }
 ],
 "_share":true,
-"_owner":"ak2i",
-"_ownername":"@ak2i",
-"_time":1374460474,
-"_timestr":"2013-07-22"
+"_owner":"crumbjp",
+"_ownername":"@crumbjp",
+"_time":1374504316,
+"_timestr":"2013-07-22",
+"images":null,
+"public":false
 }
