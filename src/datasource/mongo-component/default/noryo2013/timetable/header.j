@@ -1,5 +1,5 @@
 {
-"@R":"1374023431",
+"@R":"1374508132",
 "type":"HorizontalWidget",
 "subject":"noryo2013_timetable_header",
 "description":"",
@@ -277,8 +277,8 @@ function time2date(str){\r
 }\r
 function draw_timetable(h,cb_appendTo){\r
   for ( var i in timetable ) {\r
-    var height = h;\r
     var session = timetable[i];\r
+    var height = h(session);\r
     if ( ! session.start || ! session.end ) {\r
       continue;\r
     }\r

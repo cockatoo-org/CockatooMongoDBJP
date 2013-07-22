@@ -1,5 +1,5 @@
 {
-"@R":"1373297080",
+"@R":"1374507531",
 "type":"HorizontalWidget",
 "subject":"timetableedit",
 "description":"",
@@ -86,6 +86,7 @@ div.noryo2013_timetable div.tab table.timetable input[name=\"targets\"] {\r
 <tbody>\r
  <tr>\r
  <th class=\"place\"   >\u4f1a\u5834</th>\r
+ <th class=\"nbooth\"   >\u30d6\u30fc\u30b9\u6570</th>\r
  <th class=\"start\"   >\u958b\u59cb\u6642\u523b</th>\r
  <th class=\"end\"     >\u7d42\u4e86\u6642\u523b</th>\r
  <th class=\"title\"   >\u30bf\u30a4\u30c8\u30eb</th>\r
@@ -95,6 +96,7 @@ div.noryo2013_timetable div.tab table.timetable input[name=\"targets\"] {\r
 <?cs each: item = A.mongo.timeboxs.raw ?>\r
  <tr class=\"view <?cs if:! item.public ?>private<?cs /if ?>\">\r
  <td class=\"place\"   ><?cs var:item.place ?></td>   \r
+ <td class=\"nbooth\"   ><?cs var:item.nbooth ?></td>   \r
  <td class=\"start\"   ><?cs var:item.start ?></td>   \r
  <td class=\"end\"     ><?cs var:item.end ?></td>\t    \r
  <td class=\"title\"   ><?cs var:item.title ?></td>\r
@@ -130,6 +132,13 @@ div.noryo2013_timetable div.tab table.timetable input[name=\"targets\"] {\r
   <?cs loop:x = #0, #9, #1 ?>\r
     <?cs set: v = \"C\"+x ?>\r
     <option <?cs if:item.booth == v ?>selected<?cs /if ?> value=\"<?cs var:v ?>\"><?cs var:v ?></option>\r
+  <?cs /loop ?>\r
+</select>\r
+</td></tr>\r
+<tr class=\"nbooth\"   ><td class=\"nbooth\">\u30d6\u30fc\u30b9\u6570</td><td>\r
+<select name=\"nbooth\">\r
+  <?cs loop:x = #1, #9, #1 ?>\r
+    <option <?cs if:item.nbooth == x ?>selected<?cs /if ?> value=\"<?cs var:x ?>\"><?cs var:x ?></option>\r
   <?cs /loop ?>\r
 </select>\r
 </td></tr>\r

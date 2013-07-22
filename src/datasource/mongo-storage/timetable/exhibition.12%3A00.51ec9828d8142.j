@@ -4,6 +4,7 @@
 "public":true,
 "place":"exhibition",
 "booth":"B6",
+"nbooth":"4",
 "start":"12:00",
 "end":"18:00",
 "atnd":"",
@@ -49,8 +50,9 @@
 }
 ],
 "_share":true,
-"_owner":"ak2i",
-"_ownername":"@ak2i",
-"_time":1374459944,
-"_timestr":"2013-07-22"
+"_owner":"crumbjp",
+"_ownername":"@crumbjp",
+"_time":1374508438,
+"_timestr":"2013-07-23",
+"images":null
 }

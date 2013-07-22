@@ -1,5 +1,5 @@
 {
-"@R":"1370575917",
+"@R":"1374508171",
 "type":"HorizontalWidget",
 "subject":"noryo2013_timetable",
 "description":"",
@@ -16,7 +16,7 @@ div.noryo2013_timetable div.tab table.timetable td div.t {\r
 \r
 ",
 "js":"$(function(){\r
-  draw_timetable(null,function(session){return 'div.noryo2013_timetable div.tab table td.' + session.place + '> div.t'+session.start.replace(/:/,'')});\r
+  draw_timetable(function(session){ return null },function(session){return 'div.noryo2013_timetable div.tab table td.' + session.place + '> div.t'+session.start.replace(/:/,'')});\r
   \r
 });",
 "id":"",

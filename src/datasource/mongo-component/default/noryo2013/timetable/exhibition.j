@@ -1,5 +1,5 @@
 {
-"@R":"1370575947",
+"@R":"1374508269",
 "type":"HorizontalWidget",
 "subject":"noryo2013_exhibition",
 "description":"",
@@ -13,9 +13,16 @@ div.noryo2013_timetable div.tab table.timetable td.first div.N {  \r
   height:80px;\r
 }",
 "js":"$( function (){\r
-  draw_timetable(120,function(session){ \r
-    return 'div.noryo2013_timetable div.tab div.' + session.booth;\r
-  });\r
+  draw_timetable(\r
+         function(session){\r
+             if ( session.nbooth ) {\r
+                return session.nbooth * 120 -1;\r
+             }\r
+             return 119;\r
+          },\r
+          function(session){ \r
+            return 'div.noryo2013_timetable div.tab div.' + session.booth;\r
+          });\r
 })\r
 ",
 "id":"",
