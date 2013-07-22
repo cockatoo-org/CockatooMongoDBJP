@@ -3,9 +3,10 @@
 "_u":"exhibition.12%3A00.519eb788be28b",
 "public":true,
 "place":"exhibition",
-"booth":"C0",
+"booth":"A0",
 "start":"12:00",
 "end":"18:00",
+"atnd":"",
 "title":"10genEducation\u4f53\u9a13\u30b3\u30fc\u30ca\u30fc",
 "incharge":"Ippei Suzuki",
 "overview":"10genEducation\u306e\u65e5\u672c\u8a9e\u7248\u3092\u4f53\u9a13\u3067\u304d\u308b\u30b3\u30fc\u30ca\u30fc\u3002",
@@ -31,20 +32,17 @@
 "children":[
 {
 "tag":"text",
-"attr":[
-
-],
-"children":[
-{
-"tag":"text",
 "text":""
 }
 ]
 },
 {
 "tag":"br",
-"text":""
-}
+"attr":[
+
+],
+"children":[
+
 ]
 }
 ]
@@ -53,6 +51,7 @@
 "_share":true,
 "_owner":"ak2i",
 "_ownername":"@ak2i",
-"_time":1369757615,
-"_timestr":"2013-05-29"
+"_time":1374458707,
+"_timestr":"2013-07-22",
+"images":null
 }

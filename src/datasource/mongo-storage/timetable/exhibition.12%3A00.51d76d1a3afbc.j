@@ -3,12 +3,13 @@
 "_u":"exhibition.12%3A00.51d76d1a3afbc",
 "public":true,
 "place":"exhibition",
-"booth":"A3",
+"booth":"A4",
 "start":"12:00",
 "end":"18:00",
+"atnd":"",
 "title":"@BIN@655a205075626c6973682043584d20e38397e383a9e38383e38388e38395e382a9e383bce383a0efbc8bceb120e3819de381aeefbc92",
 "incharge":"ez japan",
-"overview":"A2\u3068\u4e00\u7dd2\u306e\u30d6\u30fc\u30b9\u306b\u306a\u308a\u307e\u3059",
+"overview":"A3\u3068\u4e00\u7dd2\u306e\u30d6\u30fc\u30b9\u306b\u306a\u308a\u307e\u3059",
 "targets":[
 ""
 ],
@@ -50,6 +51,7 @@
 "_share":true,
 "_owner":"ak2i",
 "_ownername":"@ak2i",
-"_time":1373072666,
-"_timestr":"2013-07-06"
+"_time":1374459013,
+"_timestr":"2013-07-22",
+"images":null
 }

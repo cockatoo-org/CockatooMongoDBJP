@@ -1,5 +1,5 @@
 {
-"@R":"1374198023",
+"@R":"1374465985",
 "type":"HorizontalWidget",
 "subject":"noryo2013/sponsors",
 "description":"",
@@ -20,11 +20,12 @@
 <img width=\"300\" src=\"/_s_/mongo/page/noryo2013/sponsors/sakura_logo.png\">\r
 <img width=\"300\" src=\"/_s_/mongo/page/noryo2013/sponsors/10gen_Logo_Full.png\">\r
 <img width=\"300\" src=\"/_s_/mongo/page/noryo2013/sponsors/ezlogo.png\">\r
-<img width=\"300\" src=\"/_s_/mongo/page/noryo2013/sponsors/cloudn_300.png\">\r
+<a href=\"http://www.ntt.com/cloudn/\"><img width=\"300\" src=\"/_s_/mongo/page/noryo2013/sponsors/cloudn_300.png\"></a>\r
 <img width=\"300\" src=\"/_s_/mongo/page/noryo2013/sponsors/WinAzure_c_Blue286_M.png\">\r
 <br>\r
 <img width=\"220\" src=\"/_s_/mongo/page/noryo2013/sponsors/OpenStandia_logo.png\">\r
 <img width=\"220\" src=\"/_s_/mongo/page/noryo2013/sponsors/MiraitInformationSystemsLogo.png\">\r
+<img width=\"220\" src=\"/_s_/mongo/page/noryo2013/sponsors/codeiq_logo.png\">\r
 ",
 "action":[
 ""
