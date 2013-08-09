@@ -12,7 +12,7 @@
 }
 
 &table(\u5354\u8cdb\uff08\u30b9\u30eb\u30e1\u30a4\u30ab\u67a0\uff09\u4f01\u696d\u69d8\u4e00\u89a7,width:300px;font-size:1.5em;){
-&img(OpenStandia_logo.png,,300)|
+&img(OpenStandia_logo.png,,300,http://openstandia.jp/)|
 &img(MiraitInformationSystemsLogo.png,,300)|
 &img(codeiq_logo.png,,300)|
 }
@@ -679,7 +679,7 @@
 {
 "tag":"a",
 "attr":{
-"href":"/_s_/mongo/page/noryo2013/sponsors/OpenStandia_logo.png"
+"href":"http://openstandia.jp/"
 },
 "children":[
 {
@@ -1318,7 +1318,7 @@
 ],
 "_owner":"crumbjp",
 "_ownername":"@crumbjp",
-"_time":1374465788,
-"_timestr":"2013-07-22",
+"_time":1376090659,
+"_timestr":"2013-08-10",
 "_u":"noryo2013/sponsors"
 }
