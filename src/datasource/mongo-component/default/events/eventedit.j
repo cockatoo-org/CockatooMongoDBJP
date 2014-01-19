@@ -1,5 +1,5 @@
 {
-"@R":"1390141071",
+"@R":"1390141551",
 "type":"HorizontalWidget",
 "subject":"eventedit",
 "description":"",
@@ -37,6 +37,7 @@
     $('form input[type=\"submit\"]').removeAttr(\"disabled\");\r
   }else{\r
 //    $('form input[type=\"submit\"]').attr(\"disabled\",\"disabled\");\r
+     $('form input').removeAttr('readonly');\r
   }\r
   function setfield(event){\r
       $('form input[name=\"event_id\"]').val(event.event_id);\r
