@@ -1,5 +1,5 @@
 {
-"@R":"1371109086",
+"@R":"1390141071",
 "type":"HorizontalWidget",
 "subject":"eventedit",
 "description":"",
@@ -36,7 +36,7 @@
   if ( $('form input[name=\"event_id\"]').val() ) {\r
     $('form input[type=\"submit\"]').removeAttr(\"disabled\");\r
   }else{\r
-    $('form input[type=\"submit\"]').attr(\"disabled\",\"disabled\");\r
+//    $('form input[type=\"submit\"]').attr(\"disabled\",\"disabled\");\r
   }\r
   function setfield(event){\r
       $('form input[name=\"event_id\"]').val(event.event_id);\r
@@ -59,11 +59,11 @@
     if ( event.event_id ) {\r
       $('form input[type=\"submit\"]').removeAttr('disabled');\r
     }else{\r
-      $('form input[type=\"submit\"]').attr('disabled','disabled');\r
+//      $('form input[type=\"submit\"]').attr('disabled','disabled');\r
     }\r
   }\r
   function getattendbeta(event_id){\r
-    setfield({});\r
+//    setfield({});\r
     var apiurl = 'http://api.atnd.org/events/';\r
       $.ajax({\r
 \turl: apiurl,\r
@@ -80,7 +80,7 @@
       });\r
   }\r
   function getattend(event_id){\r
-    setfield({});\r
+//    setfield({});\r
     var apiurl = 'http://api.atnd.org/eventatnd/event/';\r
       $.ajax({\r
 \turl: apiurl,\r
