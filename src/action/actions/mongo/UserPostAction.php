@@ -171,7 +171,7 @@ abstract class UserPostAction extends \Cockatoo\Action {
       $doc = $this->get_doc($docid);
       if ( $doc ) {
         $this->get_hook($doc);
-        return array( $this->DOCNAME => $doc);
+        return array( $this->DOCNAME => $doc , 'page' => array('title' => $doc['title'] ));
       }
     }
     $this->setMovedTemporary($this->REDIRECT);

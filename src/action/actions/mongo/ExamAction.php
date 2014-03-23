@@ -138,6 +138,7 @@ class ExamAction extends UserPostAction {
         }
       });
     shuffle($qs);
+    $doc['title'] = $doc['qname'];
     $qs = array_slice($qs,0,$doc['qnum']);
     $qs[sizeof($qs)-1]['last'] = 1;
     $doc['qs'] = $qs;
