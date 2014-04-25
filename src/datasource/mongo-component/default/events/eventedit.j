@@ -1,5 +1,5 @@
 {
-"@R":"1390141551",
+"@R":"1398444418",
 "type":"HorizontalWidget",
 "subject":"eventedit",
 "description":"",
@@ -36,19 +36,19 @@
   if ( $('form input[name=\"event_id\"]').val() ) {\r
     $('form input[type=\"submit\"]').removeAttr(\"disabled\");\r
   }else{\r
-//    $('form input[type=\"submit\"]').attr(\"disabled\",\"disabled\");\r
-     $('form input').removeAttr('readonly');\r
+    $('form input[type=\"submit\"]').attr(\"disabled\",\"disabled\");\r
+    $('form input').removeAttr('readonly');\r
   }\r
   function setfield(event){\r
-      $('form input[name=\"event_id\"]').val(event.event_id);\r
-      $('form input[name=\"event_url\"]').val(event.event_url);\r
+      $('form input[name=\"event_id\"]').val(event.id);\r
+      $('form input[name=\"event_url\"]').val(event.public_url);\r
       $('form input[name=\"title\"]').val(event.title);\r
-      $('form input[name=\"subtitle\"]').val(event.catch);\r
+      // $('form input[name=\"subtitle\"]').val(event.description);\r
       $('form input[name=\"address\"]').val(event.address);\r
-      $('form input[name=\"place\"]').val(event.place);\r
+      $('form input[name=\"place\"]').val(event.venue_name);\r
     var date = '';\r
-    if ( event.started_at ) {\r
-      var dd = new Date(event.started_at);\r
+    if ( event.starts_at ) {\r
+      var dd = new Date(event.starts_at);\r
       var m = (dd.getMonth()+1);\r
       m = (m<10)?('0'+m):m;\r
       var d = dd.getDate();\r
@@ -56,53 +56,25 @@
       date = (dd.getYear()+1900)+'/'+m+'/'+dd.getDate();\r
     }\r
       $('form input[name=\"date\"]').val(date);\r
-      $('form input[name=\"limit\"]').val(event.limit);\r
-    if ( event.event_id ) {\r
+      $('form input[name=\"limit\"]').val(event.ticket_limit);\r
+    if ( event.id ) {\r
       $('form input[type=\"submit\"]').removeAttr('disabled');\r
     }else{\r
-//      $('form input[type=\"submit\"]').attr('disabled','disabled');\r
+      $('form input[type=\"submit\"]').attr('disabled','disabled');\r
     }\r
   }\r
-  function getattendbeta(event_id){\r
-//    setfield({});\r
-    var apiurl = 'http://api.atnd.org/events/';\r
-      $.ajax({\r
-\turl: apiurl,\r
-\ttype: 'GET',\r
-\tdataType: 'jsonp',\r
-\tdata: {\r
-\t  event_id:event_id,\r
-\t  format:'jsonp' \r
-\t},\r
-\tsuccess: function(data){\r
-\t  var event = data.events[0];\r
-\t  setfield(event);\r
-\t}\r
-      });\r
-  }\r
-  function getattend(event_id){\r
-//    setfield({});\r
-    var apiurl = 'http://api.atnd.org/eventatnd/event/';\r
-      $.ajax({\r
-\turl: apiurl,\r
-\ttype: 'GET',\r
-\tdataType: 'jsonp',\r
-\tdata: {\r
-\t  event_id:event_id,\r
-\t  format:'jsonp' \r
-\t},\r
-\tsuccess: function(data){\r
-\t  var event = data.events[0].event[0];\r
-\t  setfield(event);\r
-\t}\r
-      });\r
-  }\r
+\r
   function getevent(event_id){\r
-    if ( /^\\d+$/.exec(event_id) ) {\r
-      getattendbeta(event_id);\r
-    }else{\r
-      getattend(event_id);\r
-    }\r
+    setfield({});\r
+    var apiurl = 'http://api.doorkeeper.jp/events/' + event_id;\r
+      $.ajax({\r
+\turl: apiurl,\r
+\ttype: 'GET',\r
+\tdataType: 'jsonp',\r
+\tsuccess: function(data){\r
+\t  setfield(data.event);\r
+\t}\r
+      });\r
   }\r
 \r
     $('#eventedit input[name=\"event_id\"]').change(function(){\r
@@ -112,20 +84,9 @@
     $('#eventedit input[name=\"event_url\"]').change(function(){\r
       var url = $(this).val();\r
       if ( url ) {\r
-\tvar attend=/^http:\\/\\/atnd\\.org\\/event\\/(.+)$/.exec(url);\r
-\tif ( attend ) {\r
-\t  var attendm = /E0*(\\d+)(\\/\\d+)?/.exec(attend[1]);\r
-\t  if ( ! attendm[2] ) {\r
-\t    attendm[2] = '/0';\r
-\t  }\r
-\t  var event_id = attendm[1] + attendm[2];\r
-\t  getevent(event_id);\r
-\t  return;\r
-\t}\r
-\tvar attendbeta=/^http:\\/\\/atnd\\.org\\/events\\/(.+)$/.exec(url);\r
-\tif ( attendbeta ) {\r
-\t  getevent(attendbeta[1]);\r
-\t  return;\r
+\tvar matcher =/\\/([^\\/]+)$/.exec(url);\r
+\tif ( matcher ) {\r
+          getevent(matcher[1]);\r
 \t}\r
       }\r
     });\r
@@ -146,7 +107,7 @@ $(function() {\r
 "id":"eventedit",
 "class":"",
 "body":"<?cs if: A.mongo.event.writable ?>\r
-<h2>ATND (ATND beta) information</h2>\r
+<h2>input DOORKEEPER URL</h2>\r
 <form method=\"POST\" action=\"<?cs var:C._base ?>/events/edit/<?cs var:A.mongo.event._u ?>\">\r
   <table><tbody>\r
     <tr>\r

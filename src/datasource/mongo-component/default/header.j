@@ -1,5 +1,5 @@
 {
-"@R":"1372660179",
+"@R":"1396673283",
 "type":"HorizontalWidget",
 "subject":"header",
 "description":"header",
@@ -19,15 +19,16 @@
 }\r
 #header #title {\r
   font-size: 2em;\r
-  margin: 30px;\r
+  margin: 30px 0 30px 30px;\r
   color: #f0f0f0;\r
-  float:left;\r
+  float: left;\r
 }\r
 #header #identity {\r
   min-width:100px;\r
   text-align: center;\r
   margin: 2px 8px;\r
-  float:right;\r
+  position: absolute;\r
+  right: 0;\r
 }\r
 #header #identity a {\r
   color: #AA814D;\r

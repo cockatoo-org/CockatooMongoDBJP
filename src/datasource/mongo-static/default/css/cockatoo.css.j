@@ -1,5 +1,5 @@
 {
-"etag":"\"72b968fb-9e98-61f6-f539820f53f80893\"",
+"etag":"\"e90d2a89-c476-b974-f625b0031e2a6b27\"",
 "type":"text/css",
 "exp":"0",
 "desc":"",
@@ -14,7 +14,7 @@
   margin: 0 auto;\r
   color: #4c3a2c;\r
   background-color:#F0F0F0;\r
-  min-width:940px;\r
+  min-width:520px;\r
 }\r
 \r
 a{\r
