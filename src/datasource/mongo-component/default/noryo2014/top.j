@@ -1,5 +1,5 @@
 {
-"@R":"1410397896",
+"@R":"1410407620",
 "type":"HorizontalWidget",
 "subject":"noryo2014_top",
 "description":"",
@@ -26,8 +26,8 @@
 }\r
 #noryo2014_top a {\r
   color: #ffff00;\r
-  font-weight: 600;\r
-  font-size: 18px;\r
+  font-weight: 400;\r
+  font-size: 16px;\r
 }\r
 \r
 #message {\r
