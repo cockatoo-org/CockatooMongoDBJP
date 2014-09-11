@@ -1,0 +1,10 @@
+{
+"user":"syokenz",
+"twitter":1,
+"name":"@syokenz",
+"_u":"syokenz",
+"email":"",
+"writable":"1",
+"root":"",
+"hash":"cba4d0104233ed2e5feef141329b986e"
+}

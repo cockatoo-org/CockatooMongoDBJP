@@ -1,0 +1,10 @@
+{
+"user":"rinrin0108",
+"twitter":1,
+"name":"@rinrin0108",
+"_u":"rinrin0108",
+"email":"",
+"writable":"1",
+"root":"",
+"hash":"790829fe8b1b6d7ac6e7c8fc24f184ed"
+}

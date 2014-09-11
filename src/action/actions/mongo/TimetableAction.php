@@ -11,12 +11,19 @@ namespace mongo;
  * @copyright Copyright (C) 2011, rakuten 
  */
 class TimetableAction extends UserPostAction {
-  protected $REDIRECT = '/mongo/noryo2013';
-  protected $COLLECTION = 'timetable';
+  protected $REDIRECT = '/mongo/noryo2014';
+  protected $COLLECTION_BASE = 'timetable';
   protected $DOCNAME    = 'timebox';
   protected $ORDER      = '1';
   protected $DOCS_EXCEPTS = '';
   protected $IMAGE_PATH = 'timetable';
+
+  public function proc() {
+    $qs = $this->getQueries();
+    $this->COLLECTION = $this->COLLECTION_BASE . '_' . $qs['table_name'];
+    return parent::proc();
+  }
+
   public function docid(){
     $session = $this->getSession();
     return $session[\Cockatoo\Def::SESSION_KEY_POST]['_u'];

@@ -1,0 +1,10 @@
+{
+"user":"nntsugu",
+"twitter":1,
+"name":"@nntsugu",
+"_u":"nntsugu",
+"email":"",
+"writable":"1",
+"root":"",
+"hash":"c71d213e31463517aab0a12b6438d60a"
+}

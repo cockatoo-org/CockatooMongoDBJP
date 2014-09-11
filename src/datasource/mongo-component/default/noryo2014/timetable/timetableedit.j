@@ -1,67 +1,67 @@
 {
-"@R":"1374507531",
+"@R":"1410406804",
 "type":"HorizontalWidget",
 "subject":"timetableedit",
 "description":"",
-"css":"div.noryo2013_timetable div.tab table.timetable th.place,\r
-div.noryo2013_timetable div.tab table.timetable select[name=\"place\"] {\r
+"css":"div.noryo2014_timetable div.tab table.timetable th.place,\r
+div.noryo2014_timetable div.tab table.timetable select[name=\"place\"] {\r
   width: 80px;\r
 }  \r
-div.noryo2013_timetable div.tab table.timetable input[name=\"booth\"]{\r
+div.noryo2014_timetable div.tab table.timetable input[name=\"booth\"]{\r
   width: 40px;\r
 }\r
-div.noryo2013_timetable div.tab table.timetable th.start,\r
-div.noryo2013_timetable div.tab table.timetable th.end,\r
-div.noryo2013_timetable div.tab table.timetable input[name=\"start\"],\r
-div.noryo2013_timetable div.tab table.timetable input[name=\"end\"] {\r
+div.noryo2014_timetable div.tab table.timetable th.start,\r
+div.noryo2014_timetable div.tab table.timetable th.end,\r
+div.noryo2014_timetable div.tab table.timetable input[name=\"start\"],\r
+div.noryo2014_timetable div.tab table.timetable input[name=\"end\"] {\r
   width: 40px;\r
 }\r
-div.noryo2013_timetable div.tab table.timetable th.atnd,\r
-div.noryo2013_timetable div.tab table.timetable input[name=\"atnd\"] {\r
+div.noryo2014_timetable div.tab table.timetable th.atnd,\r
+div.noryo2014_timetable div.tab table.timetable input[name=\"atnd\"] {\r
   width: 500px;\r
 }\r
-div.noryo2013_timetable div.tab table.timetable th.title,\r
-div.noryo2013_timetable div.tab table.timetable input[name=\"title\"] {\r
+div.noryo2014_timetable div.tab table.timetable th.title,\r
+div.noryo2014_timetable div.tab table.timetable input[name=\"title\"] {\r
   width: 250px;\r
 }\r
-div.noryo2013_timetable div.tab table.timetable th.incharge,\r
-div.noryo2013_timetable div.tab table.timetable input[name=\"incharge\"] {\r
+div.noryo2014_timetable div.tab table.timetable th.incharge,\r
+div.noryo2014_timetable div.tab table.timetable input[name=\"incharge\"] {\r
   width: 60px;\r
 }\r
-div.noryo2013_timetable div.tab table.timetable tr.view td {\r
+div.noryo2014_timetable div.tab table.timetable tr.view td {\r
   border-bottom: 1px dashed  #402817;\r
   padding: 2px 0 4px 0;\r
   cursor : pointer;\r
 }\r
-div.noryo2013_timetable div.tab table.timetable tr.view.private td {\r
+div.noryo2014_timetable div.tab table.timetable tr.view.private td {\r
   background-color: #cccccc;\r
 }\r
-div.noryo2013_timetable div.tab table.timetable tr.view td.title{\r
+div.noryo2014_timetable div.tab table.timetable tr.view td.title{\r
   font-weight:600;\r
 }\r
-div.noryo2013_timetable div.tab table.timetable tr.form {\r
+div.noryo2014_timetable div.tab table.timetable tr.form {\r
   display:none;\r
 }\r
-div.noryo2013_timetable div.tab table.timetable tr.form td.key{\r
+div.noryo2014_timetable div.tab table.timetable tr.form td.key{\r
   font-weight:600;\r
 }\r
 \r
-div.noryo2013_timetable div.tab table.timetable textarea[name=\"overview\"] {\r
+div.noryo2014_timetable div.tab table.timetable textarea[name=\"overview\"] {\r
   width: 600px;\r
   height: 50px;\r
 }\r
-div.noryo2013_timetable div.tab table.timetable textarea[name=\"origin\"] {\r
+div.noryo2014_timetable div.tab table.timetable textarea[name=\"origin\"] {\r
   width: 600px;\r
   height:400px;\r
 }\r
-div.noryo2013_timetable div.tab table.timetable input[name=\"types\"] {\r
+div.noryo2014_timetable div.tab table.timetable input[name=\"types\"] {\r
   width: 600px;\r
 }\r
-div.noryo2013_timetable div.tab table.timetable input[name=\"targets\"] {\r
+div.noryo2014_timetable div.tab table.timetable input[name=\"targets\"] {\r
   width: 600px;\r
 }",
 "js":"$(function(){\r
-  $('div.noryo2013_timetable div.tab table.timetable tr.view').click(function(){\r
+  $('div.noryo2014_timetable div.tab table.timetable tr.view').click(function(){\r
    $(this).next().slideToggle();\r
   });\r
   function booth_check(select){\r
@@ -79,7 +79,7 @@ div.noryo2013_timetable div.tab table.timetable input[name=\"targets\"] {\r
 });\r
 ",
 "id":"",
-"class":"noryo2013_timetable",
+"class":"noryo2014_timetable",
 "body":"<div class=\"tab\">\r
 <?cs if: S.login.writable ?>\r
 <table class=\"timetable\">\r
@@ -106,7 +106,7 @@ div.noryo2013_timetable div.tab table.timetable input[name=\"targets\"] {\r
  <tr class=\"form\">\r
   <td colspan=\"6\">\r
 <div>\r
-  <form method=\"POST\" enctype=\"multipart/form-data\" action=\"<?cs var:C._base ?>/noryo2013/edit\">\r
+  <form method=\"POST\" enctype=\"multipart/form-data\" action=\"<?cs var:C._base ?>/noryo2014/edit\">\r
    <input type=\"submit\" name=\"op\" value=\"save\"></input>\r
    <input type=\"submit\" name=\"op\" value=\"remove\"></input>\r
    <input type=\"hidden\" name=\"_u\" value=\"<?cs var:item._u ?>\"></input>\r
@@ -116,9 +116,8 @@ div.noryo2013_timetable div.tab table.timetable input[name=\"targets\"] {\r
 <tr class=\"place\"   ><td class=\"key\">\u4f1a\u5834</td>    <td>\r
 <select name=\"place\">\r
   <option <?cs if:item.place == \"exhibition\"?>selected<?cs /if ?> value=\"exhibition\">\u5c55\u793a</option>\r
-  <option <?cs if:item.place == \"place1\"    ?>selected<?cs /if ?> value=\"place1\">\u304f\u3089\u307e\u3048</option>\r
-  <option <?cs if:item.place == \"place2\"    ?>selected<?cs /if ?> value=\"place2\">\u30ed\u30a4\u30a2\u30eb\u30d6\u30eb\u30fc</option>\r
-  <option <?cs if:item.place == \"place3\"    ?>selected<?cs /if ?> value=\"place3\">\u30ae\u30e3\u30e9\u30ea\u30fc</option>\r
+  <option <?cs if:item.place == \"place1\"    ?>selected<?cs /if ?> value=\"place1\">\u30e1\u30a4\u30f3\u4f1a\u5834</option>\r
+  <option <?cs if:item.place == \"place2\"    ?>selected<?cs /if ?> value=\"place2\">\u30bb\u30c3\u30b7\u30e7\u30f3\u4f1a\u5834</option>\r
 </select>\r
 <select name=\"booth\">\r
   <?cs loop:x = #0, #9, #1 ?>\r
@@ -172,9 +171,9 @@ div.noryo2013_timetable div.tab table.timetable input[name=\"targets\"] {\r
 \r
 ",
 "action":[
-"action://mongo-action/mongo/TimetableAction?getA&table_name=noryo2013"
+"action://mongo-action/mongo/TimetableAction?getA&table_name=noryo2014"
 ],
 "header":"",
 "bottom":"",
-"_u":"noryo2013/timetable/timetableedit"
+"_u":"noryo2014/timetable/timetableedit"
 }

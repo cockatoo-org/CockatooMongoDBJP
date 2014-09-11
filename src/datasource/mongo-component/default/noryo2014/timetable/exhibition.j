@@ -1,13 +1,13 @@
 {
-"@R":"1374508269",
+"@R":"1409585281",
 "type":"HorizontalWidget",
-"subject":"noryo2013_exhibition",
+"subject":"noryo2014_exhibition",
 "description":"",
-"css":"div.noryo2013_timetable div.tab table.timetable td div.N {  \r
+"css":"div.noryo2014_timetable div.tab table.timetable td div.N {  \r
   height:120px;\r
   border-top: 1px dashed  #402817;\r
 }\r
-div.noryo2013_timetable div.tab table.timetable td.first div.N {  \r
+div.noryo2014_timetable div.tab table.timetable td.first div.N {  \r
   text-align:center;\r
   padding-top : 40px;\r
   height:80px;\r
@@ -21,20 +21,20 @@ div.noryo2013_timetable div.tab table.timetable td.first div.N {  \r
              return 119;\r
           },\r
           function(session){ \r
-            return 'div.noryo2013_timetable div.tab div.' + session.booth;\r
+            return 'div.noryo2014_timetable div.tab div.' + session.booth;\r
           });\r
 })\r
 ",
 "id":"",
-"class":"noryo2013_timetable",
+"class":"noryo2014_timetable",
 "body":"<div class=\"tab\">\r
   <table class=\"timetable\">\r
     <tbody>\r
       <tr>\r
 \t<th class=\"first\">\u30d6\u30fc\u30b9</th>\r
-\t<th class=\"cols place A\" place=\"top:90px;left:50px;height:50px;width:200px\">A\u30a8\u30ea\u30a2</th>\r
-\t<th class=\"cols place B\" place=\"top:160px;left:100px;height:60px;width:120px\">B\u30a8\u30ea\u30a2</th>\r
-\t<th class=\"cols place C\" place=\"top:240px;left:50px;height:50px;width:200px\">C\u30a8\u30ea\u30a2</th>\r
+\t<th class=\"cols place A\" place=\"top:45px;left:110px;height:70px;width:140px\">A\u30a8\u30ea\u30a2</th>\r
+\t<th class=\"cols place B\" place=\"top:125px;left:110px;height:70px;width:140px\">B\u30a8\u30ea\u30a2</th>\r
+\t<th class=\"cols place C\" place=\"top:205px;left:110px;height:70px;width:140px\">C\u30a8\u30ea\u30a2</th>\r
       </tr>\r
       <tr class=\"first\">\r
 \t<td class=\"first N\">\r
@@ -97,9 +97,9 @@ div.noryo2013_timetable div.tab table.timetable td.first div.N {  \r
 </script>\r
 ",
 "action":[
-"action://mongo-action/mongo/TimetableAction?getA&table_name=noryo2013&exhibition=1#cache#cexp=1"
+"action://mongo-action/mongo/TimetableAction?getA&exhibition=1#cache#cexp=1"
 ],
 "header":"",
 "bottom":"",
-"_u":"noryo2013/timetable/exhibition"
+"_u":"noryo2014/timetable/exhibition"
 }

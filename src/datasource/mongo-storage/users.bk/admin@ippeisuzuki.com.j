@@ -1,0 +1,11 @@
+{
+"user":"admin@ippeisuzuki.com",
+"google":1,
+"name":"admin",
+"_u":"admin@ippeisuzuki.com",
+"email":"admin@ippeisuzuki.com",
+"writable":"1",
+"root":"",
+"hash":"a682b9ad01353d86b883fa4e45a3fb99",
+"expires":1685118185
+}

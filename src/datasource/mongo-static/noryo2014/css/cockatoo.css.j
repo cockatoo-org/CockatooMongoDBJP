@@ -1,5 +1,5 @@
 {
-"etag":"\"8c9734df-8e52-84f5-5389c738a128e2f1\"",
+"etag":"\"4b4c5a99-4e6e-e436-6b4ebc98eb7a701a\"",
 "type":"text/css",
 "exp":"0",
 "desc":"",
@@ -27,15 +27,15 @@ a:hover {\r
 div.box {\r
   border : 1px solid #BBBBBB;\r
 }\r
-div.noryo2013 {\r
+div.noryo2014 {\r
   margin: 0 auto;\r
-  background-image: url(\"/_s_/mongo/noryo2013/top.png\");\r
+  background-image: url(\"/_s_/mongo/noryo2014/top.jpg\");\r
   background-origin: padding-box;\r
   background-position: top center;\r
   background-repeat: no-repeat;\r
   background-size: contain;\r
-  background-color: #000010;\r
-  min-height: 600px;\r
+  background-color: #FFF;\r
+  min-height: 900px;\r
 \r
 }",
 "_u":"css/cockatoo.css"
