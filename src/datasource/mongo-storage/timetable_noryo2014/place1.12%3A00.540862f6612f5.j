@@ -6,7 +6,7 @@
 "booth":"A0",
 "nbooth":"1",
 "start":"12:00",
-"end":"12:30",
+"end":"12:15",
 "atnd":"",
 "title":"\u958b\u4f1a\u306e\u6328\u62f6",
 "incharge":"MongoDBJP\u4ee3\u8868\u3000\u7aaa\u7530\u535a\u662d",
@@ -52,8 +52,8 @@
 "_share":true,
 "_owner":"crumbjp",
 "_ownername":"@crumbjp",
-"_time":1409842682,
-"_timestr":"2014-09-04",
+"_time":1411569410,
+"_timestr":"2014-09-24",
 "images":{
 "logo":"place1.12%3A00.540862f6612f5/logo"
 }

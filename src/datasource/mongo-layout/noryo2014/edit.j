@@ -1,9 +1,9 @@
 {
-"@R":"1369102876",
+"@R":"1411568727",
 "eredirect":"/mongo/noryo2014/timetable",
 "redirect":"",
 "pre_action":"",
-"post_action":"action://mongo-action/mongo/TimetableAction?set",
+"post_action":"action://mongo-action/mongo/TimetableAction?set&table_name=noryo2014",
 "session_exp":"2147483647",
 "expires":"",
 "header":"<meta name=\"description\" content=\"\">\r
