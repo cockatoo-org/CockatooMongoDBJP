@@ -1,5 +1,5 @@
 {
-"@R":"1411568334",
+"@R":"1412689134",
 "type":"HorizontalWidget",
 "subject":"noryo2014_exhibition",
 "description":"",
@@ -38,52 +38,28 @@ div.noryo2014_timetable div.tab table.timetable td.first div.N {  \r
       </tr>\r
       <tr class=\"first\">\r
 \t<td class=\"first N\">\r
-\t  <div class=\"N N0\">0</div>\r
 \t  <div class=\"N N1\">1</div>\r
 \t  <div class=\"N N2\">2</div>\r
 \t  <div class=\"N N3\">3</div>\r
 \t  <div class=\"N N4\">4</div>\r
-\t  <div class=\"N N5\">5</div>\r
-\t  <div class=\"N N6\">6</div>\r
-\t  <div class=\"N N7\">7</div>\r
-\t  <div class=\"N N8\">8</div>\r
-\t  <div class=\"N N9\">9</div>\r
 \t</td>\r
 \t<td class=\"cols A\">\r
-\t  <div class=\"N A0\"></div>\r
 \t  <div class=\"N A1\"></div>\r
 \t  <div class=\"N A2\"></div>\r
 \t  <div class=\"N A3\"></div>\r
 \t  <div class=\"N A4\"></div>\r
-\t  <div class=\"N A5\"></div>\r
-\t  <div class=\"N A6\"></div>\r
-\t  <div class=\"N A7\"></div>\r
-\t  <div class=\"N A8\"></div>\r
-\t  <div class=\"N A9\"></div>\r
 \t</td>\r
 \t<td class=\"cols B\">\r
-\t  <div class=\"N B0\"></div>\r
 \t  <div class=\"N B1\"></div>\r
 \t  <div class=\"N B2\"></div>\r
 \t  <div class=\"N B3\"></div>\r
 \t  <div class=\"N B4\"></div>\r
-\t  <div class=\"N B5\"></div>\r
-\t  <div class=\"N B6\"></div>\r
-\t  <div class=\"N B7\"></div>\r
-\t  <div class=\"N B8\"></div>\r
-\t  <div class=\"N B9\"></div>\r
 \t</td>\r
 \t<td class=\"cols C\">\r
-\t  <div class=\"N C0\"></div>\r
 \t  <div class=\"N C1\"></div>\r
 \t  <div class=\"N C2\"></div>\r
 \t  <div class=\"N C3\"></div>\r
 \t  <div class=\"N C4\"></div>\r
-\t  <div class=\"N C5\"></div>\r
-\t  <div class=\"N C6\"></div>\r
-\t  <div class=\"N C7\"></div>\r
-\t  <div class=\"N C8\"></div>\r
-\t  <div class=\"N C9\"></div>\r
 \t</td>\r
       </tr>\r
     </tbody>\r
@@ -94,8 +70,7 @@ div.noryo2014_timetable div.tab table.timetable td.first div.N {  \r
 \r
 <script>\r
   var timetable = <?cs var:A.mongo.timeboxs.@json ?>;\r
-</script>\r
-",
+</script>",
 "action":[
 "action://mongo-action/mongo/TimetableAction?getA&table_name=noryo2014&exhibition=1#cache#cexp=1"
 ],

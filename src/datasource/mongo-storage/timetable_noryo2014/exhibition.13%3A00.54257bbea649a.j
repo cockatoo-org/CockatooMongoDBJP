@@ -3,15 +3,14 @@
 "_u":"exhibition.13%3A00.54257bbea649a",
 "public":true,
 "place":"exhibition",
-"booth":"A3",
+"booth":"A1",
 "nbooth":"1",
 "start":"13:00",
 "end":"17:00",
 "atnd":"",
 "title":"MongoDB\u3067\u81ea\u7531\u306a\u5730\u56f3\u60c5\u5831\u3092\u6271\u304a\u3046\uff01",
-"incharge":"\u5c0f\u7b20\u539f \u5fb3\u5f66",
-"overview":"\u81ea\u7531\u306a\u5730\u56f3\u60c5\u5831\u30b7\u30b9\u30c6\u30e0OpenStreetMap\u306e\u30c7\u30fc\u30bf\u3092MongoDB\u306b\u53d6\u308a\u8fbc\u3093\u3067\u5730\u7406\u7a7a\u9593\u30a4\u30f3\u30c7\u30c3\u30af\u30b9\u3092\u4f7f\u3063\u305f\u7c21\u5358\u306a\u691c\u7d22\u30b5\u30a4\u30c8\u3092\u4f5c\u3063\u3066\u307f\u307e\u3059\u3002\r
-\u65b9\u5411\u3067\u8003\u3048\u3066\u3044\u307e\u3059\u3002",
+"incharge":"MongoDBJP\u5c0f\u7b20\u539f\u5fb3\u5f66",
+"overview":"\u81ea\u7531\u306a\u5730\u56f3\u60c5\u5831\u30b7\u30b9\u30c6\u30e0OpenStreetMap\u306e\u30c7\u30fc\u30bf\u3092MongoDB\u306b\u53d6\u308a\u8fbc\u3093\u3067\u5730\u7406\u7a7a\u9593\u30a4\u30f3\u30c7\u30c3\u30af\u30b9\u3092\u4f7f\u3063\u305f\u7c21\u5358\u306a\u691c\u7d22\u30b5\u30a4\u30c8\u3092\u4f5c\u3063\u3066\u307f\u307e\u3059\u3002",
 "targets":[
 ""
 ],
@@ -53,8 +52,8 @@
 "_share":true,
 "_owner":"crumbjp",
 "_ownername":"@crumbjp",
-"_time":1411742654,
-"_timestr":"2014-09-26",
+"_time":1412689176,
+"_timestr":"2014-10-07",
 "images":{
 "logo":""
 }

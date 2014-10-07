@@ -1,15 +1,15 @@
 {
 "op":"save",
-"_u":"place1.12%3A30.542579c53745a",
+"_u":"place1.17%3A45.542ea5fa93d7c",
 "public":true,
 "place":"place1",
 "booth":"A0",
 "nbooth":"1",
-"start":"12:30",
-"end":"13:50",
+"start":"17:45",
+"end":"18:00",
 "atnd":"",
-"title":"\u30b9\u30bf\u30fc\u30c8\u30a2\u30c3\u30d7CTO\u304cMongoDB\u306e\u9b45\u529b\u3092\u30d1\u30cd\u30eb\u30c7\u30a3\u30b9\u30ab\u30c3\u30b7\u30e7\u30f3",
-"incharge":"\u30e2\u30c7\u30ec\u30fc\u30bf\u30fc\u3000\u85e4\u5d0e \u7965\u898b",
+"title":"\u9589\u4f1a\u306e\u6328\u62f6",
+"incharge":"",
 "overview":"",
 "targets":[
 ""
@@ -52,7 +52,6 @@
 "_share":true,
 "_owner":"crumbjp",
 "_ownername":"@crumbjp",
-"_time":1411742240,
-"_timestr":"2014-09-26",
-"images":null
+"_time":1412343290,
+"_timestr":"2014-10-03"
 }

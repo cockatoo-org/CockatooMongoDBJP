@@ -1,5 +1,5 @@
 {
-"@R":"1410406804",
+"@R":"1412688377",
 "type":"HorizontalWidget",
 "subject":"timetableedit",
 "description":"",
@@ -120,15 +120,15 @@ div.noryo2014_timetable div.tab table.timetable input[name=\"targets\"] {\r
   <option <?cs if:item.place == \"place2\"    ?>selected<?cs /if ?> value=\"place2\">\u30bb\u30c3\u30b7\u30e7\u30f3\u4f1a\u5834</option>\r
 </select>\r
 <select name=\"booth\">\r
-  <?cs loop:x = #0, #9, #1 ?>\r
+  <?cs loop:x = #1, #9, #1 ?>\r
     <?cs set: v = \"A\"+x ?>\r
     <option <?cs if:item.booth == v ?>selected<?cs /if ?> value=\"<?cs var:v ?>\"><?cs var:v ?></option>\r
   <?cs /loop ?>\r
-  <?cs loop:x = #0, #9, #1 ?>\r
+  <?cs loop:x = #1, #9, #1 ?>\r
     <?cs set: v = \"B\"+x ?>\r
     <option <?cs if:item.booth == v ?>selected<?cs /if ?> value=\"<?cs var:v ?>\"><?cs var:v ?></option>\r
   <?cs /loop ?>\r
-  <?cs loop:x = #0, #9, #1 ?>\r
+  <?cs loop:x = #1, #9, #1 ?>\r
     <?cs set: v = \"C\"+x ?>\r
     <option <?cs if:item.booth == v ?>selected<?cs /if ?> value=\"<?cs var:v ?>\"><?cs var:v ?></option>\r
   <?cs /loop ?>\r

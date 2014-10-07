@@ -1,5 +1,5 @@
 {
-"@R":"1410399059",
+"@R":"1412688861",
 "type":"HorizontalWidget",
 "subject":"noryo2014_timetable_header",
 "description":"",
@@ -49,7 +49,7 @@ div.noryo2014_timetable div.tab {\r
   overflow:hidden;\r
 }\r
 div.noryo2014_timetable div.tab div.session{\r
-  width:276px;\r
+  width:221px;\r
   border-radius: 8px;\r
   background-color: #fFf8e0;\r
   border: 1px solid  #402817;\r
