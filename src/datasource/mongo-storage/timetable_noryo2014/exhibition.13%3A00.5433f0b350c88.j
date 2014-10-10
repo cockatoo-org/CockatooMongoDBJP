@@ -9,8 +9,8 @@
 "end":"17:00",
 "atnd":"",
 "title":"\u516c\u52df\u5c55\u793a",
-"incharge":"",
-"overview":"",
+"incharge":"\u5c0f\u6fa4\u5321\u53f2",
+"overview":"\u300cMongoDB+Node.js+socket.io\u3092\u6d3b\u7528\u3057\u305f\u30ea\u30a2\u30eb\u30bf\u30a4\u30e0WEB\u30b5\u30a4\u30c8\u300cNETROOM\u300d\u306e\u3054\u7d39\u4ecb\u300d",
 "targets":[
 ""
 ],
@@ -52,6 +52,7 @@
 "_share":true,
 "_owner":"crumbjp",
 "_ownername":"@crumbjp",
-"_time":1412690099,
-"_timestr":"2014-10-07"
+"_time":1412911607,
+"_timestr":"2014-10-10",
+"images":null
 }

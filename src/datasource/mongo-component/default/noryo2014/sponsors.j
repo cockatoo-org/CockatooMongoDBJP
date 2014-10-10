@@ -1,5 +1,5 @@
 {
-"@R":"1412687778",
+"@R":"1412912081",
 "type":"HorizontalWidget",
 "subject":"noryo2014/sponsors",
 "description":"",
@@ -16,9 +16,11 @@
 "id":"sponsors",
 "class":"",
 "body":"<a target=\"_blank\" href=\"http://www.infocorpus.co.jp\"><img width=\"200\" src=\"/_s_/mongo/page/noryo2014/sponsors/infocorpus_logo_w.png\"></a>\r
+<a target=\"_blank\" href=\"http://www.centimani.biz\"><img width=\"200\" src=\"/_s_/mongo/page/noryo2014/sponsors/centimani.jpg\"></a>\r
 <a target=\"_blank\" href=\"http://moe3.co.jp/\"><img width=\"200\" src=\"/_s_/mongo/page/noryo2014/sponsors/mcube_logo.png\"></a>\r
 <a target=\"_blank\" href=\"http://thinkit.co.jp/\"><img width=\"200\" src=\"/_s_/mongo/page/noryo2014/sponsors/Think%20IT_logo.png\"></a>\r
 <a target=\"_blank\" href=\"http://www.sansei-tokyo.co.jp\"><img width=\"200\" src=\"/_s_/mongo/page/noryo2014/sponsors/sanse.jpg\"></a>\r
+<a target=\"_blank\" href=\"http://openstandia.jp/\"><img width=\"200\" src=\"/_s_/mongo/page/noryo2014/sponsors/openstandia.jpg\"></a>\r
 ",
 "action":[
 ""

@@ -8,9 +8,9 @@
 "start":"13:00",
 "end":"17:00",
 "atnd":"",
-"title":"Jasper",
+"title":"\u65e5\u672cJasperServer\u30e6\u30fc\u30b6\u30fc\u4f1a",
 "incharge":"",
-"overview":"",
+"overview":"\u30d3\u30b8\u30cd\u30b9\u30a4\u30f3\u30c6\u30ea\u30b8\u30a7\u30f3\u30b9\u306e\u3054\u7d39\u4ecb(iReport)",
 "targets":[
 ""
 ],
@@ -52,6 +52,7 @@
 "_share":true,
 "_owner":"crumbjp",
 "_ownername":"@crumbjp",
-"_time":1412689646,
-"_timestr":"2014-10-07"
+"_time":1412911465,
+"_timestr":"2014-10-10",
+"images":null
 }

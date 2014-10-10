@@ -8,10 +8,9 @@
 "start":"12:15",
 "end":"13:30",
 "atnd":"",
-"title":"\u4e38\u306e\u5185MongoDB\u52c9\u5f37\u4f1ain\u3082\u3093\u3054\u796d\u308a",
+"title":"\u7b2c19\u56de\u300c\u521d\u5fc3\u8005\u5411\u3051MongoDB\u30cf\u30f3\u30ba\u30aa\u30f3\u300d",
 "incharge":"MongoDBJP\u6797\u7530\u6566",
-"overview":"\u7b2c19\u56de\u300cMongoDB\u306eindex\u306b\u3064\u3044\u3066\u300d\r
-\u300cMongoDB\u521d\u5fc3\u8005\u306e\u65b9\u3092\u5bfe\u8c61\u3068\u3057\u305f\u30cf\u30f3\u30ba\u30aa\u30f3\u3092\u884c\u3044\u307e\u3059\u3002\u307e\u305f\u3001MongoDB\u306eindex\u306b\u3064\u3044\u3066\u7d39\u4ecb\u3057\u307e\u3059\u3002\u300d",
+"overview":"\u300cMongoDB\u306eindex\u306b\u3064\u3044\u3066\u300d\u3002MongoDB\u521d\u5fc3\u8005\u306e\u65b9\u3092\u5bfe\u8c61\u3068\u3057\u305f\u30cf\u30f3\u30ba\u30aa\u30f3\u3092\u884c\u3044\u307e\u3059\u3002\u307e\u305f\u3001MongoDB\u306eindex\u306b\u3064\u3044\u3066\u7d39\u4ecb\u3057\u307e\u3059\u3002",
 "targets":[
 ""
 ],
@@ -53,8 +52,8 @@
 "_share":true,
 "_owner":"crumbjp",
 "_ownername":"@crumbjp",
-"_time":1412689239,
-"_timestr":"2014-10-07",
+"_time":1412695733,
+"_timestr":"2014-10-08",
 "images":{
 "logo":"place1.12%3A15.542ea549c5ebf/logo"
 }

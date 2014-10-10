@@ -10,7 +10,7 @@
 "atnd":"",
 "title":"\u682a\u5f0f\u4f1a\u793e\u30a4\u30f3\u30d5\u30a9\u30b3\u30fc\u30d1\u30b9",
 "incharge":"",
-"overview":"",
+"overview":"SensorCorpus\u306e\u3054\u7d39\u4ecb",
 "targets":[
 ""
 ],
@@ -52,6 +52,7 @@
 "_share":true,
 "_owner":"crumbjp",
 "_ownername":"@crumbjp",
-"_time":1412689960,
-"_timestr":"2014-10-07"
+"_time":1412911412,
+"_timestr":"2014-10-10",
+"images":null
 }
