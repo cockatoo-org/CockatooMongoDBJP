@@ -1,5 +1,5 @@
 {
-"@R":"1412688861",
+"@R":"1412958269",
 "type":"HorizontalWidget",
 "subject":"noryo2014_timetable_header",
 "description":"",
@@ -49,7 +49,7 @@ div.noryo2014_timetable div.tab {\r
   overflow:hidden;\r
 }\r
 div.noryo2014_timetable div.tab div.session{\r
-  width:221px;\r
+  width:100%;\r
   border-radius: 8px;\r
   background-color: #fFf8e0;\r
   border: 1px solid  #402817;\r
@@ -184,7 +184,7 @@ div.noryo2014_timetable div.tab table.timetable th.first {\r
   width: 100px;\r
 }\r
 div.noryo2014_timetable div.tab table.timetable th.cols {\r
-  width: 279px;\r
+  width: 221px;\r
   border-left: 2px solid  #402817;\r
   border-bottom: 1px dashed  #402817;\r
 }\r
@@ -200,7 +200,7 @@ div.noryo2014_timetable div.tab table.timetable td.first {\r
 }\r
 \r
 div.noryo2014_timetable div.tab table.timetable td.cols {\r
-  width: 279px;\r
+  width: 221px;\r
   border-left: 2px solid  #402817;\r
   border-bottom: 1px dashed #402817;\r
   vertical-align: top;\r
