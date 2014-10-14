@@ -1,5 +1,5 @@
 {
-"@R":"1410407620",
+"@R":"1413295975",
 "type":"HorizontalWidget",
 "subject":"noryo2014_top",
 "description":"",
@@ -96,7 +96,7 @@
   <li><a href=\"<?cs var:C._base ?>/noryo2014/sponsors\">\u30b9\u30dd\u30f3\u30b5\u30fc</a></li>\r
 </ul>\r
 <div id=\"message\">\r
-  <div class=\"participate\"><a href=\"http://62e60c2c9e4f4c61769ea89b71.doorkeeper.jp/events/15132\">\u53c2\u52a0\u3059\u308b</a></div>\r
+  <div class=\"participate\"><a href=\"http://62e60c2c9e4f4c61769ea89b71.doorkeeper.jp/events/15132\">\u7d42\u4e86\u3057\u307e\u3057\u305f</a></div>\r
 </div>\r
 \r
 <div id=\"infomation\">\r
